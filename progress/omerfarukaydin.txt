@@ -1,0 +1,3 @@
+omerfarukaydin' s progress
+
+thelook_ecommerce - order_items.csv file added to the tables folder
