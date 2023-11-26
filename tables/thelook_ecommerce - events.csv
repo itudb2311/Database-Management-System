@@ -1,0 +1,501 @@
+id,user_id,sequence_number,session_id,created_at,ip_address,city,state,postal_code,browser,traffic_source,uri,event_type
+1437378,,3,1fa8f43a-da87-426d-bacf-cc33d17049bb,03.08.2020 00:31:00,92.208.191.197,Bogatynia,Dolnośląskie,59,Chrome,YouTube,/cart,cart
+1511836,,2,c3657070-848b-4c15-a07b-1041e23e96c1,22.09.2022 12:40:00,203.170.182.131,Bogatynia,Dolnośląskie,59,Safari,Organic,/cart,cart
+160346,11997,3,8d15c1e1-0a90-4ca4-bea6-8ba4480e8d30,04.01.2023 12:46:25,128.63.210.181,Bogatynia,Dolnośląskie,59,Chrome,Organic,/cart,cart
+1156916,88696,6,6db2513c-6fc7-40ac-b338-a0e6fbc53f5c,23.09.2023 02:11:59,186.76.72.140,Bogatynia,Dolnośląskie,59,Safari,Email,/cart,cart
+1438095,,3,55148874-96da-4573-97cb-18313f88d717,22.07.2023 03:05:00,36.20.249.25,Bogatynia,Dolnośląskie,59,Safari,Email,/cart,cart
+1774602,,3,56dd7b67-ee23-407d-b93d-a8cd59bdd3cf,22.06.2021 08:45:00,76.234.17.165,Bogatynia,Dolnośląskie,59,Firefox,Email,/cart,cart
+12653,872,6,fb08ef1e-5bd1-4988-9eff-b4da7ad0c6c5,03.11.2020 00:04:20,223.114.184.120,Bogatynia,Dolnośląskie,59,Chrome,Email,/cart,cart
+387754,29356,3,9b452c40-c964-4580-9466-3dcfc759a290,17.11.2021 23:39:16,53.155.21.248,Bogatynia,Dolnośląskie,59,Chrome,YouTube,/cart,cart
+472476,35817,3,71e3f925-5750-4ae6-8f13-0e5b64ea83d6,28.09.2022 12:12:38,181.78.70.154,Bogatynia,Dolnośląskie,59,IE,Adwords,/cart,cart
+328550,24904,3,177440d7-4e4a-43ce-9447-6eb8607a5fbf,23.10.2022 10:46:40,149.154.63.92,Bogatynia,Dolnośląskie,59,Chrome,Email,/cart,cart
+296153,22437,6,6e85dfce-fb2c-4d06-b743-0075e8c230c9,18.08.2023 07:09:48,167.183.199.159,Bogatynia,Dolnośląskie,59,Safari,YouTube,/cart,cart
+344279,26056,9,76e0fcca-fe3e-4ff8-89b2-52b6c1f009e8,05.01.2023 18:12:21,68.149.106.242,Bogatynia,Dolnośląskie,59,Safari,Email,/cart,cart
+1480271,,2,d957fe01-8d79-4b38-b93e-2ec6179b3d82,14.11.2022 06:00:00,104.186.240.86,Bogatynia,Dolnośląskie,59,Firefox,Email,/cart,cart
+1643738,,2,4f8c6bfa-ce59-4de1-a39e-170726c16ba9,27.08.2021 12:09:00,17.201.124.190,Bogatynia,Dolnośląskie,59,Chrome,Email,/cart,cart
+160342,11997,4,d28fa60a-6e43-4753-9b57-5a03543174d1,02.06.2023 14:08:34,91.225.157.125,Bogatynia,Dolnośląskie,59,Chrome,Email,/cart,cart
+472489,35817,3,02b8e5a9-7792-4557-b4c6-8b87b06ee36e,28.09.2022 13:48:25,149.190.194.104,Bogatynia,Dolnośląskie,59,Firefox,Email,/cart,cart
+1569510,,3,08b41ecb-4b8c-474f-82ed-c363b3490aed,29.08.2022 13:41:00,74.162.76.239,Bogatynia,Dolnośląskie,59,Other,Email,/cart,cart
+504834,38355,6,5727cd2f-d908-4bb7-9fa6-0faefedd26a8,14.06.2020 22:08:24,38.85.210.74,Bogatynia,Dolnośląskie,59,Safari,Email,/cart,cart
+932838,71313,4,7ab66aff-d387-443c-b34a-a8b27e7fad7b,17.03.2023 23:43:21,75.8.197.83,Bogatynia,Dolnośląskie,59,Chrome,Adwords,/cart,cart
+811918,62012,3,ccb31d15-3e00-4162-8122-b5f6465cb34a,24.09.2022 02:39:07,103.92.84.175,Bogatynia,Dolnośląskie,59,IE,Email,/cart,cart
+1513046,,2,054b9dd5-eff0-441a-892e-a3f5b21c4384,22.07.2022 08:58:00,163.177.191.42,Bogatynia,Dolnośląskie,59,Chrome,Adwords,/cart,cart
+1629584,,3,fe08e24b-c9b4-4e0c-88b4-54ed12ba2b88,28.09.2020 05:20:00,83.21.118.223,Bogatynia,Dolnośląskie,59,Safari,Email,/cart,cart
+12669,872,9,5ba147b6-61c1-4b21-9cfd-7ad2970cc65d,02.11.2020 23:33:46,30.239.246.29,Bogatynia,Dolnośląskie,59,Other,YouTube,/cart,cart
+504890,38355,9,b32daa3f-49d7-44b4-9291-bcea409265a2,12.09.2021 23:22:56,49.42.28.121,Bogatynia,Dolnośląskie,59,Chrome,Email,/cart,cart
+31061,2224,9,8e631f6d-af23-424b-9f38-0f707c402d23,09.01.2022 15:16:35,50.228.28.72,Bogatynia,Dolnośląskie,59,Chrome,Adwords,/cart,cart
+450642,34152,4,0ea4084a-bf03-42f5-a608-4819612fd534,21.01.2023 16:02:19,170.70.125.163,Bogatynia,Dolnośląskie,59,Chrome,Email,/cart,cart
+160375,11997,6,81c4a8d4-4abe-44e1-9d66-79de60c5c298,04.01.2023 11:06:29,86.14.47.113,Bogatynia,Dolnośląskie,59,Safari,Email,/cart,cart
+31114,2224,4,b55f0fd6-26ef-403e-93ab-a3728434f611,01.05.2020 15:35:28,211.26.192.81,Bogatynia,Dolnośląskie,59,Chrome,Adwords,/cart,cart
+2058104,,3,b1b97492-7a64-4dcb-a98b-0367ad41052f,06.05.2021 13:56:00,102.42.68.36,Bogatynia,Dolnośląskie,59,Chrome,Adwords,/cart,cart
+725534,55325,6,c3f94cef-14ec-47db-8a79-e012be0b59d2,27.09.2023 00:34:20,55.12.246.148,Bogatynia,Dolnośląskie,59,Chrome,Email,/cart,cart
+2408614,,3,c2a3c282-e752-4bb9-afe1-d44850c91223,17.06.2022 14:37:00,73.10.46.245,Bogatynia,Dolnośląskie,59,Chrome,Adwords,/cart,cart
+472485,35817,12,71e3f925-5750-4ae6-8f13-0e5b64ea83d6,28.09.2022 12:27:02,181.78.70.154,Bogatynia,Dolnośląskie,59,IE,Adwords,/cart,cart
+12659,872,12,fb08ef1e-5bd1-4988-9eff-b4da7ad0c6c5,03.11.2020 00:08:50,223.114.184.120,Bogatynia,Dolnośląskie,59,Chrome,Email,/cart,cart
+2165019,,2,16f66427-d975-49b2-aff1-e91d299013b7,29.06.2019 11:09:00,31.239.126.24,Bogatynia,Dolnośląskie,59,Safari,Email,/cart,cart
+2028694,,3,f1025493-6e2d-4fc5-add7-6530d9dcacff,08.10.2023 17:29:00,149.18.132.94,Bogatynia,Dolnośląskie,59,Chrome,Email,/cart,cart
+296111,22437,3,64c9605f-1291-4bac-8e2b-7332332dacbb,18.08.2023 08:59:43,129.79.66.43,Bogatynia,Dolnośląskie,59,Firefox,YouTube,/cart,cart
+1656260,,3,8ee50aa6-9fcd-4ab5-9986-a46a1480dc40,19.05.2023 17:09:00,219.131.201.45,Bogatynia,Dolnośląskie,59,Other,Email,/cart,cart
+502485,38181,3,058b03b5-ab7d-428f-9a57-230166f7296b,18.08.2020 23:22:29,176.54.196.226,Bogatynia,Dolnośląskie,59,Chrome,Adwords,/cart,cart
+1311933,,3,126a6a76-bfd6-4666-bad0-b5701be46f9c,01.02.2019 18:10:00,172.134.174.26,Bogatynia,Dolnośląskie,59,Chrome,YouTube,/cart,cart
+729250,55622,3,4ef7c817-b3a8-4da5-ac8b-a62c6939158b,17.02.2023 05:56:26,1.170.143.102,Bogatynia,Dolnośląskie,59,Other,YouTube,/cart,cart
+2089344,,2,e899fab3-9184-4b46-b155-26678a1b5f23,20.05.2022 05:35:00,25.112.252.137,Bogatynia,Dolnośląskie,59,Chrome,Adwords,/cart,cart
+504874,38355,6,9bd6ec79-1b9f-4693-96ea-3ae60a04b70f,12.09.2021 22:59:34,187.11.167.9,Bogatynia,Dolnośląskie,59,Chrome,YouTube,/cart,cart
+160406,11997,6,27c750a2-b34a-4924-aeaa-16a0eb4d389d,04.02.2023 11:42:31,6.204.88.103,Bogatynia,Dolnośląskie,59,Chrome,Adwords,/cart,cart
+725527,55325,12,f815f1b9-130c-4561-bc3a-7cc6007d8a28,27.09.2023 00:14:26,10.52.89.74,Bogatynia,Dolnośląskie,59,Firefox,Email,/cart,cart
+344259,26056,4,ec70b515-5d8e-4528-93ab-efc05368ff73,09.11.2022 17:53:45,161.160.159.2,Bogatynia,Dolnośląskie,59,Chrome,Organic,/cart,cart
+975300,74608,4,8847c91b-ac54-4f13-8b25-591d91dc7636,10.04.2021 23:37:40,190.91.227.65,Gorzów Wielkopolski,Lubuskie,66,Firefox,Email,/cart,cart
+1523907,,3,96a9c072-aa7c-4b41-b3d6-6f2c8193a72a,30.03.2022 12:02:00,223.138.97.28,Gorzów Wielkopolski,Lubuskie,66,Safari,Adwords,/cart,cart
+1106128,84716,3,bf761d08-080c-48f1-a250-f83311527377,26.04.2020 05:35:32,79.35.49.204,Gorzów Wielkopolski,Lubuskie,66,Chrome,Adwords,/cart,cart
+789279,60264,3,5e65dc8d-1273-46b3-bf27-d8d6a18c636a,12.10.2021 23:26:44,212.182.227.141,Gorzów Wielkopolski,Lubuskie,66,Chrome,Adwords,/cart,cart
+445974,33797,4,e11c85d7-0f6b-44d6-af1d-9cef85b1aae6,26.01.2023 05:39:51,1.226.195.210,Gorzów Wielkopolski,Lubuskie,66,Safari,Email,/cart,cart
+739281,56409,3,de992af9-8c3e-49a9-8ce6-953b50c0f5fa,15.07.2023 05:10:30,64.194.61.224,Gorzów Wielkopolski,Lubuskie,66,Chrome,Email,/cart,cart
+1146491,87860,3,ac56c434-8d2c-4dc2-920c-d3bf15d47812,03.12.2021 10:44:26,155.107.157.93,Gorzów Wielkopolski,Lubuskie,66,Chrome,Adwords,/cart,cart
+1922045,,3,7ae107cc-3d80-47c5-80ff-5c0989363b0f,09.10.2023 08:21:00,168.146.73.208,Gorzów Wielkopolski,Lubuskie,66,Firefox,Facebook,/cart,cart
+1157901,88760,12,e40d3340-88cd-4ec9-914e-0a0c8fb5746c,09.11.2022 08:24:07,7.78.182.60,Gorzów Wielkopolski,Lubuskie,66,Chrome,Email,/cart,cart
+1631144,,3,990a3a2c-b5bc-4983-ac67-369948d108a3,18.12.2021 14:46:00,167.48.140.49,Gorzów Wielkopolski,Lubuskie,66,Chrome,Email,/cart,cart
+2174300,,2,dd645a80-ea05-4713-b9c0-a10b060753ec,15.09.2020 09:40:00,205.68.48.123,Gorzów Wielkopolski,Lubuskie,66,Chrome,Adwords,/cart,cart
+447076,33895,12,1ba48bc2-070e-4c14-ace7-d5d61d8999e6,09.10.2023 08:52:58,162.27.184.79,Gorzów Wielkopolski,Lubuskie,66,Safari,Adwords,/cart,cart
+1042199,79730,3,e0d8d747-210b-4034-907d-ad119bbc001b,14.05.2020 00:41:41,176.57.233.87,Gorzów Wielkopolski,Lubuskie,66,Chrome,Email,/cart,cart
+1106168,84716,6,7457a9b4-7a4d-4200-acbc-e17292ebf6a1,20.05.2021 06:21:43,124.219.244.73,Gorzów Wielkopolski,Lubuskie,66,Firefox,Adwords,/cart,cart
+2188927,,2,ffab772b-9f8c-4249-83ec-ebfb0503126b,25.05.2023 03:40:00,58.140.90.204,Gorzów Wielkopolski,Lubuskie,66,Chrome,Email,/cart,cart
+187609,14093,3,ad72fc5f-366c-42a1-8c8e-95b313e178df,12.11.2021 22:55:30,152.121.145.144,Gorzów Wielkopolski,Lubuskie,66,Safari,Adwords,/cart,cart
+447044,33895,6,08b815cf-feae-405d-8fec-092cbc8b891e,09.10.2023 08:35:19,217.138.35.163,Gorzów Wielkopolski,Lubuskie,66,Chrome,Email,/cart,cart
+187619,14093,6,9b50ba22-cb2d-4418-a308-377e2e33b884,12.11.2021 22:56:55,78.240.120.239,Gorzów Wielkopolski,Lubuskie,66,Chrome,Email,/cart,cart
+2289334,,3,48d53ae2-d4a1-4ef0-a142-9bb807a131e6,12.12.2019 15:47:00,55.235.12.63,Gorzów Wielkopolski,Lubuskie,66,Chrome,Email,/cart,cart
+1890559,,2,45a38c0b-5e09-4978-861d-106f5d0c76c2,17.03.2020 09:57:00,190.51.30.148,Gorzów Wielkopolski,Lubuskie,66,Firefox,Adwords,/cart,cart
+1764225,,3,14d52c72-efd8-492d-bad9-06c837edeb4b,31.01.2022 01:21:00,170.194.139.102,Gorzów Wielkopolski,Lubuskie,66,Chrome,YouTube,/cart,cart
+1339097,,3,b9910be8-3b81-4e55-a65b-a1352c76cb08,01.09.2022 07:02:00,32.72.227.28,Gorzów Wielkopolski,Lubuskie,66,Chrome,Email,/cart,cart
+1487440,,2,cdef8260-6a56-4263-8b3a-4cadc44423e5,02.11.2019 01:34:00,144.4.130.92,Gorzów Wielkopolski,Lubuskie,66,Firefox,Facebook,/cart,cart
+1857072,,2,bf6ffc87-db5a-4373-884e-2eddb5c90c06,02.10.2023 15:28:00,209.159.5.156,Gorzów Wielkopolski,Lubuskie,66,Chrome,Organic,/cart,cart
+103233,7771,4,0a0fa45e-6ab1-469e-ab86-afb84b8b65ba,11.06.2023 05:47:57,143.39.243.62,Gorzów Wielkopolski,Lubuskie,66,Safari,Adwords,/cart,cart
+1106148,84716,3,a7fa9a80-01a8-4f96-a22f-2a85fa703c2f,26.04.2020 05:18:41,203.213.217.53,Gorzów Wielkopolski,Lubuskie,66,Chrome,Facebook,/cart,cart
+1730673,,2,769dde83-8b73-441c-951c-b82a58382296,08.10.2022 02:39:00,138.151.20.102,Gorzów Wielkopolski,Lubuskie,66,Chrome,Email,/cart,cart
+447086,33895,9,695c2a5b-4372-493b-8951-7cc803d8cf19,09.10.2023 11:49:38,184.246.1.83,Gorzów Wielkopolski,Lubuskie,66,Firefox,Organic,/cart,cart
+1523014,,2,3e7a07ff-c10d-4131-9e60-4be9afb6638f,23.07.2023 18:26:00,43.156.162.176,Gorzów Wielkopolski,Lubuskie,66,Safari,Email,/cart,cart
+41474,3045,6,225bd37e-9084-4a02-a1bc-974908fe42bd,24.03.2022 22:39:56,66.146.170.152,Gorzów Wielkopolski,Lubuskie,66,Firefox,Facebook,/cart,cart
+1818671,,3,8035884c-7a5a-4298-ae57-a5b0e907282b,29.04.2022 02:07:00,60.148.132.94,Gorzów Wielkopolski,Lubuskie,66,Safari,Email,/cart,cart
+1072357,82127,3,e4f1b86f-4317-4912-a033-354c128c399c,13.12.2021 16:57:18,144.91.6.217,Gorzów Wielkopolski,Lubuskie,66,Chrome,Email,/cart,cart
+2182543,,3,19d1453f-f482-4655-8b0e-f12ab3d626ea,02.11.2022 13:02:00,2.209.72.172,Gorzów Wielkopolski,Lubuskie,66,Chrome,Email,/cart,cart
+320227,24225,9,5f96547a-81a6-4c35-896f-e1b06cd99d5c,22.07.2023 12:35:40,6.179.72.24,Żagań,Lubuskie,68,Chrome,Adwords,/cart,cart
+67988,5099,6,0d37e01d-8b75-4171-b0bc-be8dd81e1e7f,19.05.2023 01:28:35,145.4.92.40,Żagań,Lubuskie,68,Chrome,Organic,/cart,cart
+442219,33491,3,0a1ddfff-5c10-45f1-a07e-251d142a8aae,19.12.2022 23:23:17,198.21.202.70,Żagań,Lubuskie,68,Safari,Organic,/cart,cart
+1646159,,2,7e1f0c92-12c6-437e-a57f-19d052dfb4b4,12.06.2019 01:33:00,84.178.187.225,Żagań,Lubuskie,68,Chrome,Facebook,/cart,cart
+200368,15068,9,404d598e-ccaa-41dc-a252-cf281554935a,08.03.2021 14:57:17,65.41.134.100,Żagań,Lubuskie,68,Safari,Adwords,/cart,cart
+1729180,,3,bd517c5b-28c7-4490-b868-1cf3eb5f994c,15.04.2022 13:27:00,33.147.175.138,Żagań,Lubuskie,68,Safari,Adwords,/cart,cart
+1771838,,2,78e92a89-7873-45b6-8da9-0b83a54538ee,09.01.2021 08:05:00,8.103.144.38,Żagań,Lubuskie,68,Other,YouTube,/cart,cart
+1144761,87729,6,7dee94e8-d26b-4e76-a9d7-75d3d1637930,31.08.2023 05:12:30,45.3.3.191,Żagań,Lubuskie,68,Firefox,Email,/cart,cart
+516830,39286,6,4298984d-121d-42e1-9383-cf0bdd4b09ea,23.07.2022 22:28:13,33.73.52.147,Ziltendorf,Lubuskie,69,Safari,Email,/cart,cart
+1615827,,2,f3b67e3d-47c6-436b-9448-2522b3173e1e,06.05.2021 08:19:00,153.141.216.27,Ziltendorf,Lubuskie,69,Chrome,Email,/cart,cart
+1316167,,2,c8930cf8-420c-4287-b741-508ea0a2ca1f,14.07.2019 12:15:00,100.63.108.85,Schwedt/Oder,Zachodniopomorskie,74,Chrome,Email,/cart,cart
+1216283,93225,4,956f54aa-dca2-40a6-8f37-beac2d363209,28.02.2023 03:53:27,147.61.193.7,Schwedt/Oder,Zachodniopomorskie,74,Chrome,Email,/cart,cart
+913448,69882,3,36d0251f-4b3e-4a1e-8f8d-994869271db6,18.04.2022 03:09:52,218.144.125.30,Schwedt/Oder,Zachodniopomorskie,74,Chrome,Email,/cart,cart
+1754848,,2,1ac8318d-af36-4ed8-9c96-7f8372f7d8ee,07.02.2021 10:54:00,31.174.168.195,Schwedt/Oder,Zachodniopomorskie,74,Chrome,Email,/cart,cart
+913458,69882,6,14c36ac9-880f-4619-acc8-65ff4bdd7b90,18.04.2022 03:08:28,79.84.193.80,Schwedt/Oder,Zachodniopomorskie,74,Other,Email,/cart,cart
+913455,69882,3,14c36ac9-880f-4619-acc8-65ff4bdd7b90,18.04.2022 03:02:38,79.84.193.80,Schwedt/Oder,Zachodniopomorskie,74,Other,Email,/cart,cart
+1163284,89153,4,68fdf5d1-b64a-4912-864e-c2d7c6396a08,23.06.2023 09:58:03,136.102.98.125,Schwedt/Oder,Zachodniopomorskie,74,Chrome,Email,/cart,cart
+856721,65447,6,678d895b-51c3-4f52-a41a-85803b4e582a,26.01.2023 14:34:04,19.197.145.152,Schwedt/Oder,Zachodniopomorskie,74,Safari,Facebook,/cart,cart
+864677,66035,3,a883038a-7c0e-4a5e-9f70-637b25108c6d,08.03.2023 16:23:45,197.113.202.107,Schwedt/Oder,Zachodniopomorskie,74,Safari,Email,/cart,cart
+856724,65447,9,678d895b-51c3-4f52-a41a-85803b4e582a,26.01.2023 14:38:37,19.197.145.152,Schwedt/Oder,Zachodniopomorskie,74,Safari,Facebook,/cart,cart
+2122687,,3,750638e1-b87e-4a1c-8ba0-00652f39e88e,15.03.2022 07:30:00,120.60.166.42,Schwedt/Oder,Zachodniopomorskie,74,Chrome,Adwords,/cart,cart
+1781147,,3,d9674367-72c6-4a84-9fcc-506f338029b7,05.11.2019 17:33:00,90.17.16.167,Schwedt/Oder,Zachodniopomorskie,74,Safari,Email,/cart,cart
+545092,41469,4,41259c77-6416-4d94-9956-b9df61327509,07.12.2022 00:40:44,218.92.174.239,Schwedt/Oder,Zachodniopomorskie,74,IE,Email,/cart,cart
+1365368,,3,dadd1720-e4d1-489d-83e6-4f641e9772a0,06.10.2023 15:43:00,109.15.7.61,London,England,E1,Firefox,Adwords,/cart,cart
+1707063,,3,f7cb768d-ea61-4230-a9d4-6f906b67b2d4,22.04.2020 16:14:00,194.114.116.181,London,England,E1,Chrome,Email,/cart,cart
+882962,67437,6,b26e5bb2-2ce0-43bf-9565-a041d6ed58bc,05.07.2022 10:32:57,7.207.105.180,London,England,E1,Safari,Facebook,/cart,cart
+2415118,,2,5059b381-1e5d-4503-9ede-c2275c6775f7,20.04.2022 06:46:00,85.214.144.201,London,England,E2,Firefox,Email,/cart,cart
+64695,4857,4,2f1855b5-2b40-4b42-a135-f6a251df04b2,10.04.2023 08:06:45,170.98.34.126,London,England,E2,IE,Adwords,/cart,cart
+716110,54582,3,0f06e025-ec1c-4f15-b1de-699fe1a16280,09.09.2021 14:54:51,92.176.207.244,London,England,E3,Chrome,Facebook,/cart,cart
+716094,54582,4,0125a6aa-a6a2-466c-9198-a4b4d6f0c0ab,11.05.2023 15:35:39,23.84.249.207,London,England,E3,Safari,Adwords,/cart,cart
+1729596,,3,fe289fcf-2bfe-40a3-bd10-158ea5ed5041,19.11.2019 10:25:00,178.235.246.82,London,England,E4,Safari,Facebook,/cart,cart
+2387077,,3,7a651a91-e181-4540-b9e3-b622b2e26a4a,23.09.2020 06:12:00,14.207.226.133,London,England,E4,Chrome,Email,/cart,cart
+1721948,,3,6589ee8f-2ddb-440b-ae6f-4cd4018ae9b8,22.06.2022 18:08:00,101.169.141.115,London,England,E4,Chrome,YouTube,/cart,cart
+1186453,90988,4,8e36e992-8187-4a8d-a2b5-efdb2e596f08,27.08.2022 23:07:01,52.225.59.156,London,England,E4,Chrome,Email,/cart,cart
+1998245,,3,b3bc17cd-444a-4caa-8777-2578a5861281,23.07.2019 11:21:00,187.235.99.135,London,England,E6,Chrome,Adwords,/cart,cart
+441416,33447,6,66a58147-c065-4dc1-81fb-410f66d377f1,21.09.2023 10:51:47,3.145.53.147,London,England,E6,Chrome,YouTube,/cart,cart
+441448,33447,12,1203ce9f-53f2-48dd-b031-7d3ce0019c96,21.09.2023 09:10:51,211.77.65.240,London,England,E6,Other,Email,/cart,cart
+301149,22799,4,1098eccc-b0a3-4afb-ad12-fb02ea1b3818,07.10.2020 05:27:21,85.143.134.96,London,England,E6,Firefox,Email,/cart,cart
+2367949,,3,f97e3dcd-fdd5-495e-816c-04b981c42af5,19.09.2021 10:27:00,172.234.11.187,London,England,E6,Chrome,Adwords,/cart,cart
+2301102,,2,e122d61f-6c6a-46fa-81b9-a07b5c591aba,02.09.2023 01:03:00,33.143.156.241,London,England,E7,Chrome,Email,/cart,cart
+2225071,,3,1e29d0e5-8c5f-446e-81f8-f04102307290,03.02.2019 17:03:00,11.59.42.105,London,England,E7,Chrome,Email,/cart,cart
+1892149,,2,a96e2584-0ec8-4cd2-9f4d-1d8b530d4097,13.10.2021 02:28:00,70.66.5.177,London,England,E7,Chrome,YouTube,/cart,cart
+605911,46073,4,9391ba54-d41f-4f67-be29-63b81e33ab85,21.04.2023 15:44:30,84.147.171.92,London,England,E8,Chrome,Email,/cart,cart
+1758216,,2,2fe4e0e1-2b33-44bd-bfe6-e78604c777e2,06.06.2020 08:59:00,7.189.137.192,London,England,E9,Firefox,YouTube,/cart,cart
+1921557,,2,8ee9e953-a135-4ccc-a234-661a41043747,21.10.2023 11:25:00,49.34.242.190,Liverpool,England,L8,Chrome,YouTube,/cart,cart
+101347,7646,3,2870c226-1d3b-41cb-b594-c0bfbedfc9cf,04.06.2020 01:15:25,149.31.19.205,Liverpool,England,L8,Firefox,Adwords,/cart,cart
+2251749,,3,cf1a21a7-6656-4c02-be60-8a9658ed0270,23.10.2022 15:53:00,186.87.237.47,Liverpool,England,L8,Safari,Adwords,/cart,cart
+882011,67369,3,8749466e-1204-4d09-a8a8-893b28e75246,11.09.2023 10:39:49,184.164.70.45,Liverpool,England,L9,Chrome,Email,/cart,cart
+559750,42576,4,be072f63-1c98-4f5b-8488-738b7800b8c2,25.12.2022 04:58:57,101.254.0.76,Liverpool,England,L9,Chrome,Organic,/cart,cart
+882027,67369,6,79aca01d-16e5-418d-868e-ed48d1d1faba,11.09.2023 07:35:56,80.159.7.106,Liverpool,England,L9,Chrome,Facebook,/cart,cart
+1591431,,2,e3edbe85-51af-4556-a24c-4a5ef6a080a2,03.03.2023 19:47:00,11.197.180.2,Salford,England,M6,Firefox,YouTube,/cart,cart
+551086,41933,6,30cf7111-cdb8-46af-b444-4a27100fd58a,07.10.2023 06:25:32,191.134.125.40,Manchester,England,M8,Chrome,Facebook,/cart,cart
+2127232,,3,575d5457-7dc8-4fdb-9360-e359647d088f,23.03.2020 16:21:00,39.151.231.243,Manchester,England,M9,Firefox,Email,/cart,cart
+858278,65573,6,eda20a10-ef98-40da-a343-129dafac83b8,26.08.2023 04:57:00,175.34.56.62,Manchester,England,M9,Firefox,Adwords,/cart,cart
+2335813,,3,7a2dec30-04f2-433f-8608-978d27d4fe0d,27.08.2023 09:15:00,103.29.225.56,Manchester,England,M9,IE,Email,/cart,cart
+1210105,92765,3,2a06ad11-62ad-4143-a948-67e2b0f3322f,24.02.2023 08:27:27,113.111.162.62,Manchester,England,M9,Safari,Email,/cart,cart
+2139098,,2,f60c4fd2-2ce1-4beb-b054-4ec3aed00683,23.02.2023 18:19:00,114.149.9.7,London,England,N1,Safari,YouTube,/cart,cart
+1424053,,3,65efae42-2a50-4181-a47f-6b8f028d06d5,14.08.2021 04:37:00,186.122.198.245,London,England,N1,Safari,Email,/cart,cart
+850716,64984,4,2138aff0-82df-4e7d-9fe0-a232e7097189,08.07.2022 16:26:31,40.78.175.81,London,England,N1,Chrome,YouTube,/cart,cart
+2003271,,3,726d56e2-d2e9-4a6f-bbe4-0401ddb1df98,08.01.2021 11:56:00,62.173.161.69,London,England,N1,Chrome,Adwords,/cart,cart
+1758405,,2,314cff06-c404-4a85-909c-3475a1400f3f,07.02.2023 02:54:00,207.59.39.32,London,England,N3,Safari,Adwords,/cart,cart
+1438642,,2,61b7c6f5-f56d-4df2-ba83-492ba1447a04,19.09.2023 05:17:00,166.70.25.109,London,England,N4,Chrome,Adwords,/cart,cart
+2054820,,3,235a4003-8cbd-4cfa-90e3-ce25578d8bb0,27.12.2019 05:38:00,140.170.4.94,London,England,N4,Firefox,Adwords,/cart,cart
+928602,70982,3,6e243d36-e80a-4c92-9331-4437613226d7,21.10.2023 03:53:42,66.142.75.2,London,England,N4,Chrome,Email,/cart,cart
+1740445,,3,f11d367f-9cc7-4341-ba68-1174ac5fb1b6,17.11.2021 05:25:00,67.104.43.17,London,England,N4,Firefox,Adwords,/cart,cart
+928615,70982,3,04427528-c65d-4e47-97b8-ab1a3a96e9b6,21.10.2023 02:18:50,200.27.73.8,London,England,N4,Safari,Facebook,/cart,cart
+1172013,89832,4,66cd6b2a-80a5-4268-88a1-79e517d9cdba,28.01.2023 23:19:18,176.57.10.65,London,England,N4,Firefox,Email,/cart,cart
+783022,59810,6,48b6ff18-fc1c-422b-ab86-888bacb70f37,19.09.2023 07:33:28,92.239.215.196,London,England,N7,Chrome,Email,/cart,cart
+1621887,,2,41f9448e-e0f7-4a2c-aa21-47e454611ef6,31.03.2020 10:15:00,186.202.185.77,London,England,N7,Chrome,YouTube,/cart,cart
+2046527,,3,77f6b533-ed8b-41fd-95e7-58863b8a1001,22.04.2019 05:06:00,10.152.29.184,London,England,N7,Firefox,Email,/cart,cart
+521667,39684,6,a1f58d16-4623-49f9-bf55-fc2fdbcea050,20.11.2022 08:38:22,126.29.229.163,London,England,N7,Firefox,Email,/cart,cart
+521706,39684,6,fcccc6dc-5612-4a3e-82a6-a21c26f30052,20.11.2022 11:35:52,8.59.130.238,London,England,N7,Chrome,Organic,/cart,cart
+41428,3038,4,b23761de-52b3-4aec-a820-eb8d22e45ff3,15.07.2022 03:49:03,51.17.156.136,London,England,N8,Firefox,Email,/cart,cart
+498895,37921,4,0071bb6c-5f82-4a2e-9163-c755ad4a68ec,05.07.2021 05:04:13,143.200.187.96,London,England,N9,Safari,Adwords,/cart,cart
+212480,15930,4,abbc8ba5-7230-4e2d-b7c3-52784ac389b3,06.06.2022 00:38:50,161.156.184.145,London,England,N9,Safari,Adwords,/cart,cart
+590857,44925,12,dbb31a8b-6e71-4dd3-915d-703fa19138c2,07.02.2023 01:10:39,145.3.12.33,Sheffield,England,S2,Firefox,Email,/cart,cart
+132548,9983,6,8b07af5d-48f4-42df-9310-b180820ff67c,13.09.2023 02:40:08,118.149.25.241,Sheffield,England,S2,Safari,Email,/cart,cart
+1779161,,3,14d1ae7b-2e47-407d-8759-fc8a31fbd8ae,18.11.2022 17:53:00,167.190.189.125,Sheffield,England,S2,Chrome,Adwords,/cart,cart
+132593,9983,12,79e65c78-add7-4eca-ae55-f040fe748f64,13.09.2023 01:23:46,138.164.83.59,Sheffield,England,S2,Chrome,Email,/cart,cart
+132554,9983,12,8b07af5d-48f4-42df-9310-b180820ff67c,13.09.2023 02:52:18,118.149.25.241,Sheffield,England,S2,Safari,Email,/cart,cart
+1460159,,2,0394cc63-a3f9-429c-9cde-5cac0441184a,18.06.2021 04:20:00,175.119.71.186,Sheffield,England,S5,Safari,YouTube,/cart,cart
+1433302,,2,e8df4453-6dc5-406c-bf1e-cd576062a704,31.10.2020 05:23:00,215.141.233.187,Sheffield,England,S5,Firefox,Adwords,/cart,cart
+1517195,,2,6b5432c5-b13f-4a78-9bd8-f6806f6b5e1a,01.01.2023 07:23:00,45.70.111.254,Sheffield,England,S5,Safari,Email,/cart,cart
+147711,11046,6,66c283ad-703f-4595-bb69-7138444e9278,13.05.2021 08:15:23,210.108.182.38,Sheffield,England,S6,Other,Email,/cart,cart
+1152879,88373,6,f8e25fc8-87b7-4722-9d46-416fc73201d0,09.09.2022 16:01:39,210.205.210.83,Sheffield,England,S8,Chrome,Email,/cart,cart
+44304,3267,4,5ae602d5-86b3-4341-960c-ffa6ff46ff3a,05.07.2023 10:57:50,134.247.8.178,Sheffield,England,S8,Other,Email,/cart,cart
+1031010,78818,4,31f58eb4-3af8-4701-91a9-da45032c8102,21.07.2022 11:26:20,56.187.234.248,London,England,W2,Chrome,Adwords,/cart,cart
+1146076,87817,4,53913603-417b-413a-8507-e6d963197c4c,30.07.2023 12:24:07,44.227.226.194,London,England,W3,Firefox,Email,/cart,cart
+2249429,,2,dc832fac-08d4-4db9-a70a-dd70a5997d18,04.09.2019 06:14:00,26.3.41.172,London,England,W3,Safari,Email,/cart,cart
+2381227,,3,b3d91d01-fa16-42a5-9d66-77c88d9bae54,10.04.2023 18:55:00,199.118.50.118,London,England,W4,Chrome,Email,/cart,cart
+2027922,,3,6f908a1b-7458-4a45-baa1-3ef45f26dad8,05.05.2019 19:42:00,87.99.26.126,London,England,W6,Chrome,Facebook,/cart,cart
+1365127,,2,59d34195-94a9-4b78-9aee-9187cf5682fa,22.09.2021 14:12:00,81.197.19.113,London,England,W6,Firefox,Adwords,/cart,cart
+906824,69394,4,17254555-d883-4bbe-b321-3e7867a3ccc9,15.07.2023 05:50:52,22.54.101.250,London,England,W7,Safari,Email,/cart,cart
+1525678,,3,7713d46d-fc15-4191-ae89-6bff42670e94,08.01.2023 09:36:00,146.69.150.33,London,England,W9,Other,Email,/cart,cart
+401435,30347,3,4fc066b8-3d61-40a6-8659-e068f969c6e0,11.09.2023 16:13:42,49.37.12.194,London,England,W9,Firefox,YouTube,/cart,cart
+401457,30347,12,51e45482-5b41-4d32-b71b-a0df88f27720,11.09.2023 18:54:23,99.215.83.29,London,England,W9,Chrome,Adwords,/cart,cart
+2055755,,3,f72e034c-84de-46de-af7a-c67a01b3a3fd,24.04.2022 13:01:00,82.222.160.11,London,England,W9,Chrome,YouTube,/cart,cart
+299048,22663,12,de149b8b-9e43-4d73-b8f3-320c132c0bd9,11.04.2023 07:23:21,138.63.110.94,London,England,W9,IE,Email,/cart,cart
+299068,22663,6,14903598-3d0d-4c5e-9ed8-22164b500b01,11.04.2023 06:02:32,115.117.135.18,London,England,W9,Firefox,Email,/cart,cart
+1277212,97957,3,200ad88e-aafb-4e6e-887d-7a75d2213913,14.10.2023 00:01:04,68.127.62.78,Darwin,Northern Territory,810,Chrome,Email,/cart,cart
+1358688,,2,3123b9af-09e2-4044-927d-009c56c7f935,04.09.2021 17:53:00,196.167.50.160,Darwin,Northern Territory,810,Safari,Email,/cart,cart
+1277202,97957,3,06dedf20-0a72-4720-bcc1-26e7936ca8b5,14.10.2023 00:34:06,59.77.160.99,Darwin,Northern Territory,810,IE,Email,/cart,cart
+446771,33875,3,8f80e34e-4af0-42ed-805b-76157e40b73d,09.05.2023 12:52:16,206.56.225.75,Buffalo Creek,Northern Territory,812,Safari,Email,/cart,cart
+1334051,,3,11938325-9e17-45af-9dbc-dea2f5c33cf6,14.01.2021 18:39:00,171.229.50.56,Buffalo Creek,Northern Territory,812,Chrome,Adwords,/cart,cart
+446774,33875,6,8f80e34e-4af0-42ed-805b-76157e40b73d,09.05.2023 12:55:37,206.56.225.75,Buffalo Creek,Northern Territory,812,Safari,Email,/cart,cart
+2284509,,2,457dd59f-6fc1-4fb1-a744-9a842cce5fee,09.11.2021 14:55:00,17.6.110.12,Mitchell,Northern Territory,832,Firefox,Facebook,/cart,cart
+1211162,92850,4,2e268b0d-59eb-4b59-8291-3b988e62a3b8,22.10.2023 00:59:07,121.105.141.111,Humpty Doo,Northern Territory,836,Safari,Email,/cart,cart
+1602,126,12,ab6b848f-d697-4f11-8a5d-7ef793ad4dbf,20.04.2021 03:23:47,111.115.253.226,Cossack,Northern Territory,850,Safari,Adwords,/cart,cart
+1609,126,6,b00cab1c-8c2c-494d-936e-edc72bb464ce,20.04.2021 05:54:12,212.173.149.183,Cossack,Northern Territory,850,IE,Email,/cart,cart
+1641,126,12,2d2d863d-c12e-40bf-b8e8-3769db2e668f,20.04.2021 05:58:47,24.251.252.225,Cossack,Northern Territory,850,IE,Adwords,/cart,cart
+72927,5504,9,31efd1bd-573b-4dd3-852a-88f31c5ccd00,25.06.2023 00:35:13,87.154.229.88,Alice Springs,Northern Territory,870,Safari,Email,/cart,cart
+1998319,,3,24cc6b0e-e7d6-4b1d-9713-7f2a893d6176,21.07.2019 03:18:00,98.73.63.43,Alice Springs,Northern Territory,870,Safari,Email,/cart,cart
+1080979,82837,4,981837da-675d-497f-b764-c4f17223698a,19.05.2023 08:08:38,39.59.192.203,Gibson Desert North,Northern Territory,872,Chrome,Email,/cart,cart
+1080997,82837,12,8020ce9f-56f2-4eb1-9efa-f5d4295a79d0,29.05.2023 09:29:59,136.161.244.174,Gibson Desert North,Northern Territory,872,Chrome,Email,/cart,cart
+620243,47100,3,5f34a1f6-c060-49bd-a9e9-bc639d50ac35,29.12.2022 07:59:03,74.96.105.90,St Albans,England,AL1,Chrome,Facebook,/cart,cart
+208416,15587,12,e21541c3-f8d4-4b3f-a7d3-549cfcef8102,04.02.2020 13:04:43,42.18.116.154,Harpenden,England,AL5,Safari,YouTube,/cart,cart
+208380,15587,6,528ec300-445b-4ac5-bbc0-de9d00569681,07.02.2023 15:16:28,211.119.161.134,Harpenden,England,AL5,Safari,Email,/cart,cart
+208452,15587,9,90fc5854-893b-4219-8989-ad000e18d2d9,04.02.2020 14:39:49,136.87.210.186,Harpenden,England,AL5,Chrome,Adwords,/cart,cart
+208449,15587,6,90fc5854-893b-4219-8989-ad000e18d2d9,04.02.2020 14:35:15,136.87.210.186,Harpenden,England,AL5,Chrome,Adwords,/cart,cart
+208426,15587,9,ac73f3f4-2085-4f66-96a9-9d1cbe38c065,04.02.2020 14:55:44,71.80.138.228,Harpenden,England,AL5,Chrome,Adwords,/cart,cart
+208423,15587,6,ac73f3f4-2085-4f66-96a9-9d1cbe38c065,04.02.2020 14:51:08,71.80.138.228,Harpenden,England,AL5,Chrome,Adwords,/cart,cart
+208433,15587,3,15c27f75-2955-494f-9c21-c895419e46dc,04.02.2020 13:32:27,176.79.168.70,Harpenden,England,AL5,Safari,Organic,/cart,cart
+208429,15587,12,ac73f3f4-2085-4f66-96a9-9d1cbe38c065,04.02.2020 15:03:08,71.80.138.228,Harpenden,England,AL5,Chrome,Adwords,/cart,cart
+422479,31974,4,9f57cc8c-4a3e-429b-9dbe-5a29ddd82c7a,03.07.2023 02:53:45,220.171.200.205,Harpenden,England,AL5,Chrome,YouTube,/cart,cart
+2216780,,2,7867924e-ccf4-425c-9d6d-1fffe4bb5ac3,10.08.2020 01:13:00,160.25.208.237,Birmingham,England,B10,Safari,Email,/cart,cart
+1264797,96990,12,849442d1-d08d-4333-b205-9cf50b35b77a,13.05.2023 12:57:29,88.125.87.99,Birmingham,England,B11,Chrome,Adwords,/cart,cart
+2151894,,3,48725796-6507-4864-bbed-4f6e08adcf06,13.07.2022 09:09:00,62.147.141.106,Birmingham,England,B11,Chrome,Email,/cart,cart
+1132926,86796,4,4f49be73-78e0-490f-be7f-e7845c24bb4e,25.01.2021 04:34:12,149.209.202.135,Birmingham,England,B13,Firefox,Facebook,/cart,cart
+239532,18012,3,24c03f50-cd81-4eff-81d3-e6883ce01d2d,30.04.2023 16:03:00,57.81.158.135,Birmingham,England,B13,Chrome,Email,/cart,cart
+2057646,,2,a704e307-dffa-4aef-8f97-742b7e683759,18.03.2022 15:33:00,217.89.29.167,Birmingham,England,B20,Firefox,Email,/cart,cart
+1637515,,2,50a81735-2061-49cb-82ed-92b1200c6d77,25.05.2021 06:54:00,208.131.217.90,Birmingham,England,B23,Chrome,Email,/cart,cart
+1760487,,3,7b2fc937-fc3f-4d6b-9ab2-fee1344dc41d,01.03.2020 14:37:00,23.117.228.161,Birmingham,England,B23,Chrome,Adwords,/cart,cart
+1349681,,3,6dfe6ee6-4f6e-4a39-86e1-80c2973d486c,17.06.2021 08:54:00,186.213.104.247,Birmingham,England,B23,Chrome,YouTube,/cart,cart
+2180212,,2,f99f2acd-3423-4352-a89c-81837d1dea15,25.09.2021 17:36:00,98.196.165.247,Birmingham,England,B23,Firefox,Email,/cart,cart
+2058041,,3,5c2b7602-9551-4acd-afb5-fe9800286b30,15.05.2021 04:42:00,131.133.83.198,Birmingham,England,B26,Firefox,Email,/cart,cart
+676422,51528,4,30e21d15-3b12-4ac4-bef6-d91330fb1390,12.10.2023 06:42:21,154.18.98.56,Birmingham,England,B26,Firefox,Email,/cart,cart
+870772,66527,9,539e8818-1ccc-4fed-96c4-9be647df9daf,24.06.2023 10:31:47,65.232.81.127,Birmingham,England,B26,Safari,Email,/cart,cart
+1281865,98301,4,6bdcd273-b6a7-4026-a6c7-c4f8a305db38,10.12.2022 03:34:32,116.88.194.57,Birmingham,England,B26,Chrome,YouTube,/cart,cart
+80625,6100,12,f5d165c7-17f0-480d-ba61-efd9ffb03504,17.01.2023 04:12:02,91.117.190.44,Birmingham,England,B28,Firefox,Email,/cart,cart
+1144138,87674,4,bd2d0114-24ac-4a17-a3e5-b8d942c8fee7,30.08.2023 14:29:18,7.65.201.195,Birmingham,England,B28,Safari,Adwords,/cart,cart
+1839590,,2,291c12df-daee-43eb-9958-78f63ccc01be,08.08.2022 08:07:00,53.107.26.190,Birmingham,England,B28,Chrome,Email,/cart,cart
+80651,6100,12,d29b096e-3f5a-4b84-ad60-4edc37c53f2e,17.01.2023 03:56:34,46.163.46.73,Birmingham,England,B28,Safari,Email,/cart,cart
+1942140,,2,42b3d828-aead-4c9f-9fc8-01888bebf8c3,23.03.2023 14:34:00,65.18.241.127,Birmingham,England,B29,Chrome,Email,/cart,cart
+2139034,,3,f004f375-a057-40d4-ad05-01a09b6b528b,07.07.2022 02:33:00,130.120.56.21,Birmingham,England,B29,Chrome,Adwords,/cart,cart
+1210065,92762,4,2ee530c9-c743-4357-8a6b-c030903b148d,29.11.2022 00:50:26,8.197.46.44,Birmingham,England,B29,Firefox,Email,/cart,cart
+735807,56157,4,07224e89-d924-45df-8859-209eb110fa37,23.11.2021 01:32:49,120.213.7.35,Birmingham,England,B29,Firefox,Adwords,/cart,cart
+2204920,,3,9e0acaa1-569d-47b3-ad89-76539d994a01,06.10.2022 13:27:00,63.50.63.17,Birmingham,England,B29,Chrome,Facebook,/cart,cart
+157134,11767,3,3c28c116-9dec-415b-9c21-16980081e07e,22.07.2022 02:58:42,93.206.134.49,Birmingham,England,B30,Chrome,Email,/cart,cart
+157098,11767,6,d587c59b-4711-4be3-9c88-1d1668a3345a,22.07.2022 04:02:54,214.168.235.139,Birmingham,England,B30,Chrome,Email,/cart,cart
+998715,76402,3,a597245a-5dce-4c26-b1ea-f0eb613df0be,26.06.2023 10:25:02,49.73.213.167,Birmingham,England,B30,Firefox,Facebook,/cart,cart
+1385732,,3,07ca7fbe-0334-43dd-a985-be87e5944a75,08.08.2023 16:27:00,43.220.150.25,Birmingham,England,B31,Firefox,Organic,/cart,cart
+2321970,,3,01bf7767-bf16-4212-bbb5-a43253622c3b,30.09.2021 09:31:00,115.94.77.196,Birmingham,England,B31,Safari,Email,/cart,cart
+1231842,94445,6,dc6ece50-8d3f-41c1-8784-db0ad3859d3f,20.05.2023 04:08:24,157.114.147.156,Birmingham,England,B31,Firefox,Adwords,/cart,cart
+743092,56716,4,02573c19-9b66-40d9-b489-92c549ac72f2,23.02.2023 13:01:33,153.17.206.81,Birmingham,England,B31,Chrome,Facebook,/cart,cart
+1690173,,2,4887592b-43c3-402e-ac93-9b8048efb150,10.04.2021 08:10:00,130.155.136.99,Birmingham,England,B31,Chrome,Adwords,/cart,cart
+878281,67077,4,622c497f-90a9-4381-bb11-89980f71dc6d,01.09.2023 17:12:21,82.197.177.227,Birmingham,England,B32,Chrome,Email,/cart,cart
+1998454,,2,ac107657-b180-4a4d-aa02-abd6e8946f8f,16.09.2020 12:15:00,60.42.120.244,Birmingham,England,B36,Safari,Facebook,/cart,cart
+2267920,,3,7764892a-4987-4478-ae19-9d8815f16b23,30.11.2022 12:24:00,136.27.148.177,Birmingham,England,B37,Chrome,Email,/cart,cart
+908241,69485,6,e9607970-967e-4ab1-af65-118d132510c8,17.06.2022 17:41:08,73.135.153.177,Birmingham,England,B43,Chrome,Adwords,/cart,cart
+1512243,,2,ed28157e-90af-4af3-a409-3c32dc95cd1b,09.03.2021 13:31:00,149.57.123.72,Birmingham,England,B44,Chrome,Email,/cart,cart
+981620,75140,4,c39a6307-0ba7-46d6-adb8-6cd88c279685,29.06.2021 00:03:16,198.145.0.189,Halesowen,England,B62,Firefox,Adwords,/cart,cart
+2273719,,2,b2754a55-04cf-446b-ae54-c8904c7cc339,19.09.2023 14:54:00,216.220.10.1,Halesowen,England,B62,Safari,Adwords,/cart,cart
+476576,36154,4,af3745f3-bdc7-46d9-befe-e94040d7ea97,08.11.2021 20:39:16,184.252.0.179,Halesowen,England,B62,IE,Adwords,/cart,cart
+2236291,,3,0aceb977-191e-49af-8781-89986ef7967a,15.03.2020 07:51:00,115.253.84.190,Halesowen,England,B63,Chrome,Adwords,/cart,cart
+733234,55955,4,c78e24f9-b0c2-49f7-88eb-9870573d9463,20.09.2023 00:39:59,143.157.70.242,Halesowen,England,B63,Chrome,Email,/cart,cart
+175731,13205,4,26bc7eae-95f9-429d-8c26-1e3bf8ca90a5,26.06.2023 12:45:07,159.246.163.50,Smethwick,England,B67,Chrome,Facebook,/cart,cart
+681951,51924,6,8e7e3cf9-ffbe-42ba-a278-52ad7a31daa3,05.12.2022 06:29:46,149.158.165.67,Smethwick,England,B67,Chrome,Email,/cart,cart
+2275277,,3,c6c0c378-f2e1-421f-b712-819f2336574a,15.12.2021 04:39:00,43.188.217.229,Oldbury,England,B69,Firefox,YouTube,/cart,cart
+868650,66349,4,b8a9221d-af10-4561-90fd-e02ee12c0190,26.06.2023 11:02:13,191.75.41.35,West Bromwich,England,B71,Chrome,Adwords,/cart,cart
+942663,72085,3,885f5567-7e06-43ea-8dc2-06c5e1cd693c,12.03.2020 02:05:32,87.26.204.38,The Royal Town of Sutton Coldfield,England,B74,Other,Organic,/cart,cart
+1370491,,3,2afe2312-4dea-4a18-a938-cbdef1af3e26,30.09.2020 03:53:00,37.12.78.177,Tamworth,England,B77,Safari,Adwords,/cart,cart
+349466,26480,6,bbf0df89-9a9e-4ced-8997-c22bb99ef84c,19.08.2023 12:50:45,88.253.204.217,Tamworth,England,B77,Other,Email,/cart,cart
+349459,26480,12,a8e769d2-9ca8-4e4a-8d4c-b0586f9562f0,19.08.2023 14:01:45,17.167.1.158,Tamworth,England,B77,Chrome,Email,/cart,cart
+756537,57715,4,b5b8cecf-f43d-457d-b72b-fef83a80f47c,21.05.2023 22:43:16,180.139.139.175,Tamworth,England,B77,Firefox,Facebook,/cart,cart
+1642218,,2,d680e1c3-f274-4d4b-96ce-ca4b94ca53bf,07.05.2022 12:28:00,187.11.232.94,Dordon,England,B78,Chrome,Adwords,/cart,cart
+479610,36388,3,b9857eee-619e-4b56-a864-082123023da6,09.05.2023 01:11:25,196.7.212.66,Solihull,England,B91,Chrome,Email,/cart,cart
+445221,33710,9,d27ed549-def3-4786-b0a4-14d684b6a672,10.05.2023 23:01:29,144.17.238.18,Solihull,England,B91,Safari,Adwords,/cart,cart
+1958966,,3,91c5ea3e-c735-4a88-8b07-8fa5f9489033,28.09.2020 07:52:00,130.147.195.190,Redditch,England,B97,Safari,Email,/cart,cart
+1396588,,2,dc121e3e-d6b6-4906-9c92-39f99f3cd248,28.02.2023 16:05:00,209.85.113.44,Redditch,England,B98,Chrome,Email,/cart,cart
+2423695,,3,dc8fdfd0-8f42-4881-9f41-3ce777a50ac6,06.11.2022 13:15:00,105.100.177.23,Redditch,England,B98,Chrome,Adwords,/cart,cart
+1888828,,2,3f9da03f-aecf-4b9b-a058-66ae2b75fd71,04.02.2020 15:23:00,124.181.145.189,Redditch,England,B98,Chrome,Email,/cart,cart
+1112641,85229,3,2748ffed-0980-43ec-803c-0022560033f9,02.04.2023 06:59:52,200.48.53.106,Redditch,England,B98,Chrome,Adwords,/cart,cart
+222869,16700,3,77b415e7-10db-4cda-9cf3-773465198954,16.02.2021 08:42:59,86.102.74.25,Bath,England,BA2,IE,Organic,/cart,cart
+1471865,,2,71706d00-b752-4ce0-a7bd-37b127f87817,28.05.2021 03:24:00,31.3.121.127,Radstock,England,BA3,Chrome,Email,/cart,cart
+1914005,,2,2ec2964c-7f1d-4823-867b-c35c5d6eaeee,05.01.2019 02:05:00,99.238.164.3,Blackburn,England,BB1,Chrome,Email,/cart,cart
+1974854,,3,c7b4a68d-0338-4fc7-a888-89cbfa06877d,23.05.2022 09:07:00,198.48.107.141,Blackburn,England,BB1,IE,Email,/cart,cart
+142468,10670,3,399670e7-3118-46a7-a496-7247a299a8c6,19.10.2023 02:24:20,204.87.219.62,Blackburn,England,BB2,Chrome,Email,/cart,cart
+1016689,77694,4,36c68241-8ac0-44db-bcaa-5a22fb90d69a,24.05.2023 09:15:45,48.172.100.164,Blackburn,England,BB2,Chrome,Adwords,/cart,cart
+763184,58212,4,d5c2a26d-3317-4d41-9e99-3924a871ef54,04.09.2020 14:43:19,32.226.189.242,Darwen,England,BB3,Firefox,Email,/cart,cart
+1039075,79485,4,5d96b0c7-f527-443c-b8c2-a65bb0870491,24.10.2023 09:54:04,65.9.30.219,Darwen,England,BB3,Firefox,Adwords,/cart,cart
+222925,16706,4,98afceee-731c-45f0-ba0a-b2fbfe5ef0b3,02.11.2022 07:25:58,128.176.201.43,Darwen,England,BB3,Chrome,YouTube,/cart,cart
+615621,46747,3,61973f6a-de01-4d06-ac82-6a9ae8fb9bd8,19.08.2023 07:53:36,135.215.179.67,Haslingden,England,BB4,Safari,Email,/cart,cart
+2425405,,2,6b00ffe1-ca02-4f9b-be1f-6e843e84e399,24.02.2022 13:26:00,92.85.11.206,Haslingden,England,BB4,Firefox,Adwords,/cart,cart
+1014288,77532,3,dfd5a7df-fbe7-43d2-bf6e-69045b9abbf9,07.07.2020 01:10:59,65.129.232.223,Haslingden,England,BB4,IE,Adwords,/cart,cart
+1014343,77532,6,8c800203-5a20-46c0-aeea-cc164e27ffa2,21.10.2023 02:53:48,218.246.161.198,Haslingden,England,BB4,Other,Email,/cart,cart
+727416,55457,3,539694f3-b090-4d0a-b07a-6de6bbe695eb,26.07.2023 12:42:51,214.187.25.226,Accrington,England,BB5,Chrome,Adwords,/cart,cart
+2269582,,3,a95dc8ca-f02b-498a-8b66-6de9233a364a,05.07.2022 01:13:00,72.100.220.126,Clitheroe,England,BB7,Firefox,Email,/cart,cart
+141652,10603,6,ce4c84ca-84b6-4c92-9abd-9e1f88a3abef,13.07.2023 17:22:04,200.40.245.151,Bradford,England,BD2,Chrome,Facebook,/cart,cart
+141662,10603,3,d8dd30d7-a020-4c05-9192-8d753416a806,13.07.2023 17:56:52,118.40.62.158,Bradford,England,BD2,Firefox,YouTube,/cart,cart
+2067601,,3,858c6917-317f-4b45-a55c-bdb613681d76,22.09.2023 11:32:00,152.18.50.199,Bradford,England,BD2,Firefox,Email,/cart,cart
+2298671,,2,d8012fc7-814f-4aac-91ea-9f41375db9d4,30.04.2020 08:33:00,163.146.12.246,Bradford,England,BD3,Firefox,Email,/cart,cart
+130958,9855,4,d9bddf24-79af-4058-b414-edb2670611ef,07.04.2022 03:58:16,125.74.159.192,Bradford,England,BD3,Safari,Email,/cart,cart
+130943,9855,3,ef794ee8-863b-4c84-9bee-c61f70c5e71c,05.08.2023 03:22:54,111.55.254.224,Bradford,England,BD3,Chrome,Email,/cart,cart
+2410679,,3,44e8b102-5bd9-4984-942b-a9c96d3fdce0,17.02.2023 19:35:00,138.182.138.197,Bradford,England,BD4,Chrome,Adwords,/cart,cart
+942863,72097,12,b727c293-9904-4a88-b7a2-d4466086048b,14.09.2023 11:58:22,93.138.224.152,Bradford,England,BD4,Other,Email,/cart,cart
+1801118,,3,fe3b11a4-fd90-4ff4-b9a0-d1acf45784ab,16.04.2020 03:53:00,179.88.7.237,Bradford,England,BD4,Chrome,Adwords,/cart,cart
+2339723,,3,d9bd0113-a90d-4c48-988c-f77c3922e30f,20.07.2022 08:03:00,214.93.96.201,Bradford,England,BD4,Chrome,YouTube,/cart,cart
+1582416,,2,432a7dd9-1da5-460e-9d1f-033556209d19,19.06.2023 09:25:00,134.73.118.177,Bradford,England,BD4,Chrome,Facebook,/cart,cart
+2187858,,2,336fc1ee-8101-416b-a5b7-4812e2710f1a,28.01.2022 07:18:00,116.214.29.16,Bradford,England,BD5,Chrome,Email,/cart,cart
+233101,17493,6,8383e1e1-bb50-4933-abdc-4a933af5d1df,16.11.2020 15:36:26,211.195.62.30,Bradford,England,BD6,IE,Email,/cart,cart
+233105,17493,3,76aa04bb-494d-4ab7-9533-6d0b3acb3541,16.11.2020 16:36:32,27.130.169.6,Bradford,England,BD6,Firefox,Email,/cart,cart
+1515073,,2,ec3b71b9-0571-4633-89ee-6ee6bfb780d5,06.09.2021 15:29:00,220.209.231.167,Bradford,England,BD6,Firefox,Email,/cart,cart
+1126170,86306,6,6764f3de-d223-4d62-bb08-0cd29ef675f1,26.09.2022 09:15:15,50.173.89.215,Bradford,England,BD7,Chrome,Email,/cart,cart
+1882408,,3,612c4ad6-0a96-4054-9df9-956d2ff07d30,08.07.2020 07:29:00,42.199.143.13,Bradford,England,BD8,Chrome,Email,/cart,cart
+377782,28543,6,9b5210e1-7349-4fed-80a9-92bcd2265def,10.07.2022 07:01:15,190.150.238.90,Bradford,England,BD9,Safari,Email,/cart,cart
+487852,37040,3,5b000197-1038-466e-9913-4c33c41ce822,12.04.2020 23:55:02,35.206.135.84,Bournemouth,England,BH8,Chrome,Email,/cart,cart
+1471230,,3,18f2863c-f297-4f49-9bf1-e5084ccf4e44,17.02.2019 11:25:00,119.61.235.175,Bournemouth,England,BH8,IE,Email,/cart,cart
+2252757,,3,e77420be-cb63-401d-801e-3c04bd44bfac,29.10.2020 14:37:00,76.142.169.172,Bournemouth,England,BH8,Safari,Facebook,/cart,cart
+109480,8236,4,12cbb3e9-aa3f-4ff6-ba44-c7f6172ac36b,12.02.2019 01:44:12,221.237.197.1,Bolton,England,BL1,Safari,Facebook,/cart,cart
+970769,74276,4,75a7a4cf-8290-4d6a-94ff-60f398ca9ed9,03.11.2021 13:20:26,199.217.156.246,Bolton,England,BL2,Chrome,Email,/cart,cart
+1885955,,3,c2b03ee8-6831-4b97-8d00-b811a220b5ae,29.09.2019 19:21:00,65.240.204.56,Bolton,England,BL2,Chrome,Email,/cart,cart
+1564881,,3,5f8efcc7-fb5e-4b5c-b9ac-ae9198fb4491,14.08.2019 14:22:00,63.170.248.226,Bolton,England,BL3,IE,Email,/cart,cart
+257467,19416,6,24400c03-08eb-4a64-b17c-28360f3a71f0,22.08.2023 04:48:57,34.74.3.15,Bolton,England,BL3,Chrome,Email,/cart,cart
+951058,72738,4,c2a49450-291f-469d-9b40-ab2e65f36d00,02.03.2021 07:22:53,112.84.181.91,Bolton,England,BL3,Chrome,Organic,/cart,cart
+980645,75039,3,8ee95653-8ead-4519-8aef-46857ceb3d7a,11.12.2020 00:32:54,142.100.208.23,Bolton,England,BL3,Safari,Email,/cart,cart
+1683380,,2,7a3de099-f744-424a-81f8-2a64da3abfa9,04.08.2023 04:52:00,39.204.183.128,Farnworth,England,BL4,Chrome,Email,/cart,cart
+2246833,,3,0455bf46-fc21-4e96-9260-47f92d735406,26.10.2019 20:12:00,151.212.143.29,Farnworth,England,BL4,Firefox,Adwords,/cart,cart
+416539,31491,9,62156c12-f1b3-43ed-ba4a-679b9a62d2c1,20.02.2022 05:26:45,115.172.209.129,Horwich,England,BL6,Chrome,Email,/cart,cart
+1239350,95027,3,1444d5f5-5d0f-4671-8ecc-7b9e0f6d7861,23.03.2023 14:34:46,123.5.58.137,Horwich,England,BL6,Chrome,Facebook,/cart,cart
+416529,31491,4,19d738a6-dadb-45e7-ad59-56c68ef7c4e5,13.12.2022 02:06:00,125.127.254.219,Horwich,England,BL6,Chrome,Adwords,/cart,cart
+416553,31491,3,46c5b2d1-4283-410d-8d22-48cba09ff45d,20.02.2022 03:00:17,81.55.8.109,Horwich,England,BL6,Chrome,Facebook,/cart,cart
+1826706,,2,efb1d939-2edc-4b4c-ad17-99740d48f258,15.04.2020 15:44:00,99.85.255.25,Bury,England,BL9,Chrome,Adwords,/cart,cart
+648657,49284,4,5fe4d53d-5ae6-4274-bc07-57225cfad601,03.08.2023 23:52:11,220.211.57.176,Bury,England,BL9,Chrome,Adwords,/cart,cart
+1138751,87244,4,55037e4c-ad56-4166-b989-9e15c9fb8dec,04.09.2023 16:05:05,157.3.13.121,Brighton,England,BN1,Safari,Adwords,/cart,cart
+587499,44654,6,587977f2-ca6f-4139-8d8a-a39eb3a0e971,04.10.2023 16:01:12,183.54.252.202,Brighton,England,BN1,Chrome,Email,/cart,cart
+587492,44654,6,9676a68a-2233-4e9b-9a80-0d5a4180c483,04.10.2023 12:28:44,101.231.52.171,Brighton,England,BN1,Firefox,Email,/cart,cart
+1627615,,2,3af57762-595b-45da-82fc-b100b87e2680,25.01.2022 02:44:00,106.227.39.108,Brighton,England,BN1,Other,Adwords,/cart,cart
+2049462,,2,4a3cc849-2216-4db3-b6b6-d22397e79b5b,11.08.2021 13:39:00,125.136.11.239,Brighton,England,BN1,Chrome,Email,/cart,cart
+1244113,95410,12,c84fba3d-bbd9-4cbd-b48e-5db67666946e,14.02.2021 20:39:57,204.130.251.204,Brighton,England,BN2,Safari,YouTube,/cart,cart
+1244107,95410,6,c84fba3d-bbd9-4cbd-b48e-5db67666946e,14.02.2021 20:31:54,204.130.251.204,Brighton,England,BN2,Safari,YouTube,/cart,cart
+1244104,95410,3,c84fba3d-bbd9-4cbd-b48e-5db67666946e,14.02.2021 20:27:55,204.130.251.204,Brighton,England,BN2,Safari,YouTube,/cart,cart
+1244094,95410,6,38549768-52ea-4ec3-96dc-76d51e3cc94f,14.02.2021 22:16:03,53.175.95.140,Brighton,England,BN2,Firefox,Email,/cart,cart
+2423356,,3,b2ed4414-71dc-4b8c-93ed-2997dc1004c1,13.02.2019 16:18:00,110.67.48.213,Brighton,England,BN2,Chrome,Facebook,/cart,cart
+834104,63741,12,60a51441-4e88-4bce-9009-ba33caa4ba90,13.04.2022 08:22:36,218.16.168.31,Hove,England,BN3,Chrome,Adwords,/cart,cart
+834117,63741,12,6b8ffca3-8859-4e71-8554-0eb70a091ef4,13.04.2022 06:23:25,206.195.29.181,Hove,England,BN3,Chrome,Email,/cart,cart
+1970346,,3,b0079859-1cf7-4c3b-88e5-d68d3048dec0,13.09.2022 07:38:00,194.124.101.91,Hove,England,BN3,Chrome,YouTube,/cart,cart
+834111,63741,6,6b8ffca3-8859-4e71-8554-0eb70a091ef4,13.04.2022 06:15:16,206.195.29.181,Hove,England,BN3,Chrome,Email,/cart,cart
+1789529,,3,4483de25-d5b4-4791-8a9c-82155061a4e1,06.09.2021 03:56:00,211.228.6.77,Hove,England,BN3,Chrome,Email,/cart,cart
+503242,38238,4,9a11b88e-da98-4756-9037-559f27dbb2eb,17.02.2022 13:55:25,35.222.126.6,Bromley,England,BR1,Safari,Email,/cart,cart
+2344551,,3,93fa575a-5e0d-46c9-ad39-217b869e9f3f,11.03.2022 18:10:00,20.40.94.214,Bromley,England,BR2,Chrome,Adwords,/cart,cart
+1111382,85122,3,b21f219b-36ea-46b1-a797-4ca0a2207890,11.04.2019 14:16:41,19.77.134.64,Orpington,England,BR5,Chrome,Email,/cart,cart
+1959814,,2,502e7743-eba7-41d6-8ebc-4faf2f6a9fa4,30.01.2019 04:41:00,173.175.71.178,Orpington,England,BR5,Chrome,Adwords,/cart,cart
+1610670,,2,cca2266d-c93e-4c9e-9959-61a8d1c68681,19.09.2019 03:10:00,4.136.7.60,Orpington,England,BR5,Chrome,Email,/cart,cart
+56914,4258,3,954425d7-3d37-469d-ba71-0537669cb4b1,04.09.2021 18:24:13,150.104.132.222,Orpington,England,BR5,Chrome,Email,/cart,cart
+833220,63672,6,870700c5-c4de-4523-aa7c-9483a97b53f7,03.06.2023 08:34:17,215.88.131.229,Orpington,England,BR6,Firefox,Email,/cart,cart
+343650,26012,9,a07abae7-c309-47a8-81cf-dc66c0ab7e14,17.10.2023 01:58:29,133.225.95.217,Bristol,England,BS3,Firefox,Adwords,/cart,cart
+1491094,,3,f4af17ef-0d09-4f20-a43c-3af69dcffc74,14.02.2019 14:38:00,1.212.170.2,Bristol,England,BS3,Chrome,Email,/cart,cart
+2231122,,2,e7d04c97-a2fb-41b7-ba31-5aee65dbd124,02.05.2022 04:41:00,23.222.35.131,Bristol,England,BS4,IE,Email,/cart,cart
+2161953,,2,361a0670-cd91-45d6-8e2f-8f8ca692770b,14.05.2022 08:32:00,95.230.119.18,Bristol,England,BS5,Other,Email,/cart,cart
+2398093,,2,98ecfd89-2356-46b9-833f-7a65dbd3b069,20.07.2023 07:33:00,20.177.28.237,Bristol,England,BS5,Chrome,Facebook,/cart,cart
+2037013,,3,8be26f90-847b-4321-87c7-02322a906262,17.07.2021 10:18:00,154.172.255.84,Bristol,England,BS5,Safari,Email,/cart,cart
+734491,56054,4,613c98b1-cbe3-4083-add3-1d7c08e3aa47,30.06.2020 03:50:42,29.11.122.74,Bristol,England,BS5,Safari,Facebook,/cart,cart
+2284972,,3,748f956c-b361-4527-b4ff-8afecde11d0f,15.01.2023 08:33:00,205.221.62.242,Bristol,England,BS6,Chrome,YouTube,/cart,cart
+1936001,,2,92d9cab1-a687-45d4-a2c8-6c144948c4ae,15.04.2022 13:17:00,19.82.212.130,Bristol,England,BS7,Chrome,Email,/cart,cart
+2034652,,2,c1a9234d-cd89-44c1-aea6-62e0faf637fc,13.06.2023 04:50:00,118.122.28.48,Bristol,England,BS7,Chrome,YouTube,/cart,cart
+1864184,,2,d8bcf91c-f275-4315-af24-3ebdbbf41d81,29.09.2023 14:06:00,86.167.157.91,Bristol,England,BS9,Safari,Organic,/cart,cart
+1312714,,3,dd74e643-b6d6-4911-804e-affed64a15a2,14.11.2021 04:58:00,92.46.243.181,Bristol,England,BS9,Chrome,Adwords,/cart,cart
+2324046,,2,82c29867-43ed-43e7-9598-e419a873ba15,08.02.2022 03:29:00,114.156.22.46,Bristol,England,BS9,Safari,Adwords,/cart,cart
+992707,75951,3,8f1eeec0-0017-4076-b1a2-1d0b7b3b428f,11.02.2023 18:03:11,9.27.217.248,Bristol,England,BS9,Chrome,Facebook,/cart,cart
+1688023,,3,ca270c0c-a36a-4f1c-b1ee-77550dc3c874,01.09.2022 06:43:00,45.96.221.226,Bristol,England,BS9,Safari,YouTube,/cart,cart
+1321804,,3,a8aafeca-ce10-4363-a0e5-a624de3072d8,21.09.2022 13:16:00,197.8.100.76,Bristol,England,BS9,Safari,Email,/cart,cart
+276149,20893,3,2ccaa989-d8ef-4c32-9771-fcb079a01d9e,01.06.2023 11:52:23,30.53.83.161,Belfast,Northern Ireland,BT5,Firefox,Adwords,/cart,cart
+2096701,,2,48f7067b-4b0c-4fc6-8e80-e1205f8e9192,06.09.2019 17:47:00,28.48.7.25,Carryduff,Northern Ireland,BT8,Safari,YouTube,/cart,cart
+1800388,,3,d98a5ed9-bd2c-4618-813e-debb2a4d4d71,18.01.2022 17:29:00,128.56.159.176,Belfast,Northern Ireland,BT9,Chrome,Email,/cart,cart
+517416,39345,6,58f7e64c-9483-42a0-a7a8-295143dd5d11,08.10.2023 00:04:43,52.95.79.183,Belfast,Northern Ireland,BT9,Chrome,Organic,/cart,cart
+517420,39345,3,bcc32369-afd8-4823-ab95-ca0ce27f6854,07.10.2023 20:41:11,71.165.218.69,Belfast,Northern Ireland,BT9,Chrome,Adwords,/cart,cart
+887099,67757,3,400d8dd2-f527-4cbc-a5c6-6f450e01c4a2,22.05.2023 05:57:27,9.132.60.64,Belfast,Northern Ireland,BT9,Safari,Facebook,/cart,cart
+1116604,85546,9,eb189b5a-f81b-4b7e-b2e4-024253b9ff5a,12.05.2021 11:33:39,172.202.184.127,Carlisle,England,CA2,Chrome,Adwords,/cart,cart
+726360,55388,3,122194fe-7002-4ad1-a677-0edc93bf5fee,04.05.2022 01:03:24,21.29.245.209,Cambridge,England,CB4,Chrome,Adwords,/cart,cart
+1200116,92001,6,d96a307f-c1d6-4c80-ac62-944e508e561f,27.09.2023 10:22:58,33.11.78.83,Cambridge,England,CB4,Chrome,YouTube,/cart,cart
+726376,55388,6,421a7c27-f856-4751-8582-825d7222f2ef,03.05.2022 23:33:48,216.73.238.238,Cambridge,England,CB4,Firefox,Adwords,/cart,cart
+1419441,,3,50d1e59a-5b57-4cf7-a5ad-aea64cfca21d,01.03.2021 18:26:00,98.70.26.186,Littleport,England,CB6,Chrome,Adwords,/cart,cart
+625133,47512,3,6b96b378-9b34-451b-8120-889db3d798f9,10.05.2022 11:15:37,57.138.249.189,Soham,England,CB7,Chrome,Adwords,/cart,cart
+625165,47512,9,85bd767d-7fd0-47a6-b3a0-45e61198de46,10.05.2022 10:19:37,16.246.208.12,Soham,England,CB7,Firefox,Adwords,/cart,cart
+2332937,,3,75f6e819-87b9-4294-819b-1258acda4ecc,24.03.2019 03:06:00,51.52.249.15,Newmarket,England,CB8,Chrome,Adwords,/cart,cart
+647443,49185,4,818d4a67-485c-4895-8097-91ec886a36f1,10.09.2023 06:52:53,25.95.51.122,Haverhill,England,CB9,Chrome,Email,/cart,cart
+1400794,,3,4b299ee0-d3f1-4ef0-af9c-8411c2eec514,29.11.2020 12:54:00,75.166.197.146,Saint Mellons,Wales,CF3,Other,YouTube,/cart,cart
+933951,71398,9,bb0e0706-4613-491c-ab54-adfa5ab33c5d,21.05.2020 10:23:48,68.71.132.240,Cardiff,Wales,CF5,Firefox,YouTube,/cart,cart
+933971,71398,3,4eea435b-ad66-4e49-83a6-6911106f1c81,21.05.2020 10:48:31,62.151.130.226,Cardiff,Wales,CF5,Chrome,Email,/cart,cart
+1670675,,3,a121513c-b39f-43ec-b783-2974549cd943,10.10.2023 14:30:00,83.124.168.208,Cardiff,Wales,CF5,Chrome,Adwords,/cart,cart
+1581578,,3,a959e6f6-b457-45da-bbb2-9ffdebe95762,29.12.2021 19:35:00,39.205.233.193,Chester,England,CH2,Chrome,YouTube,/cart,cart
+969939,74210,4,89f028e0-5693-4598-977a-acc0ecafdacc,20.09.2023 04:04:44,158.197.123.100,Chester,England,CH2,Firefox,Email,/cart,cart
+2115797,,2,adc15dfb-e919-4530-8ffe-15cc847e8dae,16.08.2020 19:24:00,71.173.196.105,Christleton,England,CH3,Safari,Adwords,/cart,cart
+136063,10240,4,eba76e8f-a4c4-4aa6-8324-3c3cd63d552f,15.03.2023 09:51:18,13.73.112.127,Christleton,England,CH3,Chrome,Adwords,/cart,cart
+416704,31509,3,28118fd8-ff7e-4976-922a-037b2297cddd,28.08.2020 03:13:28,128.65.211.165,Higher Kinnerton,England,CH4,Other,Email,/cart,cart
+633654,48154,3,f682f428-6d3d-46bf-bb1e-13148e63007e,05.01.2023 08:44:51,181.91.100.188,Higher Kinnerton,England,CH4,Chrome,Email,/cart,cart
+1236074,94766,3,4a8b4c19-f4b0-40ad-b6a9-c39eabbd0432,10.06.2021 03:59:09,51.201.52.47,Connah's Quay,Wales,CH5,Chrome,Facebook,/cart,cart
+1737331,,2,3c0ed7b6-cd44-4c66-b4f5-075c7e1c62bd,06.09.2021 07:10:00,125.25.74.64,Connah's Quay,Wales,CH5,Chrome,YouTube,/cart,cart
+1033657,79022,4,47ad8ed1-f84d-4414-95bb-aae41c3d2cb1,06.07.2022 07:18:28,85.204.189.56,Connah's Quay,Wales,CH5,Chrome,YouTube,/cart,cart
+1873636,,3,e47e6151-a92e-40f5-81e9-f9178411237f,01.06.2020 08:33:00,145.227.145.109,Connah's Quay,Wales,CH5,Chrome,Email,/cart,cart
+1033652,79022,4,c3c81b31-c9b8-404d-b4c1-76d6acd32fff,25.02.2023 05:34:52,51.213.24.226,Connah's Quay,Wales,CH5,Firefox,Organic,/cart,cart
+2262063,,2,b8f45b7f-5f73-4f9a-be7f-c90af7f68494,16.02.2019 06:26:00,36.211.165.245,Buckley,Wales,CH7,Other,YouTube,/cart,cart
+1363058,,3,9d2c4123-319a-4372-936b-555d16aa34ab,14.04.2021 16:51:00,150.183.31.34,Writtle,England,CM1,Safari,Adwords,/cart,cart
+643190,48877,6,82ba610a-e28b-43be-8d16-3edfafb9a79f,27.11.2022 06:19:43,190.5.247.255,Writtle,England,CM1,Chrome,Adwords,/cart,cart
+1926341,,2,106e3878-73ef-4105-be9a-2d1862e1ae97,08.12.2021 02:31:00,173.182.246.234,Writtle,England,CM1,Chrome,Email,/cart,cart
+155854,11666,6,e74fda05-2883-45d1-9040-77e8c55b33e5,27.06.2023 10:10:15,76.209.46.85,Writtle,England,CM1,IE,Email,/cart,cart
+643197,48877,3,0161cf33-1725-4a5a-967c-4e3e80c05e25,27.11.2022 05:51:42,84.6.98.40,Writtle,England,CM1,Safari,Email,/cart,cart
+1294987,99280,9,be473a0a-2968-449b-aaeb-7a5afc2ca140,30.07.2022 11:25:48,144.118.211.53,Chelmsford,England,CM2,Chrome,Email,/cart,cart
+1514616,,3,64558544-c029-4c9d-b5b5-f1a0e0efff85,21.03.2022 03:12:00,18.238.156.67,Chelmsford,England,CM2,Firefox,Email,/cart,cart
+1594394,,2,acc21040-df10-4589-898b-956f75e41794,11.01.2020 05:51:00,213.125.5.241,Boreham,England,CM3,Firefox,Email,/cart,cart
+179626,13474,6,3b219a31-83bf-43ac-9b53-52b06c09dcbe,29.11.2021 17:47:32,129.252.127.109,Boreham,England,CM3,Safari,Facebook,/cart,cart
+1339962,,3,167bac2a-6ad0-4448-b4d0-026712a13d5f,31.07.2023 19:14:00,212.36.8.250,Braintree,England,CM7,Firefox,Email,/cart,cart
+653244,49606,12,0e78531f-dd7f-4c3a-aef5-c18580b76161,24.06.2023 00:35:59,36.114.200.144,Braintree,England,CM7,Other,Email,/cart,cart
+311716,23569,3,0df728e8-8ac3-401d-a09a-9e8f8ff1e69b,23.04.2023 08:09:56,19.196.236.115,Braintree,England,CM7,Firefox,Email,/cart,cart
+311712,23569,12,88acd720-8bfb-457a-844d-03087c10bab0,23.04.2023 05:02:53,80.232.28.254,Braintree,England,CM7,Chrome,Organic,/cart,cart
+1740767,,3,677f14e0-d4d6-41e9-8a96-b12ef32aa2c2,26.06.2019 11:04:00,116.94.159.92,Braintree,England,CM7,Firefox,Adwords,/cart,cart
+655927,49821,4,67f6d80d-5a32-45f4-8ebf-0bdcea9228a7,13.10.2022 13:31:03,202.199.222.166,Braintree,England,CM7,Chrome,Email,/cart,cart
+1157227,88711,6,24bc8fb8-1f5d-4132-8472-e30ad1bf1807,07.08.2023 02:27:46,36.121.86.73,Braintree,England,CM7,Firefox,Facebook,/cart,cart
+311738,23569,12,c41dfc0b-97ab-4e5c-9e38-a87c77038e1c,23.04.2023 04:33:57,130.49.245.234,Braintree,England,CM7,Chrome,Facebook,/cart,cart
+946430,72367,6,5f458976-e365-4981-b3f6-d59c03097a9a,13.10.2022 10:08:48,29.51.143.137,Witham,England,CM8,Chrome,YouTube,/cart,cart
+350009,26514,6,d1c4d12e-a4c8-4269-a6ac-498fe0535c02,16.08.2023 10:53:37,105.168.53.158,Maldon,England,CM9,Safari,Email,/cart,cart
+350006,26514,3,d1c4d12e-a4c8-4269-a6ac-498fe0535c02,16.08.2023 10:52:03,105.168.53.158,Maldon,England,CM9,Safari,Email,/cart,cart
+1080012,82766,9,aacb3b06-c827-4532-a7e5-11e72be667ec,11.07.2023 00:40:36,17.99.254.72,Maldon,England,CM9,Chrome,Adwords,/cart,cart
+1079967,82766,3,4a7cd675-2d12-4731-a305-40f3284e8f92,11.07.2023 00:47:59,126.133.17.14,Maldon,England,CM9,IE,Adwords,/cart,cart
+1079983,82766,6,657bce20-2d7f-4752-afc2-1bda5d92775b,11.07.2023 00:20:20,60.216.205.162,Maldon,England,CM9,Chrome,Email,/cart,cart
+579892,44060,6,5e95147c-122e-47da-a6a3-56cc01675688,21.03.2023 08:05:26,200.29.183.18,Maldon,England,CM9,Chrome,Adwords,/cart,cart
+350002,26514,12,180307c2-eb5a-46f5-8fe6-8bf0d3855c8f,16.08.2023 09:05:57,25.28.233.153,Maldon,England,CM9,Chrome,Email,/cart,cart
+349967,26514,3,400622ea-19bf-4038-8622-bb41146e40b5,16.08.2023 09:04:17,133.56.156.171,Maldon,England,CM9,Chrome,Email,/cart,cart
+2309561,,3,2b35961d-1dca-4c7c-83d8-e7f83948a5fb,31.08.2022 14:54:00,113.246.22.139,Colchester,England,CO2,Chrome,Email,/cart,cart
+477422,36229,3,84c8257a-a247-4e71-977f-2786a6c3e525,11.09.2022 01:48:30,201.142.222.212,Colchester,England,CO2,Chrome,Email,/cart,cart
+477425,36229,6,84c8257a-a247-4e71-977f-2786a6c3e525,11.09.2022 01:53:11,201.142.222.212,Colchester,England,CO2,Chrome,Email,/cart,cart
+876292,66935,3,b216afaa-ffff-41fb-a4c6-77d769067808,02.09.2022 02:08:52,212.58.60.192,Colchester,England,CO4,Safari,Email,/cart,cart
+1476803,,2,d4610fea-afa4-40ae-8d2a-8468922c33f5,15.12.2021 13:36:00,135.9.150.163,Colchester,England,CO4,Firefox,YouTube,/cart,cart
+1682389,,3,0c8bbe2d-d7fa-442e-9c65-2de3aa165f4e,29.06.2022 14:17:00,211.188.21.13,West Mersea,England,CO5,Chrome,Organic,/cart,cart
+2347976,,3,e1e7b54c-593e-40d6-af5f-06e07b291844,28.11.2022 16:15:00,172.175.15.154,West Mersea,England,CO5,Safari,Adwords,/cart,cart
+2038158,,2,0d397bcd-480b-4dcb-8e69-08d343e3a438,31.03.2019 12:22:00,42.166.183.135,West Bergholt,England,CO6,Safari,Adwords,/cart,cart
+2237599,,3,1b8b434c-4f96-4e42-8164-a0bdc8f73a7a,11.09.2023 01:25:00,44.77.205.181,West Bergholt,England,CO6,Chrome,Organic,/cart,cart
+888121,67821,3,17777d5c-49db-4570-835d-ddcad56aa91e,25.06.2023 03:01:54,32.127.252.179,West Bergholt,England,CO6,Chrome,Email,/cart,cart
+759851,57967,3,320efb00-ad73-4b75-b37e-416dec579d05,27.05.2023 03:12:35,175.13.170.219,Ardleigh,England,CO7,Other,Email,/cart,cart
+607411,46184,4,af92c85f-21aa-4256-bfc6-6ba354715af7,21.07.2023 00:09:42,162.250.31.237,Ardleigh,England,CO7,IE,Adwords,/cart,cart
+1719129,,2,d002ea53-b038-4fac-97b7-a833b02b685d,25.08.2020 09:39:00,96.113.155.14,Ardleigh,England,CO7,Firefox,Adwords,/cart,cart
+369281,27897,9,edd317fc-a1ce-41cb-bf6b-8ed0e89977f3,07.02.2023 06:34:55,77.69.167.22,Croydon,England,CR0,Chrome,Email,/cart,cart
+369284,27897,12,edd317fc-a1ce-41cb-bf6b-8ed0e89977f3,07.02.2023 06:40:41,77.69.167.22,Croydon,England,CR0,Chrome,Email,/cart,cart
+271144,20509,12,5ce818a0-48c1-42c2-8457-5c5ab01e82e3,30.08.2022 08:05:01,2.178.95.215,Croydon,England,CR0,Chrome,Email,/cart,cart
+1136741,87100,3,6bfddbd4-8eac-46f3-8976-2a786a8569a8,14.08.2022 08:44:18,205.54.126.69,Croydon,England,CR0,Chrome,Adwords,/cart,cart
+800866,61184,9,f72db55e-60a0-48b4-b162-5f35cca9510f,19.03.2022 05:24:05,160.13.149.199,Croydon,England,CR0,Firefox,Adwords,/cart,cart
+369291,27897,6,dfc1e78b-ea20-4eb3-b978-86d52742482c,07.02.2023 06:36:54,223.166.253.8,Croydon,England,CR0,Other,Adwords,/cart,cart
+271157,20509,12,f333f220-0072-4c85-ac97-92dd43289020,30.08.2022 06:12:03,49.144.166.38,Croydon,England,CR0,Chrome,YouTube,/cart,cart
+271164,20509,6,635952b3-ea41-4248-9fc5-733b0ade8fcd,30.08.2022 09:10:48,93.237.237.226,Croydon,England,CR0,Firefox,Email,/cart,cart
+810932,61938,9,6595fc5e-b3d4-4b00-b794-e203b7f5641c,07.06.2022 03:02:05,150.15.28.80,South Croydon,England,CR2,Chrome,Email,/cart,cart
+164448,12340,9,a926db86-0c2c-4e4a-8767-bc6ad58b8803,20.09.2023 23:38:34,7.97.165.255,South Croydon,England,CR2,Firefox,Adwords,/cart,cart
+558008,42450,6,54a3a15f-6be8-4713-8dbe-3f66d0156ec4,07.04.2019 12:36:46,1.38.226.188,South Croydon,England,CR2,Chrome,Organic,/cart,cart
+1328206,,3,3f215611-2abc-4351-9994-5174fda1058e,06.08.2020 16:54:00,14.69.186.168,South Croydon,England,CR2,Safari,Facebook,/cart,cart
+873849,66753,12,b7822596-256b-4f88-8a05-1fcb71e68b73,17.03.2022 16:56:46,189.164.144.11,Mitcham,England,CR4,Other,Organic,/cart,cart
+873792,66753,4,371a7425-7c47-4e5c-a401-40d10448dcf5,25.01.2023 15:56:18,119.172.109.52,Mitcham,England,CR4,Other,Email,/cart,cart
+873814,66753,3,a0a362a5-94ea-48e4-bbb1-e924c5a1afd3,17.03.2022 15:19:42,168.112.7.221,Mitcham,England,CR4,Chrome,Email,/cart,cart
+267478,20196,9,ca8c7122-0d89-4369-b4ff-9fc9f2afc052,22.09.2023 17:47:43,160.23.73.37,Coulsdon,England,CR5,Firefox,Email,/cart,cart
+267507,20196,12,b429507b-ccce-4e98-94d3-c144b345e87a,22.09.2023 17:38:42,8.183.145.207,Coulsdon,England,CR5,Chrome,Organic,/cart,cart
+267517,20196,9,f7234dd2-d48c-411e-8fe8-798c73e2ad68,22.09.2023 16:53:31,200.221.143.36,Coulsdon,England,CR5,Safari,Email,/cart,cart
+2366293,,2,f11ec908-725d-419a-8312-149f29b18e39,01.02.2022 12:07:00,189.238.21.34,Coulsdon,England,CR5,Firefox,Email,/cart,cart
+267498,20196,3,b429507b-ccce-4e98-94d3-c144b345e87a,22.09.2023 17:27:03,8.183.145.207,Coulsdon,England,CR5,Chrome,Organic,/cart,cart
+990831,75824,6,ce462ed2-bcd2-4851-adff-7174c41d674c,08.06.2023 12:38:29,67.234.194.70,Coulsdon,England,CR5,Safari,Adwords,/cart,cart
+2248833,,2,f70d4c04-8640-4cc1-84bd-a4edfeca2e64,02.05.2020 16:42:00,163.91.132.202,Thornton Heath,England,CR7,Chrome,Email,/cart,cart
+149402,11197,6,c673d950-bc4e-423d-9f2a-04d011c4dc64,23.12.2019 03:00:43,163.141.212.14,Thornton Heath,England,CR7,Other,Email,/cart,cart
+1654630,,3,4e612089-0aa0-426b-b2f1-f71e5838b97d,18.01.2023 13:08:00,27.174.158.2,Purley,England,CR8,Chrome,Email,/cart,cart
+130188,9808,12,a077d842-defb-46b4-b910-a44afbf37efb,30.06.2022 14:00:35,105.242.165.170,Purley,England,CR8,Chrome,YouTube,/cart,cart
+1873490,,3,ff09a1c0-2d7c-48ea-94b2-f69384f3a23a,10.01.2020 16:48:00,26.228.108.192,Purley,England,CR8,Chrome,Email,/cart,cart
+902150,68992,12,6073d81e-ca39-4bb0-87ee-22b5bfd05b49,09.08.2023 03:34:30,64.181.37.247,Blean,England,CT2,Firefox,Adwords,/cart,cart
+464419,35184,4,47112297-a814-44b9-88f4-1c5a24061921,29.04.2020 14:53:54,187.58.114.246,Whitstable,England,CT5,Firefox,Facebook,/cart,cart
+1316344,,3,f1516cd3-02a0-4279-a6d7-ca0a6bf603d6,27.09.2022 10:03:00,103.186.106.18,Herne Bay,England,CT6,Chrome,Adwords,/cart,cart
+2285335,,2,5dff2bd1-23fb-4474-b430-b71fe30a49e7,30.09.2020 12:17:00,168.66.177.231,Margate,England,CT9,Chrome,Facebook,/cart,cart
+2264899,,3,1372eddc-b2c7-4099-951c-9b1dbe395928,04.09.2021 19:38:00,19.87.237.226,Coventry,England,CV2,Chrome,Adwords,/cart,cart
+1991545,,3,ee0fe0cc-3eb7-4921-8f1d-8e013e4ca8bb,27.07.2020 15:18:00,82.120.25.183,Coventry,England,CV3,Firefox,Email,/cart,cart
+1843491,,2,689f8e0b-4ec1-49d5-8535-e0dcd3ed9073,14.06.2023 08:09:00,86.244.140.221,Coventry,England,CV3,Chrome,Email,/cart,cart
+1632254,,2,76e7d139-5c84-4cf0-9572-691d83f5ec96,05.07.2022 16:26:00,77.118.1.161,Coventry,England,CV3,Firefox,Adwords,/cart,cart
+1311667,,3,e772e2f7-bf67-40b4-930d-36d69f42c9e2,15.09.2019 08:23:00,153.41.26.113,Coventry,England,CV3,Chrome,Email,/cart,cart
+313971,23746,12,6aa6ccb9-a340-45fc-a86b-36a2fbb55b4c,25.08.2022 14:08:57,101.221.24.242,Coventry,England,CV3,Chrome,YouTube,/cart,cart
+1474445,,3,9ad59ce1-6aab-45b1-af13-a6505bdb4a68,02.11.2019 07:27:00,11.40.118.210,Coventry,England,CV4,Safari,Adwords,/cart,cart
+67782,5080,9,83587bde-f2d6-4b79-a497-98b07304ddb6,12.06.2021 00:00:05,88.9.147.226,Coventry,England,CV4,IE,Organic,/cart,cart
+1999691,,3,b63e91fe-1cff-4d8d-8377-467a28a0ac10,10.10.2021 15:22:00,66.165.172.114,Coventry,England,CV5,Chrome,Adwords,/cart,cart
+1714620,,3,c562d960-380c-4b5f-85ba-296a12056072,23.02.2021 14:31:00,77.241.177.234,Coventry,England,CV5,Chrome,Adwords,/cart,cart
+785490,59990,6,3ea8c0ae-3404-448c-880f-222cd6eeae0f,15.03.2022 13:46:51,170.24.184.27,Coventry,England,CV6,Safari,Email,/cart,cart
+550446,41884,3,01400a31-dc4f-4cab-ab5c-52ccdfb1c2af,25.09.2022 08:34:47,3.252.187.158,Coventry,England,CV6,Firefox,Adwords,/cart,cart
+2082515,,2,f5594748-dd2e-44b1-824a-22705db5d32a,23.02.2023 03:07:00,5.32.233.251,Coventry,England,CV6,Other,Adwords,/cart,cart
+550466,41884,3,77777fb0-e3b1-45dc-9603-7116b4415c99,25.09.2022 06:47:44,197.11.223.52,Coventry,England,CV6,Safari,Email,/cart,cart
+1728294,,2,d52ca9d5-ac1a-4d3b-ae28-512ac7bd3adb,23.08.2020 18:18:00,207.111.182.29,Coventry,England,CV6,Chrome,Facebook,/cart,cart
+685494,52212,6,e5d4ca54-b679-4728-8b52-d2401767c16a,06.10.2023 04:58:32,1.245.211.202,Meriden,England,CV7,Firefox,Email,/cart,cart
+785777,60011,4,5b9f8bdc-635a-4f6e-9be1-f28cf4655246,16.02.2023 08:17:22,8.192.81.105,Ryton-on-Dunsmore,England,CV8,Safari,Adwords,/cart,cart
+2185358,,3,243900da-3278-4b66-8390-700bf60f855d,18.01.2020 17:19:00,186.246.60.148,Ryton-on-Dunsmore,England,CV8,IE,Adwords,/cart,cart
+1486692,,2,1cabfb47-d1f9-4618-82ac-506cbca0da88,11.09.2022 04:51:00,133.198.69.172,Nantwich,England,CW5,Chrome,Email,/cart,cart
+1357106,,3,2c917565-4ce0-42b4-83b9-19ba62200d2e,18.02.2019 07:55:00,28.64.107.128,Weaverham,England,CW8,Firefox,Adwords,/cart,cart
+1117108,85592,12,30928afd-32ee-43d8-9cfe-6979ce1cdd75,30.01.2023 00:36:15,81.187.45.145,Davenham,England,CW9,Chrome,Adwords,/cart,cart
+1117141,85592,6,1eee1c69-1733-4426-b722-0c973252d122,30.01.2023 03:50:51,84.240.38.171,Davenham,England,CW9,Firefox,YouTube,/cart,cart
+1117118,85592,9,c231673c-261d-4d80-b5dc-83e5b0d4d8ae,30.01.2023 01:32:28,103.255.141.124,Davenham,England,CW9,Chrome,Email,/cart,cart
+1117102,85592,6,30928afd-32ee-43d8-9cfe-6979ce1cdd75,30.01.2023 00:28:11,81.187.45.145,Davenham,England,CW9,Chrome,Adwords,/cart,cart
+1711459,,2,c7daf6fa-2bf0-49f2-9a59-950509ab8982,06.04.2020 15:14:00,190.242.231.19,Dartford,England,DA1,IE,Facebook,/cart,cart
+1561898,,3,ec79db02-3fad-4e04-ba60-0cfbbbb807db,30.07.2019 07:22:00,165.226.163.73,Dartford,England,DA1,Chrome,Facebook,/cart,cart
+1591777,,2,e493fda6-918e-4ad3-a7c1-989c5e0576c4,22.11.2020 11:47:00,214.116.247.152,Bexleyheath,England,DA7,Firefox,Facebook,/cart,cart
+893637,68288,6,45c801df-8f9c-4038-b5a0-0c5dae324f0d,21.05.2022 00:33:47,23.142.216.155,Erith,England,DA8,Firefox,Email,/cart,cart
+2095265,,3,a29e15f1-9ef7-4d6a-95b4-51d06ebe5c26,14.04.2020 01:56:00,90.93.118.249,Dundee,Scotland,DD3,IE,Organic,/cart,cart
+1335292,,2,93d55262-c0a6-449e-ae0e-8117895982b9,02.03.2019 14:39:00,220.73.167.217,Dundee,Scotland,DD4,Safari,YouTube,/cart,cart
+2096538,,3,7c2909c4-53da-4d9a-bf67-1bd8f4a6d0ba,16.11.2020 14:10:00,94.1.94.126,Dundee,Scotland,DD4,Chrome,Adwords,/cart,cart
+787332,60119,4,099a3b70-7477-474b-be12-cd87e72a566e,05.06.2023 03:58:22,169.128.19.30,Dundee,Scotland,DD4,Chrome,Email,/cart,cart
+492597,37406,3,dee007ab-b42d-4408-aed0-b3ea8c2ba172,13.12.2022 07:36:44,19.131.1.13,Ilkeston,England,DE7,Chrome,Organic,/cart,cart
+1759540,,2,33838996-cd16-436d-a6f3-3e499bfc2b15,12.04.2020 04:11:00,136.160.65.51,Ilkeston,England,DE7,Chrome,Adwords,/cart,cart
+1536880,,3,e407ce69-6c30-4d7e-8055-a7099da02489,05.07.2019 08:34:00,45.238.235.6,Ilkeston,England,DE7,Chrome,Email,/cart,cart
+782040,59713,4,3a527181-adbf-40d3-8d2e-e70e4f863204,19.08.2023 13:47:56,32.135.184.26,Ilkeston,England,DE7,Other,Email,/cart,cart
+1044473,79952,4,c9f6652c-6d38-48c1-844e-dffc5b7cb109,09.04.2023 22:05:30,36.220.110.108,Houghton le Spring,England,DH4,Chrome,Email,/cart,cart
+1460258,,2,2f8f2a7d-6320-48df-b76d-97426b1fd987,08.03.2021 19:16:00,187.16.30.107,Houghton le Spring,England,DH4,Chrome,YouTube,/cart,cart
+275979,20880,4,8759e54f-0217-49db-8e0d-a47e88e6939a,23.02.2020 23:27:42,204.189.120.126,Lanchester,England,DH8,IE,YouTube,/cart,cart
+747757,57060,6,4c27c8e2-4edd-4748-8d4a-9098546da664,19.09.2023 14:44:19,104.138.245.230,Lanchester,England,DH8,Safari,Email,/cart,cart
+1767716,,3,c0dd3f63-2f02-4f9b-b9dc-383c06096750,09.04.2022 06:42:00,144.216.183.83,Stanley,England,DH9,Safari,Email,/cart,cart
+1425441,,2,2bd2ada5-8236-46a9-bdef-f364349c1328,12.08.2021 09:21:00,54.106.165.221,Darlington,England,DL3,Firefox,Facebook,/cart,cart
+1964712,,3,569db4b8-8614-4fe5-93b0-86a8bf527f98,08.08.2023 08:26:00,62.177.7.233,Darlington,England,DL3,Safari,Email,/cart,cart
+950974,72728,3,e24169fd-e288-43f2-afc4-19e90262b8bf,29.01.2020 11:18:10,31.74.59.136,Doncaster,England,DN4,Chrome,Facebook,/cart,cart
+2266709,,2,ed234908-5407-4765-a835-294dd6002697,05.02.2020 03:21:00,120.2.0.44,Doncaster,England,DN4,Firefox,Adwords,/cart,cart
+545981,41548,3,f1eba234-e5f0-4f9e-a199-17690d35da67,20.08.2022 02:01:23,218.135.241.194,Doncaster,England,DN5,Firefox,Adwords,/cart,cart
+330463,25041,4,93b00470-9bbe-4409-9789-2aef33e0e3f4,01.06.2023 23:21:36,144.104.238.195,Norton,England,DN6,Chrome,Adwords,/cart,cart
+1931033,,2,7c3a4d08-00df-468b-81ef-7bde68c90096,13.03.2023 01:07:00,118.161.225.93,Norton,England,DN6,Chrome,Facebook,/cart,cart
+2282256,,2,75d720ca-d2d4-4c49-8dad-108c6acb489b,01.11.2022 03:58:00,92.27.119.144,Puddletown,England,DT2,Chrome,Email,/cart,cart
+1333940,,3,9f674e62-9d9f-4e9b-b1e0-e68ae5815b24,05.03.2022 06:30:00,134.235.193.80,Puddletown,England,DT2,Firefox,Email,/cart,cart
+143843,10752,3,0b48a24f-4834-4140-b2fc-da18d8ece656,16.08.2019 00:11:30,194.154.158.4,Weymouth,England,DT4,Chrome,Facebook,/cart,cart
