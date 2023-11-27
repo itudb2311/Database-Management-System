@@ -1,7 +1,7 @@
 import mysql.connector
 import pandas as pd
 from table_definitions import (
-    create_users_table, create_inventory_items_table, create_distribution_centers_table, create_events_table, create_products_table
+    create_users_table, create_inventory_items_table, create_distribution_centers_table, create_events_table, create_products_table, create_order_items_table
 )
 
 def create_connection():
@@ -41,11 +41,12 @@ def main():
     cursor = db.cursor()
 
 
-    create_table_statements = [ create_inventory_items_table,        #M.Serdar NAZLI's table
+    create_table_statements = [ create_inventory_items_table,       #M.Serdar NAZLI's table
                                 create_users_table,                 #Common Table
-                                create_distribution_centers_table,   #Common Table
-                                create_events_table                 # Mehmet Umut Gokdag's table
-                                create_products_table               # Mehmet Ali Balıkçı's table
+                                create_distribution_centers_table,  #Common Table
+                                create_events_table,                # Mehmet Umut Gokdag's table
+                                create_products_table,              # Mehmet Ali Balıkçı's table
+                                create_order_items_table,           # Ömer Faruk AYDIN's table
                               ]
 
     for statement in create_table_statements:
