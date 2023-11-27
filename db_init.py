@@ -53,10 +53,12 @@ def main():
         create_table(cursor, statement)
 
     #Load and insert data from CSV files
-    load_and_insert_data(cursor, 'tables/inventory_items.csv', 'events')
-    load_and_insert_data(cursor, 'tables/users.csv', 'users')
-    load_and_insert_data(cursor, 'tables/distribution_centers.csv', 'users')
-    load_and_insert_data(cursor, 'tables\thelook_ecommerce - products.csv', 'products')
+    load_and_insert_data(cursor, 'tables/thelook_ecommerce - inventory_items.csv', 'inventory_items')
+    load_and_insert_data(cursor, 'tables/thelook_ecommerce - users.csv', 'users')
+    load_and_insert_data(cursor, 'tables/thelook_ecommerce - distribution_centers.csv', 'distribution_centers')
+    load_and_insert_data(cursor, 'tables/thelook_ecommerce - events.csv', 'events')
+    load_and_insert_data(cursor, 'tables/thelook_ecommerce - products.csv', 'products')
+    load_and_insert_data(cursor, 'tables/thelook_ecommerce - order_items.csv', 'order_items')
 
 
     db.commit()
