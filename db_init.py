@@ -1,7 +1,7 @@
 import mysql.connector
 import pandas as pd
 from table_definitions import (
-    create_users_table, create_inventory_items_table, create_distribution_centers_table
+    create_users_table, create_inventory_items_table, create_distribution_centers_table, create_events_table
 )
 
 def create_connection():
