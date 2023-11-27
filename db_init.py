@@ -56,7 +56,7 @@ def main():
     load_and_insert_data(cursor, 'tables/inventory_items.csv', 'events')
     load_and_insert_data(cursor, 'tables/users.csv', 'users')
     load_and_insert_data(cursor, 'tables/distribution_centers.csv', 'users')
-    load_and_insert_data(cursor, 'tables\thelook_ecommerce - products.csv', 'products')
+    load_and_insert_data(cursor, 'tables/products.csv', 'products')
 
 
     db.commit()
