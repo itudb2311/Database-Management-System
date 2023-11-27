@@ -68,6 +68,20 @@ create_events_table = """
         FOREIGN KEY (user_id) REFERENCES users(id)
     )
     """
+    
+create_products_table = """
+    CREATE TABLE IF NOT EXISTS products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cost DECIMAL(10, 2),
+    category VARCHAR(255),
+    name VARCHAR(255),
+    brand VARCHAR(255),
+    retail_price DECIMAL(10, 2),
+    department VARCHAR(255),
+    sku VARCHAR(255),
+    distribution_center_id INT
+)
+"""
 
 
 
