@@ -50,7 +50,24 @@ CREATE TABLE IF NOT EXISTS distribution_centers (
     longitude DECIMAL(11, 8)
 )
 """
-
+create_events_table = """
+    CREATE TABLE IF NOT EXISTS events (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        user_id INT,
+        sequence_number INT,
+        session_id VARCHAR(255),
+        created_at DATETIME,
+        ip_address VARCHAR(255),
+        city VARCHAR(255),
+        state VARCHAR(255),
+        postal_code VARCHAR(255),
+        browser VARCHAR(255),
+        traffic_source VARCHAR(255),
+        URI VARCHAR(255),
+        event_type VARCHAR(255),
+        FOREIGN KEY (user_id) REFERENCES users(id)
+    )
+    """
 
 
 
