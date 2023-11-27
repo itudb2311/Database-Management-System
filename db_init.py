@@ -43,8 +43,9 @@ def main():
 
     create_table_statements = [create_inventory_items_table,        #M.Serdar NAZLI's table
                                 create_users_table,                 #Common Table
-                                create_distribution_centers_table   #Common Table
-                                ]
+                                create_distribution_centers_table,   #Common Table
+                                create_events_table                 # Mehmet Umut Gokdag's table
+                              ]
 
     for statement in create_table_statements:
         create_table(cursor, statement)
