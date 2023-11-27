@@ -83,7 +83,25 @@ create_products_table = """
 )
 """
 
-
+create_order_items_table = """
+CREATE TABLE IF NOT EXISTS order_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    user_id INT,
+    product_id INT,
+    inventory_item_id INT,
+    status VARCHAR(255),
+    created_at DATETIME,
+    shipped_at DATETIME,
+    delivered_at DATETIME,
+    returned_at DATETIME,
+    sale_price DECIMAL(10, 2),
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (product_id) REFERENCES products(id),
+    FOREIGN KEY (inventory_item_id) REFERENCES inventory_items(id)
+)
+"""
 
 
 

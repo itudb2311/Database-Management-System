@@ -1,3 +1,4 @@
 omerfarukaydin' s progress
 
 thelook_ecommerce - order_items.csv file added to the tables folder
+order_items table definition added to db_init file and created the table
