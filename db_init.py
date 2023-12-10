@@ -53,10 +53,19 @@ def main():
         create_table(cursor, statement)
 
     #Load and insert data from CSV files
-    load_and_insert_data(cursor, 'tables/inventory_items.csv', 'events')
-    load_and_insert_data(cursor, 'tables/users.csv', 'users')
-    load_and_insert_data(cursor, 'tables/distribution_centers.csv', 'users')
-    load_and_insert_data(cursor, 'tables/products.csv', 'products')
+#<<<<<<< HEAD
+#    load_and_insert_data(cursor, 'tables/inventory_items.csv', 'events')
+#    load_and_insert_data(cursor, 'tables/users.csv', 'users')
+#    load_and_insert_data(cursor, 'tables/distribution_centers.csv', 'users')
+#    load_and_insert_data(cursor, 'tables/products.csv', 'products')
+#=======
+#    load_and_insert_data(cursor, 'tables/thelook_ecommerce - inventory_items.csv', 'inventory_items')
+#    load_and_insert_data(cursor, 'tables/thelook_ecommerce - users.csv', 'users')
+#    load_and_insert_data(cursor, 'tables/thelook_ecommerce - distribution_centers.csv', 'distribution_centers')
+#    load_and_insert_data(cursor, 'tables/thelook_ecommerce - events.csv', 'events')
+#    load_and_insert_data(cursor, 'tables/thelook_ecommerce - products.csv', 'products')
+#    load_and_insert_data(cursor, 'tables/thelook_ecommerce - order_items.csv', 'order_items')
+#>>>>>>> f7881ae541f8cf4851b1cbbf7c6a420fedfe5b45
 
 
     db.commit()
