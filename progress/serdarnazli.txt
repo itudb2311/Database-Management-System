@@ -4,3 +4,4 @@ Progress of Muhammet Serdar NAZLI(150210723),
 2,table definitions for creating tables in a database are added
 3,draft for flask is added
 4,db_init file is is added where the code initializes the database
+5,improvement of web-dev, bug fixes and optimization.
