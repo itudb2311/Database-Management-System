@@ -11,14 +11,13 @@ Before you begin, ensure you have the following installed:
 - MySQL
 - Python 3
 - Flask
-
+- Pandas
+- Numpy
 ### Setup Instructions
 
 1. **Initialize the MySQL Database:**
    
    - Start your MySQL server.
-   - Create a new database for the project.
-   - Import any initial SQL scripts to set up tables.
 
 2. **Configure Application Settings:**
 
