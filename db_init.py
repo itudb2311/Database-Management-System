@@ -55,8 +55,8 @@ def insert_data(cursor, table, data):
     cursor.executemany(sql, [tuple(row) for row in data.to_numpy()])
 
 def load_and_insert_data(cursor, table_name, data):
-    
     insert_data(cursor, table_name, data)
+    print(f"Data inserted successfully. {table_name}")
 
 def main():
     db = create_connection()
@@ -97,7 +97,7 @@ def main():
     load_and_insert_data(cursor, 'order_items',pipeLine.order_items)"""
     
 
-
+    print("-"*10,"Data is inserted!","-"*10)
 
     db.commit()
     cursor.close()
