@@ -1,3 +1,5 @@
-hasantahabagci' s progress
+hasantahabagci's progress
 
-thelook_ecommerce - orders file added to the tables folder
+1. thelook_ecommerce - orders file added to the tables folder
+
+2. Created database.sql file with MySQL Workbench from tables.
