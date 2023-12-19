@@ -41,11 +41,6 @@ create_distribution_centers_table = """
 CREATE TABLE IF NOT EXISTS distribution_centers (
     id INT PRIMARY KEY,
     name VARCHAR(255),
-    address VARCHAR(255),
-    city VARCHAR(255),
-    state VARCHAR(255),
-    postal_code VARCHAR(255),
-    country VARCHAR(255),
     latitude DECIMAL(10, 8),
     longitude DECIMAL(11, 8)
 )
