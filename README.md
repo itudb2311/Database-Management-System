@@ -32,8 +32,11 @@ Before you begin, ensure you have the following installed:
 
 3. **Run The Application:**
     Navigate to the project directory and run the Flask application:
+    ```bash
     cd path/to/itudb2311
     python app.py
+    ```
+
     This will start the Flask server. By default, it runs on http://127.0.0.1:5000
     Open your web browser and go to http://127.0.0.1:5000 to view the application.
 
