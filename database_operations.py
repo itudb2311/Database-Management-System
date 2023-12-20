@@ -51,11 +51,26 @@ class DatabaseOpeartions:
         except Exception as err:
             print(f"Error: '{err}'")
 
-    def update_data(self):
-        pass
+    def update_data(self, connection, table_name, new_values, condition):
+        try:
+            cursor = connection.cursor()
+            set_clause = ', '.join([f"{column} = '{value}'" for column, value in new_values.items()])
+            query = f"UPDATE {table_name} SET {set_clause} WHERE {condition}"
+            cursor.execute(query)
+            connection.commit()
+            print("Data updated successfully")
+        except Exception as err:
+            print(f"Error: '{err}'")
 
-    def delete_data(self):
-        pass
+    def delete_data(self, connection, table_name, condition):
+        try:
+            cursor = connection.cursor()
+            query = f"DELETE FROM {table_name} WHERE {condition}"
+            cursor.execute(query)
+            connection.commit()
+            print("Data deleted successfully")
+        except Exception as err:
+            print(f"Error: '{err}'")
 
     def select_data(self):
         pass
