@@ -57,6 +57,10 @@ def insert_data(cursor, table, data):
 def load_and_insert_data(cursor, table_name, data):
     insert_data(cursor, table_name, data)
     print(f"Data inserted successfully. {table_name}")
+    
+def delete_data(cursor, table_name):
+    cursor.execute(f"DELETE FROM {table_name}")
+    print(f"Data deleted successfully. {table_name}")
 
 def main():
     db = create_connection()
@@ -84,9 +88,11 @@ def main():
 
     print("\n","-"*10,"Data is being inserted...","-"*10)
 
-
+    delete_data(cursor, 'distribution_centers')
+    delete_data(cursor, 'users')
     load_and_insert_data(cursor, 'distribution_centers',pipeLine.distribution_centers)
-
+    load_and_insert_data(cursor, 'users',pipeLine.users)
+    
     #ERRORS!, we need to fix some integrity problems, some of the data is showing some incosistencies.
     """    
     load_and_insert_data(cursor, 'events',pipeLine.events)

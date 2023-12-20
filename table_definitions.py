@@ -4,17 +4,7 @@ create_users_table = """
         first_name VARCHAR(255),
         last_name VARCHAR(255),
         email VARCHAR(255),
-        age INT,
-        gender VARCHAR(50),
-        state VARCHAR(255),
-        street_address VARCHAR(255),
-        postal_code VARCHAR(255),
-        city VARCHAR(255),
-        country VARCHAR(255),
-        latitude DECIMAL(10, 8),
-        longitude DECIMAL(11, 8),
-        traffic_source VARCHAR(255),
-        created_at DATETIME
+        age INT
     )
     """
 

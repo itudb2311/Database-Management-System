@@ -27,5 +27,20 @@ def distribution_centers():
     centers = get_distribution_centers()
     return render_template('distribution_centers.html', centers=centers)
 
+def get_users():
+    connection = mysql.connector.connect(host=db_host, database=db_name, user=db_user, password=db_password)
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM users")
+    centers = cursor.fetchall()
+    cursor.close()
+    connection.close()
+    return centers
+
+
+@app.route('/users')
+def users():
+    centers = get_users()
+    return render_template('users.html', centers=centers)
+
 if __name__ == '__main__':
     app.run(debug=True)

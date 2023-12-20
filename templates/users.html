@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+<body>
+    <h1>Users</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+        </tr>
+        {% for center in centers %}
+            <tr>
+                <td>{{ center[0] }}</td>
+                <td>{{ center[1] }}</td>
+                <td>{{ center[2] }}</td>
+                <td>{{ center[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
