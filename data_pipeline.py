@@ -33,14 +33,14 @@ class PipeLine():
                 dataset[col] = dataset[col].dt.strftime('%Y-%m-%d %H:%M:%S')
         return dataset
     def get_data(self):
-        #datetime_cols_users = ['created_at'] 
+        datetime_cols_users = ['created_at'] 
         datetime_cols_events = ['created_at']  
         datetime_cols_orders = ['created_at','returned_at','shipped_at','delivered_at'] 
         datetime_cols_order_items = ['created_at','shipped_at','delivered_at','returned_at']
         datetime_cols_inventory_items = ['created_at', 'sold_at']  
 
 
-        self.users = self.read_csv('thelook_ecommerce - users.csv')
+        self.users = self.read_csv('thelook_ecommerce - users.csv',datetime_cols=datetime_cols_users)
         self.inventory_items = self.read_csv('thelook_ecommerce - inventory_items.csv', datetime_cols=datetime_cols_inventory_items)
         self.distribution_centers = self.read_csv('thelook_ecommerce - distribution_centers.csv')
         self.events = self.read_csv('thelook_ecommerce - events.csv', dropna=True, datetime_cols=datetime_cols_events)

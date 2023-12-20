@@ -3,27 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users</title>
+    <title>Products</title>
 </head>
 <body>
-    <h1>Users</h1>
+    <h1>Products</h1>
     <table border="1">
         <tr>
             <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>e-Mail</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>State</th>
-            <th>Street Adress</th>
-            <th>Postal Code</th>
-            <th>City</th>
-            <th>Country</th>
-            <th>Latitude</th>
-            <th>Longtitude</th>
-            <th>Traffic Source</th>
-            <th>Created at</th>
+            <th>Cost</th>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Retail Price</th>
+            <th>Department</th>
+            <th>SKU</th>
+            <th>Distribution Center ID</th>
         </tr>
         {% for center in centers %}
             <tr>
@@ -36,12 +30,6 @@
                 <td>{{ center[6] }}</td>
                 <td>{{ center[7] }}</td>
                 <td>{{ center[8] }}</td>
-                <td>{{ center[9] }}</td>
-                <td>{{ center[10] }}</td>
-                <td>{{ center[11] }}</td>
-                <td>{{ center[12] }}</td>
-                <td>{{ center[13] }}</td>
-                <td>{{ center[14] }}</td>
             </tr>
         {% endfor %}
     </table>
