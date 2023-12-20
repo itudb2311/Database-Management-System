@@ -2,3 +2,6 @@ Progress of Mehmet Ali Balıkçı (150200059)
 
 1,  The file including the table is added to tables folder as thelook_ecommerce - products.csv
     and, products table definition added to db_init file and created the table 
+
+2, I updated HTML files so that there is a page for all tables
+Also, I handle with integrity problems and solved all of them
