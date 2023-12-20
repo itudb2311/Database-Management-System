@@ -88,26 +88,28 @@ def main():
 
     print("\n","-"*10,"Data is being inserted...","-"*10)
 
+    delete_data(cursor, 'order_items')
+    delete_data(cursor, 'products')
+    delete_data(cursor, 'orders')
+    delete_data(cursor, 'events')
+    delete_data(cursor, 'inventory_items')
     delete_data(cursor, 'distribution_centers')
     delete_data(cursor, 'users')
+    
     load_and_insert_data(cursor, 'distribution_centers',pipeLine.distribution_centers)
     load_and_insert_data(cursor, 'users',pipeLine.users)
-    
-    #ERRORS!, we need to fix some integrity problems, some of the data is showing some incosistencies.
-    """    
     load_and_insert_data(cursor, 'events',pipeLine.events)
-    load_and_insert_data(cursor, 'users',pipeLine.users)
     load_and_insert_data(cursor, 'inventory_items',pipeLine.inventory_items)
     load_and_insert_data(cursor, 'products',pipeLine.products)
     load_and_insert_data(cursor, 'orders',pipeLine.orders)
-    load_and_insert_data(cursor, 'order_items',pipeLine.order_items)"""
+    load_and_insert_data(cursor, 'order_items',pipeLine.order_items)
     
-
+    
     print("-"*10,"Data is inserted!","-"*10)
 
     db.commit()
     cursor.close()
     db.close()
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     main()

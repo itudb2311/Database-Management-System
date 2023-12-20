@@ -3,3 +3,4 @@ mehmetumutgokdag' s progress
 1- thelook_ecommerce events file added to the tables folder
 2- products table definition added to db_init file and created the table
 3- update and delete functions added to the database_operations.py file
+4- ı updated app.py adn db_init.py so that all the tables are can be monitored from the admin panel
