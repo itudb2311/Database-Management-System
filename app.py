@@ -117,5 +117,5 @@ def order_items():
     centers = get_order_items()
     return render_template('order_items.html', centers=centers)
 
-if __name__ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
