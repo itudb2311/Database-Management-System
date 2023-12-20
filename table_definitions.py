@@ -17,7 +17,6 @@ create_users_table = """
         created_at DATETIME
     )
     """
-
 create_inventory_items_table = """
 CREATE TABLE IF NOT EXISTS inventory_items (
     id INT  PRIMARY KEY,
@@ -35,8 +34,6 @@ CREATE TABLE IF NOT EXISTS inventory_items (
     FOREIGN KEY (product_distribution_center_id) REFERENCES distribution_centers(id)
 )
 """
-
-
 create_distribution_centers_table = """
 CREATE TABLE IF NOT EXISTS distribution_centers (
     id INT PRIMARY KEY,
@@ -62,8 +59,7 @@ create_events_table = """
         event_type VARCHAR(255),
         FOREIGN KEY (user_id) REFERENCES users(id)
     )
-    """
-    
+    """  
 create_products_table = """
 CREATE TABLE IF NOT EXISTS products (
     id INT  PRIMARY KEY,
@@ -78,7 +74,6 @@ CREATE TABLE IF NOT EXISTS products (
     FOREIGN KEY (distribution_center_id) REFERENCES distribution_centers(id)
 )
 """
-
 create_order_items_table = """
 CREATE TABLE IF NOT EXISTS order_items (
     id INT  PRIMARY KEY,
@@ -98,7 +93,6 @@ CREATE TABLE IF NOT EXISTS order_items (
     FOREIGN KEY (inventory_item_id) REFERENCES inventory_items(id)
 )
 """
-
 create_orders_table = """
 CREATE TABLE IF NOT EXISTS orders (
     order_id INT  PRIMARY KEY,
