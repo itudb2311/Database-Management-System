@@ -3,7 +3,7 @@ from settings import db_user,db_password,db_host,db_name
 import mysql.connector
 
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 
 
@@ -117,5 +117,5 @@ def order_items():
     centers = get_order_items()
     return render_template('order_items.html', centers=centers)
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     app.run(debug=True)

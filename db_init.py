@@ -111,5 +111,5 @@ def main():
     cursor.close()
     db.close()
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     main()
