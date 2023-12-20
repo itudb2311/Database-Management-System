@@ -1,103 +1,70 @@
-import mysql.connector
-from mysql.connector import Error
-import pandas as pd
+
+
+"""
+table name: distribution_centers
+
+'id', 'name', 'latitude', 'longitude'
+
+(1, 'Memphis TN', '35,1174', '-89,9711')
+(2, 'Chicago IL', '41,8369', '-87,6847')
+(3, 'Houston TX', '29,7604', '-95,3698')
+"""
 
 
 
-class DatabaseOpeartions:
-    def __init__(self, host_name, user_name, user_password, db_name):
-        self.host_name = host_name
-        self.user_name = user_name
-        self.user_password = user_password
-        self.db_name = db_name
+class DistributionCenters:
+    def __init__(self, connection):
+        self.columns = ['id', 'name', 'latitude', 'longitude']
+        self.max_id = self.get_max_id(connection)
 
-    
-    def create_connection(self, host_name, user_name, user_password, db_name):
-        connection = None
-        try:
-            connection = mysql.connector.connect(
-                host=self.host_name,
-                user=self.user_name,
-                passwd=self.user_password,
-                database=self.db_name,
-                auth_plugin='mysql_native_password'
-            )
-            print("MySQL Database connection successful")
-        except Error as err:
-            print(f"Error: '{err}'")
-
-        return connection
-    
-
-    def insert_data(self, connection, table_name:str, data):
+    def get_max_id(self, connection):
         try:
             cursor = connection.cursor()
+            cursor.execute("SELECT MAX(id) FROM distribution_centers")
+            max_id = cursor.fetchone()[0]
+            cursor.close()
+            return max_id
+        except Exception as e:
+            print("Error while getting max id from distribution_centers", e)
+            return 0
 
-            columns = self.get_columns(connection, table_name)
-            column_names = [column[0] for column in columns]
-            query = f"INSERT INTO {table_name} ({','.join(column_names)}) VALUES ({','.join(['%s' for _ in column_names])})"
-            cursor.execute(query, data)
+    def insert_data(self, connection, data):
+        try:
+            cursor = connection.cursor()
+            cursor.execute("INSERT INTO distribution_centers VALUES (%s,%s,%s,%s)", (self.max_id+1, data[0], data[1], data[2]))
             connection.commit()
-            print("Data inserted successfully")
-        except Exception as err:
-            print(f"Error: '{err}'")
+            cursor.close()
+            print("Inserted", data)
+        except Exception as e:
+            print("Error while inserting into distribution_centers", e)
 
-    def get_columns(self, connection, table_name:str):
+    def update_data(self, connection, data, id):
         try:
             cursor = connection.cursor()
-            cursor.execute(f"SHOW COLUMNS FROM {table_name}")
-            columns = cursor.fetchall()
-            return columns
-        except Exception as err:
-            print(f"Error: '{err}'")
-
-    def update_data(self, connection, table_name, new_values, condition):
-        try:
-            cursor = connection.cursor()
-            set_clause = ', '.join([f"{column} = '{value}'" for column, value in new_values.items()])
-            query = f"UPDATE {table_name} SET {set_clause} WHERE {condition}"
-            cursor.execute(query)
+            cursor.execute("UPDATE distribution_centers SET name=%s, latitude=%s, longitude=%s WHERE id=%s" , (data[0], data[1], data[2], id))
             connection.commit()
-            print("Data updated successfully")
-        except Exception as err:
-            print(f"Error: '{err}'")
+            cursor.close()
+            print("Updated", data)
+        except Exception as e:
+            print("Error while updating distribution_centers", e)
 
-    def delete_data(self, connection, table_name, condition):
+    def delete_data(self, connection, id):
         try:
             cursor = connection.cursor()
-            query = f"DELETE FROM {table_name} WHERE {condition}"
-            cursor.execute(query)
+            cursor.execute("DELETE FROM distribution_centers WHERE id=%s", (id,))
             connection.commit()
-            print("Data deleted successfully")
-        except Exception as err:
-            print(f"Error: '{err}'")
-            
-    def select_data(self, connection, table_name, columns, condition):
+            cursor.close()
+            print("Deleted", id)
+        except Exception as e:
+            print("Error while deleting from distribution_centers", e)
+
+    def search(self, connection, data):
         try:
             cursor = connection.cursor()
-            columns_clause = ', '.join(columns)
-            query = f"SELECT {columns_clause} FROM {table_name} WHERE {condition}"
-            cursor.execute(query)
-            result = cursor.fetchall()
-            print("Data selected successfully")
-            return result
-        except Exception as err:
-            print(f"Error: '{err}'")
-
-    def select_all_data(self, connection, table_name):
-        try:
-            cursor = connection.cursor()
-            query = f"SELECT * FROM {table_name}"
-            cursor.execute(query)
-            result = cursor.fetchall()
-            print("All data selected successfully")
-            return result
-        except Exception as err:
-            print(f"Error: '{err}'")
-
-    def close_connection(self, connection):
-        try:
-            connection.close()
-            print("Connection closed successfully")
-        except Exception as err:
-            print(f"Error: '{err}'")
+            cursor.execute(f"SELECT * FROM distribution_centers WHERE id={data} OR name={data} OR latitude={data} OR longitude={data}")
+            centers = cursor.fetchall()
+            cursor.close()
+            return centers
+        except Exception as e:
+            print("Could not found any corresponding value")
+            return "Could not found any corresponding value"
