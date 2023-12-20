@@ -1,0 +1,20 @@
+:root {
+  --main-bg-color: #76d19e;
+  --main-text-color: #fff;
+  --main-button-color: #f7f7f7;
+}
+
+.nav-pills {
+  --bs-nav-pills-border-radius: var(--bs-border-radius) !important;
+  --bs-nav-pills-link-active-color: #fff !important;
+  --bs-nav-pills-link-active-bg: #76d19e !important;
+}
+
+a {
+  color: inherit !important;/* Inherit color from the parent */
+  text-decoration: none !important;/* Remove underline */
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
