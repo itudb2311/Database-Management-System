@@ -72,32 +72,32 @@ class DatabaseOpeartions:
         except Exception as err:
             print(f"Error: '{err}'")
             
-def select_data(self, connection, table_name, columns, condition):
-    try:
-        cursor = connection.cursor()
-        columns_clause = ', '.join(columns)
-        query = f"SELECT {columns_clause} FROM {table_name} WHERE {condition}"
-        cursor.execute(query)
-        result = cursor.fetchall()
-        print("Data selected successfully")
-        return result
-    except Exception as err:
-        print(f"Error: '{err}'")
+    def select_data(self, connection, table_name, columns, condition):
+        try:
+            cursor = connection.cursor()
+            columns_clause = ', '.join(columns)
+            query = f"SELECT {columns_clause} FROM {table_name} WHERE {condition}"
+            cursor.execute(query)
+            result = cursor.fetchall()
+            print("Data selected successfully")
+            return result
+        except Exception as err:
+            print(f"Error: '{err}'")
 
-def select_all_data(self, connection, table_name):
-    try:
-        cursor = connection.cursor()
-        query = f"SELECT * FROM {table_name}"
-        cursor.execute(query)
-        result = cursor.fetchall()
-        print("All data selected successfully")
-        return result
-    except Exception as err:
-        print(f"Error: '{err}'")
+    def select_all_data(self, connection, table_name):
+        try:
+            cursor = connection.cursor()
+            query = f"SELECT * FROM {table_name}"
+            cursor.execute(query)
+            result = cursor.fetchall()
+            print("All data selected successfully")
+            return result
+        except Exception as err:
+            print(f"Error: '{err}'")
 
-def close_connection(self, connection):
-    try:
-        connection.close()
-        print("Connection closed successfully")
-    except Exception as err:
-        print(f"Error: '{err}'")
+    def close_connection(self, connection):
+        try:
+            connection.close()
+            print("Connection closed successfully")
+        except Exception as err:
+            print(f"Error: '{err}'")
