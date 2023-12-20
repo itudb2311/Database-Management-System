@@ -1,3 +1,5 @@
 mehmetumutgokdag' s progress
 
-thelook_ecommerce - events file added to the tables folder
+1- thelook_ecommerce events file added to the tables folder
+2- products table definition added to db_init file and created the table
+3- update and delete functions added to the database_operations.py file
