@@ -1,12 +1,14 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from settings import db_user,db_password,db_host,db_name  
 import mysql.connector
+from utils.table_operations import DistributionCenters
 
 
 app = Flask(__name__)
 
+connection = mysql.connector.connect(host=db_host, database=db_name, user=db_user, password=db_password)
 
-
+    
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -24,7 +26,7 @@ def get_distribution_centers():
     connection.close()
     return centers
 
-@app.route('/distribution-centers')
+@app.route('/distribution_centers')
 def distribution_centers():
     centers = get_distribution_centers()
     return render_template('distribution_centers.html', centers=centers)
@@ -118,6 +120,21 @@ def get_order_items():
 def order_items():
     centers = get_order_items()
     return render_template('order_items.html', centers=centers)
+
+
+
+@app.route('/search', methods=['POST'])
+def search():
+    table_name = request.form['distribution_centers']
+    query = request.form['searchQuery']
+
+    tables = {"distribution_centers": DistributionCenters(connection=connection)}
+    table = tables[table_name]
+    results = table.search(query)
+    if not results:
+        results = [['!','!','Could not found any data','!']]
+    return render_template(f'{table_name}.html', centers=results)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

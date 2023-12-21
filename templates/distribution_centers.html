@@ -7,6 +7,15 @@
 </head>
 <body>
     <h1>Distribution Centers</h1>
+
+    <form action="/search" method="post">
+        <input type="hidden" name="distribution_centers" value="distribution_centers">
+        <textarea name="searchQuery"></textarea>
+        <input type="submit" value="Search">
+    </form>
+    
+
+    <!-- Distribution Centers Table -->
     <table border="1">
         <tr>
             <th>ID</th>

@@ -49,5 +49,5 @@ def executeScriptsFromFile(filename):
             print("Command skipped: ", msg)
 
 
-executeScriptsFromFile('./database/SCHEMA.sql')
+executeScriptsFromFile('./database/schema.sql')
 cnx.commit()
