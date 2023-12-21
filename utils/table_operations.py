@@ -40,7 +40,7 @@ class DistributionCenters:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            query = "SELECT * FROM distribution_centers WHERE id LIKE %s OR name LIKE %s OR latitude LIKE %s OR longitude LIKE %s"
+            query = "SELECT * FROM distribution_centers WHERE id LIKE %s AND name LIKE %s AND latitude LIKE %s AND longitude LIKE %s"
             parameters = (data + '%', data + '%', data + '%', data + '%')
             cursor.execute(query, parameters)
             centers = cursor.fetchall()
@@ -93,7 +93,9 @@ class Events:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute(f"SELECT * FROM distribution_centers WHERE id={data} OR user_id={data} OR sequence_number={data} OR session_id={data} OR created_at={data} OR ip_address={data} OR city={data} OR state={data} OR postal_code={data} OR browser={data} OR traffic_source={data} OR uri={data} OR event_type={data}")
+            query = "SELECT * FROM events WHERE id LIKE %s OR user_id LIKE %s OR sequence_number LIKE %s OR session_id LIKE %s OR created_at LIKE %s OR ip_address LIKE %s OR city LIKE %s OR state LIKE %s OR postal_code LIKE %s OR browser LIKE %s OR traffic_source LIKE %s OR uri LIKE %s OR event_type LIKE %s"
+            parameters = (data + '%', data + '%', data + '%',data + '%', data + '%', data + '%',data + '%', data + '%', data + '%',data + '%', data + '%', data + '%', data + '%')
+            cursor.execute(query, parameters)
             centers = cursor.fetchall()
             cursor.close()
             return centers
@@ -145,8 +147,9 @@ class InventoryItems:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute(f"SELECT * FROM distribution_centers WHERE id={data} OR product_id={data} OR created_at={data} OR sold_at={data} OR cost={data} OR product_category={data} OR product_name={data} OR product_brand={data} OR product_retail_price={data} OR product_department={data} OR product_sku={data} OR product_distribution_center_id={data}")
-            centers = cursor.fetchall()
+            query = "SELECT * FROM distribution_centers WHERE id LIKE %s OR user_id LIKE %s OR sequence_number LIKE %s OR session_id LIKE %s OR created_at LIKE %s OR ip_address LIKE %s OR city LIKE %s OR state LIKE %s OR postal_code LIKE %s OR browser LIKE %s OR traffic_source LIKE %s OR uri LIKE %s OR event_type LIKE %s"
+            parameters = (data + '%', data + '%', data + '%',data + '%', data + '%', data + '%',data + '%', data + '%', data + '%',data + '%', data + '%', data + '%', data + '%')
+            cursor.execute(query, parameters)            
             cursor.close()
             return centers
         except Exception as e:
