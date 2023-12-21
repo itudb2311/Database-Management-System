@@ -24,7 +24,7 @@ def get_distribution_centers():
     connection.close()
     return centers
 
-@app.route('/distribution-centers')
+@app.route('/distribution_centers')
 def distribution_centers():
     centers = get_distribution_centers()
     return render_template('distribution_centers.html', centers=centers)
