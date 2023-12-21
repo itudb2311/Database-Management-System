@@ -9,9 +9,9 @@ tables = {"distribution_centers": DistributionCenters(connection=connection),
               "events": Events(connection=connection),
               "inventory_items": InventoryItems(connection=connection),
               "order_items":OrderItems(connection=connection),
-              "orders":Orders(),
-              "products":Products(),
-              "users":Users()}
+              "orders":Orders(connection=connection),
+              "products":Products(connection=connection),
+              "users":Users(connection=connection)}
 
 @app.route('/')
 def index():
