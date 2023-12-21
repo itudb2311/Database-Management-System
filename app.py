@@ -28,12 +28,14 @@ def get_table_data(table_name):
     centers = cursor.fetchall()
     cursor.close()
     connection.close()
+    column_types = []
     for column in columns: # Sütunların tiplerini yazdırıyor
         column_name = column[0]
         column_type = column[1]
         mysql_data_type = get_mysql_data_types(column_type)
-        print(f"{column_name}, {mysql_data_type}")
-    return centers
+        item = {'column_name': column_name, 'column_type': mysql_data_type}
+        column_types.append(item)
+    return centers, column_types
     
 @app.route('/')
 def index():
