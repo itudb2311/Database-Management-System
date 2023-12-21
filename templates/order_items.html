@@ -28,6 +28,7 @@
   <body>
     <header
       class="d-flex flex-stratch justify-content-center py-3 mb-4 text-bg-dark fixed-top"
+      style="margin-bottom: 6.5rem"
     >
       <a
         href="/"
@@ -46,41 +47,142 @@
         </li>
       </ul>
     </header>
+
     <div class="container">
-      <table class="table table-striped table-hover" style="margin-top: 6.5rem">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Order ID</th>
-            <th scope="col">User ID</th>
-            <th scope="col">Product ID</th>
-            <th scope="col">Inventory Item ID</th>
-            <th scope="col">Status</th>
-            <th scope="col">Created at</th>
-            <th scope="col">Shipped at</th>
-            <th scope="col">Delivered at</th>
-            <th scope="col">Returned at</th>
-            <th scope="col">Sale Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for center in centers %}
-          <tr>
-            <td>{{ center[0] }}</td>
-            <td>{{ center[1] }}</td>
-            <td>{{ center[2] }}</td>
-            <td>{{ center[3] }}</td>
-            <td>{{ center[4] }}</td>
-            <td>{{ center[5] }}</td>
-            <td>{{ center[6] }}</td>
-            <td>{{ center[7] }}</td>
-            <td>{{ center[8] }}</td>
-            <td>{{ center[9] }}</td>
-            <td>{{ center[10] }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      <div style="margin-top: 11.5rem">
+        <form class="row">
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by Order ID"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by User ID"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by Product ID"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by Inventory Item ID"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by Status"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by Created at"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by Shipped at"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by Delivered at"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by Returned at"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by Sale Price"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <table
+          class="table table-striped table-hover"
+          style="margin-top: 6.5rem"
+        >
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">ID</th>
+              <th scope="col">Order ID</th>
+              <th scope="col">User ID</th>
+              <th scope="col">Product ID</th>
+              <th scope="col">Inventory Item ID</th>
+              <th scope="col">Status</th>
+              <th scope="col">Created at</th>
+              <th scope="col">Shipped at</th>
+              <th scope="col">Delivered at</th>
+              <th scope="col">Returned at</th>
+              <th scope="col">Sale Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for center in centers %}
+            <tr>
+              <td><input type="radio" name="selectRow" /></td>
+              <td>{{ center[0] }}</td>
+              <td>{{ center[1] }}</td>
+              <td>{{ center[2] }}</td>
+              <td>{{ center[3] }}</td>
+              <td>{{ center[4] }}</td>
+              <td>{{ center[5] }}</td>
+              <td>{{ center[6] }}</td>
+              <td>{{ center[7] }}</td>
+              <td>{{ center[8] }}</td>
+              <td>{{ center[9] }}</td>
+              <td>{{ center[10] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all the rows in the table body
+        var rows = document.querySelectorAll("tbody tr");
+
+        // Add click event listener to each row
+        rows.forEach(function (row) {
+          row.addEventListener("click", function () {
+            // Get data from the clicked row
+            var rowData = Array.from(row.children).map(function (cell) {
+              return cell.textContent.trim();
+            });
+
+            // Log the selected row data to the console
+            console.log("Selected Row Data:", rowData);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
