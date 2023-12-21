@@ -1,10 +1,17 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from settings import db_user,db_password,db_host,db_name  
 import mysql.connector
 from utils.table_operations import *
 
 app = Flask(__name__)
 connection = mysql.connector.connect(host=db_host, database=db_name, user=db_user, password=db_password)    
+tables = {"distribution_centers": DistributionCenters(connection=connection),
+              "events": Events(connection=connection),
+              "inventory_items": InventoryItems(connection=connection),
+              "order_items":OrderItems(connection=connection),
+              "orders":Orders(),
+              "products":Products(),
+              "users":Users()}
 
 @app.route('/')
 def index():
@@ -54,18 +61,32 @@ def search():
     table_name = request.form['table_name']
 
     inputs = [request.form.get(f'input{i}', '').strip() for i in range(1, 30)]
-
-    print(inputs)
-    tables = {"distribution_centers": DistributionCenters(connection=connection),
-              }
     table = tables[table_name]
 
     results = table.search(inputs)
-    print(results)
     if not results:
         results = [['No Data Found!']]
     results = [results]
     return render_template(f'{table_name}.html', centers=results)
-                                        
+
+def insert(data, table_name):
+    tables[table_name].insert(data)
+    return render_template(table_name+'.html')
+
+def delete(data, table_name):
+    handler = tables[table_name]
+    for datum in data:
+        handler.delete(datum)
+    return render_template(table_name+'.html')
+
+def update(data, table_name):
+    id = data[0]
+    tables[table_name].insert(data,id)
+    return render_template(table_name+'.html')
+
+
+    
+
+                       
 if __name__ == '__main__':
     app.run(debug=True)
