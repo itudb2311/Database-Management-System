@@ -4,7 +4,7 @@ import mysql.connector
 from utils.table_operations import *
 
 app = Flask(__name__)
-connection = mysql.connector.connect(host=db_host, database=db_name, user=db_user, password=db_password)    
+connection = mysql.connector.connect(host=db_host, database=db_name, user=db_user, password=db_password, auth_plugin='mysql_native_password')    
 
 @app.route('/')
 def index():
