@@ -183,7 +183,7 @@ class OrderItems:
     def update_data(self, data, id):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("UPDATE order_items SET order_id=%s, user_id=%s, product_id=%s, inventory_item_id=%s, status=%s, created_at=%s, shipped_at=%s, delivered_at=%s, returned_at=%s, sale_price=%s WHERE id=%s" , (data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], id))
+            cursor.execute("UPDATE order_items SET order_id=%s, user_id=%s, product_id=%s, inventory_item_id=%s, status=%s, created_at=%s, shipped_at=%s, delivered_at=%s, returned_at=%s, sale_price=%s WHERE id=%s" , (data["order_id"], data["user_id"], data["product_id"], data["inventory_item_id"], data["status"], data["created_at"], data["shipped_at"], data["delivered_at"], data["returned_at"],data["sale_price"], id))
             self.connection.commit()
             cursor.close()
             print("Updated", data)
