@@ -1,3 +1,6 @@
+from settings import db_user,db_password,db_host,db_name  
+import mysql.connector
+
 class DistributionCenters:
     def __init__(self, connection):
         self.columns = ['id', 'name', 'latitude', 'longitude']
@@ -374,3 +377,34 @@ class Users:
         except Exception as e:
             print("Could not find any corresponding value")
             return False
+
+
+def get_mysql_data_types(column_type):
+    # MySQL veri tipleri için eşleştirmeleri tanımla
+    mysql_types = {
+        246: 'DECIMAL',
+        3: 'INT',
+        12: 'DATETIME',
+        253: 'VARCHAR'
+        # Diğer veri tipleri için gerekli eşleştirmeleri ekle
+    }
+    
+    # Veri tipini döndür
+    return mysql_types.get(column_type, 'UNKNOWN')
+
+def get_table_data(table_name):
+    connection = mysql.connector.connect(host=db_host, database=db_name, user=db_user, password=db_password)    
+    cursor = connection.cursor()
+    cursor.execute(f"SELECT * FROM {table_name}")
+    columns = cursor.description  # Sütunların adları ve tipleri
+    centers = cursor.fetchall()
+    cursor.close()
+    connection.close()
+    column_types = []
+    for column in columns: # Sütunların tiplerini yazdırıyor
+        column_name = column[0]
+        column_type = column[1]
+        mysql_data_type = get_mysql_data_types(column_type)
+        item = {'column_name': column_name, 'column_type': mysql_data_type}
+        column_types.append(item)
+    return centers, column_types
