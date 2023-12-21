@@ -91,7 +91,6 @@ def search():
               }
     table = tables[table_name]
 
-    # Assuming 'search_with_inputs' is a method to handle the dynamic search
     results = table.search(inputs)
     print(results)
     if not results:
