@@ -64,8 +64,8 @@ def search():
     print(results)
     if not results:
         results = [['No Data Found!']]
-
+    results = [results]
     return render_template(f'{table_name}.html', centers=results)
-
+                                        
 if __name__ == '__main__':
     app.run(debug=True)
