@@ -5,6 +5,7 @@ from utils.table_operations import DistributionCenters
 
 
 app = Flask(__name__)
+connection = mysql.connector.connect(host=db_host, database=db_name, user=db_user, password=db_password)    
 
 def get_mysql_data_types(column_type):
     # MySQL veri tipleri için eşleştirmeleri tanımla
@@ -79,16 +80,22 @@ def order_items():
 
 @app.route('/search', methods=['POST'])
 def search():
-    table_name = request.form['distribution_centers']
-    query = request.form['searchQuery']
-    connection = mysql.connector.connect(host=db_host, database=db_name, user=db_user, password=db_password) 
-    tables = {"distribution_centers": DistributionCenters(connection=connection)}
+    table_name = request.form['table_name']
+
+    inputs = [request.form.get(f'input{i}', '').strip() for i in range(1, 30)]
+
+    print(inputs)
+    tables = {"distribution_centers": DistributionCenters(connection=connection),
+              }
     table = tables[table_name]
-    results = table.search(query)
+
+    # Assuming 'search_with_inputs' is a method to handle the dynamic search
+    results = table.search(inputs)
+    print(results)
     if not results:
-        results = [['!','!','Could not found any data','!']]
+        results = [['No Data Found!']]
+
     return render_template(f'{table_name}.html', centers=results)
-    connection.close()
 
 if __name__ == '__main__':
     app.run(debug=True)
