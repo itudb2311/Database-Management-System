@@ -6,7 +6,19 @@ class DistributionCenters:
         self.columns = ['id', 'name', 'latitude', 'longitude']
         self.connection = connection
 
-
+    def generate_primary_key(self):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("SELECT MAX(id) FROM distribution_centers")
+            max_id = cursor.fetchone()[0]
+            cursor.close()
+            if max_id is None:
+                return 1
+            return max_id + 1
+        except Exception as e:
+            print("Error while generating primary key for distribution_centers", e)
+            return f"Error: {e}"
+        
     def insert_data(self, data):
         try:
             cursor = self.connection.cursor()
@@ -59,6 +71,19 @@ class Events:
     def __init__(self, connection):
         self.columns = ['id', 'user_id', 'sequence_number', 'session_id', 'created_at', 'ip_address', 'city', 'state', 'postal_code', 'browser', 'traffic_source', 'uri', 'event_type']
         self.connection = connection
+
+    def generate_primary_key(self):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("SELECT MAX(id) FROM events")
+            max_id = cursor.fetchone()[0]
+            cursor.close()
+            if max_id is None:
+                return 1
+            return max_id + 1
+        except Exception as e:
+            print("Error while generating primary key for events", e)
+            return f"Error: {e}"
 
     def insert_data(self, data):
         try:
@@ -115,6 +140,19 @@ class InventoryItems:
         self.columns = ['id', 'product_id', 'created_at', 'sold_at', 'cost', 'product_category', 'product_name', 'product_brand', 'product_retail_price', 'product_department', 'product_sku', 'product_distribution_center_id']
         self.connection = connection
 
+    def generate_primary_key(self):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("SELECT MAX(id) FROM inventory_items")
+            max_id = cursor.fetchone()[0]
+            cursor.close()
+            if max_id is None:
+                return 1
+            return max_id + 1
+        except Exception as e:
+            print("Error while generating primary key for inventory_items", e)
+            return f"Error: {e}"
+        
     def insert_data(self, data):
         try:
             cursor = self.connection.cursor()
@@ -169,6 +207,19 @@ class OrderItems:
         self.columns = ['id', 'order_id', 'user_id', 'product_id', 'inventory_item_id', 'status', 'created_at', 'shipped_at', 'delivered_at', 'returned_at', 'sale_price']
         self.connection = connection
 
+    def generate_primary_key(self):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("SELECT MAX(id) FROM order_items")
+            max_id = cursor.fetchone()[0]
+            cursor.close()
+            if max_id is None:
+                return 1
+            return max_id + 1
+        except Exception as e:
+            print("Error while generating primary key for order_items", e)
+            return f"Error: {e}"
+        
     def insert_data(self, data):
         try:
             cursor = self.connection.cursor()
@@ -222,6 +273,20 @@ class Orders:
     def __init__(self, connection):
         self.columns = ['order_id', 'user_id', 'status', 'gender', 'created_at', 'returned_at', 'shipped_at', 'delivered_at', 'num_of_item']
         self.connection = connection
+
+    def generate_primary_key(self):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("SELECT MAX(order_id) FROM orders")
+            max_id = cursor.fetchone()[0]
+            cursor.close()
+            if max_id is None:
+                return 1
+            return max_id + 1
+        except Exception as e:
+            print("Error while generating primary key for orders", e)
+            return f"Error: {e}"
+
 
     def insert_data(self, data):
         try:
@@ -278,6 +343,19 @@ class Products:
         self.columns = ['id', 'cost', 'category', 'name', 'brand', 'retail_price', 'department', 'sku', 'distribution_center_id']
         self.connection = connection
 
+    def generate_primary_key(self):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("SELECT MAX(id) FROM products")
+            max_id = cursor.fetchone()[0]
+            cursor.close()
+            if max_id is None:
+                return 1
+            return max_id + 1
+        except Exception as e:
+            print("Error while generating primary key for products", e)
+            return f"Error: {e}"
+        
     def insert_data(self, data):
         try:
             cursor = self.connection.cursor()
@@ -332,6 +410,19 @@ class Users:
         self.columns = ['id', 'first_name', 'last_name', 'email', 'age', 'gender', 'state', 'street_address', 'postal_code', 'city', 'country', 'latitude', 'longitude', 'traffic_source', 'created_at']
         self.connection = connection
 
+    def generate_primary_key(self):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("SELECT MAX(id) FROM users")
+            max_id = cursor.fetchone()[0]
+            cursor.close()
+            if max_id is None:
+                return 1
+            return max_id + 1
+        except Exception as e:
+            print("Error while generating primary key for users", e)
+            return f"Error: {e}"
+        
     def insert_data(self, data):
         try:
             cursor = self.connection.cursor()
