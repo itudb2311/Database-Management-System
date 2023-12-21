@@ -11,7 +11,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 def get_distribution_centers():
     connection = mysql.connector.connect(host=db_host, database=db_name, user=db_user, password=db_password)
