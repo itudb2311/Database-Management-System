@@ -50,43 +50,21 @@
 
     <div class="container" style="margin-top: 6.5rem">
       <div class="row">
-        
-          <form>
-            <div class="form-row">
-              <div class="col mb-3">
-                <label for="validationCustom01">First name</label>
-                <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-              </div>
-              <div class="col mb-3">
-                <label for="validationCustom02">Last name</label>
-                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-              </div>
-              <div class="col mb-3">
-                <label for="validationCustomUsername">Username</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                  </div>
-                  <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
-                  <div class="invalid-feedback">
-                    Please choose a username.
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            
-            <button class="btn btn-primary" type="submit">Submit form</button>
-          </form>
-          
-        
-        
+        <form class="row">
+          {% for column in centers[1] %}
+          <div class="col">
+            <label for="{{ column.column_name }}"
+              >{{ column.column_name }}</label
+            >
+            <input
+              type="column.column_type"
+              class="form-control"
+              id="{{ column.column_name }}"
+              placeholder="{{ column.column_name }}"
+            />
+          </div>
+          {% endfor %}
+        </form>
       </div>
       <div class="row">
         <table
@@ -110,7 +88,7 @@
             </tr>
           </thead>
           <tbody>
-            {% for center in centers %}
+            {% for center in centers[0] %}
             <tr>
               <td><input type="radio" name="selectRow" /></td>
               <td>{{ center[0] }}</td>
