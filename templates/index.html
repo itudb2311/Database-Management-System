@@ -26,190 +26,184 @@
     />
   </head>
   <body>
-    <div class="area">
-      <header
-        class="d-flex flex-stratch justify-content-center py-3 mb-4 text-bg-dark"
+    <header
+      class="d-flex flex-stratch justify-content-center py-3 mb-4 text-bg-dark fixed-top"
+    >
+      <a
+        href="/"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
       >
-        <a
-          href="/"
-          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-        >
-          <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap" />
-          </svg>
-          <span class="text-white fs-4">Inventory Management System</span>
-        </a>
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap" />
+        </svg>
+        <span class="text-white fs-4">Inventory Management System</span>
+      </a>
 
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">Home</a>
-          </li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-        </ul>
-      </header>
-      <div class="container">
-        <div class="container px-4 py-5" id="custom-cards">
-          <div
-            class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5"
-          >
-            <div class="col">
-              <div
-                class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-              >
-                <a href="/inventory_items">
-                  <div
-                    class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
-                  >
-                    <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">
-                      Inventory Items
-                    </h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                      <li class="me-auto">
-                        <i class="fa-solid fa-table-cells fs-1"></i>
-                      </li>
-                      <li class="d-flex align-items-center me-3">
-                        <small>Description</small>
-                      </li>
-                    </ul>
-                  </div>
-                </a>
-              </div>
+      <ul class="nav nav-pills px-5">
+        <li class="nav-item">
+          <a href="/" class="nav-link active" aria-current="page">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about" class="nav-link">About</a>
+        </li>
+      </ul>
+    </header>
+    <div class="container">
+      <div class="container mt-5 px-4 py-5" id="custom-cards">
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            >
+              <a href="/inventory_items">
+                <div
+                  class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+                >
+                  <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">
+                    Inventory Items
+                  </h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                      <i class="fa-solid fa-table-cells fs-1"></i>
+                    </li>
+                    <li class="d-flex align-items-center me-3">
+                      <small>Description</small>
+                    </li>
+                  </ul>
+                </div>
+              </a>
             </div>
-            <div class="col">
-              <div
-                class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-              >
-                <a href="/inventory_items">
-                  <div
-                    class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
-                  >
-                    <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">Users</h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                      <li class="me-auto">
-                        <i class="fa-solid fa-table-cells fs-1"></i>
-                      </li>
-                      <li class="d-flex align-items-center me-3">
-                        <small>Description</small>
-                      </li>
-                    </ul>
-                  </div>
-                </a>
-              </div>
+          </div>
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            >
+              <a href="/inventory_items">
+                <div
+                  class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+                >
+                  <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">Users</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                      <i class="fa-solid fa-table-cells fs-1"></i>
+                    </li>
+                    <li class="d-flex align-items-center me-3">
+                      <small>Description</small>
+                    </li>
+                  </ul>
+                </div>
+              </a>
             </div>
-            <div class="col">
-              <div
-                class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-              >
-                <a href="/inventory_items">
-                  <div
-                    class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
-                  >
-                    <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">
-                      Distribution Centers
-                    </h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                      <li class="me-auto">
-                        <i class="fa-solid fa-table-cells fs-1"></i>
-                      </li>
-                      <li class="d-flex align-items-center me-3">
-                        <small>Description</small>
-                      </li>
-                    </ul>
-                  </div>
-                </a>
-              </div>
+          </div>
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            >
+              <a href="/inventory_items">
+                <div
+                  class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+                >
+                  <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">
+                    Distribution Centers
+                  </h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                      <i class="fa-solid fa-table-cells fs-1"></i>
+                    </li>
+                    <li class="d-flex align-items-center me-3">
+                      <small>Description</small>
+                    </li>
+                  </ul>
+                </div>
+              </a>
             </div>
-            <div class="col">
-              <div
-                class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-              >
-                <a href="/inventory_items">
-                  <div
-                    class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
-                  >
-                    <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">
-                      Events
-                    </h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                      <li class="me-auto">
-                        <i class="fa-solid fa-table-cells fs-1"></i>
-                      </li>
-                      <li class="d-flex align-items-center me-3">
-                        <small>Description</small>
-                      </li>
-                    </ul>
-                  </div>
-                </a>
-              </div>
+          </div>
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            >
+              <a href="/inventory_items">
+                <div
+                  class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+                >
+                  <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">Events</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                      <i class="fa-solid fa-table-cells fs-1"></i>
+                    </li>
+                    <li class="d-flex align-items-center me-3">
+                      <small>Description</small>
+                    </li>
+                  </ul>
+                </div>
+              </a>
             </div>
-            <div class="col">
-              <div
-                class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-              >
-                <a href="/inventory_items">
-                  <div
-                    class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
-                  >
-                    <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">
-                      Products
-                    </h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                      <li class="me-auto">
-                        <i class="fa-solid fa-table-cells fs-1"></i>
-                      </li>
-                      <li class="d-flex align-items-center me-3">
-                        <small>Description</small>
-                      </li>
-                    </ul>
-                  </div>
-                </a>
-              </div>
+          </div>
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            >
+              <a href="/inventory_items">
+                <div
+                  class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+                >
+                  <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">
+                    Products
+                  </h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                      <i class="fa-solid fa-table-cells fs-1"></i>
+                    </li>
+                    <li class="d-flex align-items-center me-3">
+                      <small>Description</small>
+                    </li>
+                  </ul>
+                </div>
+              </a>
             </div>
-            <div class="col">
-              <div
-                class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-              >
-                <a href="/inventory_items">
-                  <div
-                    class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
-                  >
-                    <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">
-                      Order Items
-                    </h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                      <li class="me-auto">
-                        <i class="fa-solid fa-table-cells fs-1"></i>
-                      </li>
-                      <li class="d-flex align-items-center me-3">
-                        <small>Description</small>
-                      </li>
-                    </ul>
-                  </div>
-                </a>
-              </div>
+          </div>
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            >
+              <a href="/inventory_items">
+                <div
+                  class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+                >
+                  <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">
+                    Order Items
+                  </h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                      <i class="fa-solid fa-table-cells fs-1"></i>
+                    </li>
+                    <li class="d-flex align-items-center me-3">
+                      <small>Description</small>
+                    </li>
+                  </ul>
+                </div>
+              </a>
             </div>
-            <div class="col">
-              <div
-                class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-              >
-                <a href="/inventory_items">
-                  <div
-                    class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
-                  >
-                    <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">
-                      Orders
-                    </h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                      <li class="me-auto">
-                        <i class="fa-solid fa-table-cells fs-1"></i>
-                      </li>
-                      <li class="d-flex align-items-center me-3">
-                        <small>Description</small>
-                      </li>
-                    </ul>
-                  </div>
-                </a>
-              </div>
+          </div>
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            >
+              <a href="/inventory_items">
+                <div
+                  class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+                >
+                  <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold">Orders</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                      <i class="fa-solid fa-table-cells fs-1"></i>
+                    </li>
+                    <li class="d-flex align-items-center me-3">
+                      <small>Description</small>
+                    </li>
+                  </ul>
+                </div>
+              </a>
             </div>
           </div>
         </div>
