@@ -53,7 +53,9 @@
         <form class="row">
           {% for column in centers[1] %}
           <div class="col">
-            <label for="{{ column.column_name }}"
+            <label
+              class="d-flex justify-content-center fw-bold"
+              for="{{ column.column_name }}"
               >{{ column.column_name }}</label
             >
             <input
@@ -64,7 +66,44 @@
             />
           </div>
           {% endfor %}
+          <div class="col-12 d-flex justify-content-end">
+            <button
+              type="submit"
+              class="btn btn-primary m-2"
+              style="width: 100px"
+            >
+              Update
+            </button>
+            <button
+              type="submit"
+              id="insert"
+              class="btn btn-success m-2"
+              style="width: 100px"
+            >
+              Insert
+            </button>
+          </div>
         </form>
+      </div>
+      <div class="row">
+        <div class="col-6 d-flex justify-content-start">
+          <button
+            type="submit"
+            class="btn btn-danger m-2"
+            style="margin-left: 0px !important; width: 300px"
+          >
+            Delete Selected Items
+          </button>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+          <button
+            type="submit"
+            class="btn btn-warning m-2"
+            style="margin-left: 0px !important; width: 300px"
+          >
+            Search
+          </button>
+        </div>
       </div>
       <div class="row">
         <table
@@ -90,7 +129,7 @@
           <tbody>
             {% for center in centers[0] %}
             <tr>
-              <td><input type="radio" name="selectRow" /></td>
+              <th scope="col" nam><input type="checkbox" /></th>
               <td>{{ center[0] }}</td>
               <td>{{ center[1] }}</td>
               <td>{{ center[2] }}</td>
@@ -110,22 +149,61 @@
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Get all the rows in the table body
-        var rows = document.querySelectorAll("tbody tr");
-
-        // Add click event listener to each row
-        rows.forEach(function (row) {
-          row.addEventListener("click", function () {
-            // Get data from the clicked row
+        // Get all the checkboxes in the table
+        var checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
+        var selectedItems = []; // Array to store selected items
+    
+        // Add click event listener to each checkbox
+        checkboxes.forEach(function (checkbox, index) {
+          checkbox.addEventListener("change", function () {
+            var row = checkbox.closest("tr");
+    
+            // Get data from the row containing the clicked checkbox
             var rowData = Array.from(row.children).map(function (cell) {
               return cell.textContent.trim();
             });
-
-            // Log the selected row data to the console
-            console.log("Selected Row Data:", rowData);
+    
+            // Check if the checkbox is checked and add/remove from the list accordingly
+            if (checkbox.checked) {
+              selectedItems.push(rowData);
+            } else {
+              // Remove the item from the list if the checkbox is unchecked
+              var rowIndex = selectedItems.findIndex(
+                (item) => JSON.stringify(item) === JSON.stringify(rowData)
+              );
+              if (rowIndex !== -1) {
+                selectedItems.splice(rowIndex, 1);
+              }
+            }
+    
+            // Log the selected items to the console
+            console.log("Selected Items:", selectedItems);
+          });
+        });
+      });
+    </script>    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var tableRows = document.querySelectorAll("tbody tr");
+        var formInputs = document.querySelectorAll("form input");
+    
+        tableRows.forEach(function (row, index) {
+          row.addEventListener("click", function () {
+            // Clear existing values in form inputs
+            formInputs.forEach(function (input) {
+              input.value = "";
+            });
+    
+            // Get values from the clicked row
+            var columns = row.getElementsByTagName("td");
+            for (var i = 0; i < columns.length; i++) {
+              formInputs[i].value = columns[i].innerText;
+            }
           });
         });
       });
     </script>
+    
+    
   </body>
 </html>
