@@ -40,7 +40,9 @@ class DistributionCenters:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute(f"SELECT * FROM distribution_centers WHERE id={data} OR name={data} OR latitude={data} OR longitude={data}")
+            query = "SELECT * FROM distribution_centers WHERE id LIKE %s AND name LIKE %s AND latitude LIKE %s AND longitude LIKE %s"
+            parameters = (data[0] + '%', data[1] + '%', data[2] + '%', data[3] + '%')
+            cursor.execute(query, parameters)
             centers = cursor.fetchall()
             cursor.close()
             return centers
@@ -91,13 +93,16 @@ class Events:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute(f"SELECT * FROM distribution_centers WHERE id={data} OR user_id={data} OR sequence_number={data} OR session_id={data} OR created_at={data} OR ip_address={data} OR city={data} OR state={data} OR postal_code={data} OR browser={data} OR traffic_source={data} OR uri={data} OR event_type={data}")
-            centers = cursor.fetchall()
+            query = "SELECT * FROM events WHERE id LIKE %s AND user_id LIKE %s AND sequence_number LIKE %s AND session_id LIKE %s AND created_at LIKE %s AND ip_address LIKE %s AND city LIKE %s AND state LIKE %s AND postal_code LIKE %s AND browser LIKE %s AND traffic_source LIKE %s AND uri LIKE %s AND event_type LIKE %s"
+            parameters = tuple(data[_] + '%' for _ in range(13))
+            cursor.execute(query, parameters)
+            results = cursor.fetchall()
             cursor.close()
-            return centers
+            return results
         except Exception as e:
             print("Could not find any corresponding value")
             return False
+
         
 
 
@@ -143,13 +148,16 @@ class InventoryItems:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute(f"SELECT * FROM distribution_centers WHERE id={data} OR product_id={data} OR created_at={data} OR sold_at={data} OR cost={data} OR product_category={data} OR product_name={data} OR product_brand={data} OR product_retail_price={data} OR product_department={data} OR product_sku={data} OR product_distribution_center_id={data}")
-            centers = cursor.fetchall()
+            query = "SELECT * FROM inventory_items WHERE id LIKE %s AND product_id LIKE %s AND created_at LIKE %s AND sold_at LIKE %s AND cost LIKE %s AND product_category LIKE %s AND product_name LIKE %s AND product_brand LIKE %s AND product_retail_price LIKE %s AND product_department LIKE %s AND product_sku LIKE %s AND product_distribution_center_id LIKE %s"
+            parameters = tuple(data[_] + '%' for _ in range(12))
+            cursor.execute(query, parameters)
+            results = cursor.fetchall()
             cursor.close()
-            return centers
+            return results
         except Exception as e:
-            print("Could not found any corresponding value")
+            print("Could not find any corresponding value")
             return False
+
         
 
 
@@ -194,14 +202,16 @@ class OrderItems:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute(f"SELECT * FROM distribution_centers WHERE id={data} OR order_id={data} OR user_id={data} OR product_id={data} OR inventory_item_id={data} OR status={data} OR created_at={data} OR shipped_at={data} OR delivered_at={data} OR returned_at={data} OR sale_price={data}")
-            centers = cursor.fetchall()
+            query = "SELECT * FROM order_items WHERE id LIKE %s AND order_id LIKE %s AND user_id LIKE %s AND product_id LIKE %s AND inventory_item_id LIKE %s AND status LIKE %s AND created_at LIKE %s AND shipped_at LIKE %s AND delivered_at LIKE %s AND returned_at LIKE %s AND sale_price LIKE %s"
+            parameters = tuple(data[_] + '%' for _ in range(11))
+            cursor.execute(query, parameters)
+            results = cursor.fetchall()
             cursor.close()
-            return centers
+            return results
         except Exception as e:
-            print("Could not found any corresponding value")
+            print("Could not find any corresponding value")
             return False
-        
+
 
 
 
@@ -246,13 +256,16 @@ class Orders:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute(f"SELECT * FROM orders WHERE order_id={data} OR user_id={data} OR status={data} OR gender={data} OR created_at={data} OR returned_at={data} OR shipped_at={data} OR delivered_at={data} OR num_of_item={data}")
-            orders = cursor.fetchall()
+            query = "SELECT * FROM orders WHERE order_id LIKE %s AND user_id LIKE %s AND status LIKE %s AND gender LIKE %s AND created_at LIKE %s AND returned_at LIKE %s AND shipped_at LIKE %s AND delivered_at LIKE %s AND num_of_item LIKE %s"
+            parameters = tuple(data[_] + '%' for _ in range(9))
+            cursor.execute(query, parameters)
+            results = cursor.fetchall()
             cursor.close()
-            return orders
+            return results
         except Exception as e:
             print("Could not find any corresponding value")
             return False
+
 
 
 
@@ -295,16 +308,19 @@ class Products:
             print("Error while deleting from products", e)
             return f"Error: {e}"
 
-    def search(self, data):
+    def search_products(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute(f"SELECT * FROM products WHERE id={data} OR cost={data} OR category={data} OR name={data} OR brand={data} OR retail_price={data} OR department={data} OR sku={data} OR distribution_center_id={data}")
-            products = cursor.fetchall()
+            query = "SELECT * FROM products WHERE id LIKE %s AND cost LIKE %s AND category LIKE %s AND name LIKE %s AND brand LIKE %s AND retail_price LIKE %s AND department LIKE %s AND sku LIKE %s AND distribution_center_id LIKE %s"
+            parameters = tuple(data[_] + '%' for _ in range(9))
+            cursor.execute(query, parameters)
+            results = cursor.fetchall()
             cursor.close()
-            return products
+            return results
         except Exception as e:
-            print("Could not found any corresponding value")
+            print("Could not find any corresponding value")
             return False
+
 
 
 
@@ -349,10 +365,12 @@ class Users:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("SELECT * FROM users WHERE id=%s OR first_name=%s OR last_name=%s OR email=%s OR age=%s OR gender=%s OR state=%s OR street_address=%s OR postal_code=%s OR city=%s OR country=%s OR latitude=%s OR longitude=%s OR traffic_source=%s OR created_at=%s", (data, data, data, data, data, data, data, data, data, data, data, data, data, data, data))
-            result = cursor.fetchall()
+            query = "SELECT * FROM users WHERE id LIKE %s AND first_name LIKE %s AND last_name LIKE %s AND email LIKE %s AND age LIKE %s AND gender LIKE %s AND state LIKE %s AND street_address LIKE %s AND postal_code LIKE %s AND city LIKE %s AND country LIKE %s AND latitude LIKE %s AND longitude LIKE %s AND traffic_source LIKE %s AND created_at LIKE %s"
+            parameters = tuple(data[_] + '%' for _ in range(15))
+            cursor.execute(query, parameters)
+            results = cursor.fetchall()
             cursor.close()
-            return result
+            return results
         except Exception as e:
             print("Could not find any corresponding value")
             return False
