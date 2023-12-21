@@ -9,28 +9,34 @@
     <h1>Distribution Centers</h1>
 
     <form action="/search" method="post">
-        <input type="hidden" name="distribution_centers" value="distribution_centers">
-        <textarea name="searchQuery"></textarea>
-        <input type="submit" value="Search">
-    </form>
+        <input type="hidden" name="table_name" value="distribution_centers">
     
-
-    <!-- Distribution Centers Table -->
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Latitude</th>
-            <th>Longitude</th>
-        </tr>
-        {% for center in centers %}
+        <!-- Place the submit button at the top -->
+        <div>
+            <input type="submit" value="Search">
+        </div>
+    
+        <table border="1">
+            <!-- Table Headers and other rows... -->
+            <tr>
+                <td><input type="text" name="input1" placeholder="Id"></td>
+                <td><input type="text" name="input2" placeholder="Name"></td>
+                <td><input type="text" name="input3" placeholder="Latitude"></td>
+                <td><input type="text" name="input4" placeholder="Longitude"></td>
+            </tr>
+            
+             {% for center in centers %}
             <tr>
                 <td>{{ center[0] }}</td>
                 <td>{{ center[1] }}</td>
                 <td>{{ center[2] }}</td>
                 <td>{{ center[3] }}</td>
             </tr>
-        {% endfor %}
-    </table>
+            {% endfor %} 
+        </table>
+    </form>
+    
+    
+
 </body>
 </html>
