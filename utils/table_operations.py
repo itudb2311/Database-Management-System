@@ -40,7 +40,7 @@ class DistributionCenters:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute(f"SELECT * FROM distribution_centers WHERE id='%{data}%' OR name='%{data}%' OR latitude='%{data}%' OR longitude='%{data}%'")
+            cursor.execute(f"SELECT * FROM distribution_centers WHERE LIKE id='%{data}%' OR name='%{data}%' OR latitude='%{data}%' OR longitude='%{data}%'")
             centers = cursor.fetchall()
             cursor.close()
             return centers
