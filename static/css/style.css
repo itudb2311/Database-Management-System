@@ -1,13 +1,13 @@
 :root {
-  --main-bg-color: #76d19e;
+  --main-bg-color: #86A8E7;
   --main-text-color: #fff;
-  --main-button-color: #f7f7f7;
+  --user-icon-color: #D16BA5;
 }
 
 .nav-pills {
   --bs-nav-pills-border-radius: var(--bs-border-radius) !important;
-  --bs-nav-pills-link-active-color: #fff !important;
-  --bs-nav-pills-link-active-bg: #76d19e !important;
+  --bs-nav-pills-link-active-color: var(--main-text-color) !important;
+  --bs-nav-pills-link-active-bg: var(--main-bg-color) !important;
 }
 
 a {
@@ -17,4 +17,8 @@ a {
 
 body {
   background-color: var(--main-bg-color);
+}
+
+.user-icon {
+  color: var(--user-icon-color);
 }
