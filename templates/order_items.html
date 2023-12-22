@@ -120,7 +120,7 @@
         >
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col"><input type="checkbox" id="selectAllCheckbox"></th>
               <th scope="col">ID</th>
               <th scope="col">Order ID</th>
               <th scope="col">User ID</th>
@@ -188,71 +188,87 @@
       var selectedItems = [];
 
       document.addEventListener("DOMContentLoaded", function () {
-        var checkboxes = document.querySelectorAll(
-          "tbody input[type='checkbox']"
-        );
+          // Get the "Select All" checkbox
+          var selectAllCheckbox = document.getElementById("selectAllCheckbox");
 
-        checkboxes.forEach(function (checkbox) {
-          checkbox.addEventListener("change", function () {
-            var row = checkbox.closest("tr");
-            var rowData = {};
-            rowData.id = row.children[1].textContent.trim(); // Assuming the first cell contains a unique identifier
+          selectAllCheckbox.addEventListener("change", function () {
+              // Get all checkboxes in the tbody
+              var checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
 
-            // Assuming the other cells represent columns in your table
-            // You may need to adjust this loop based on your actual table structure
-            Array.from(row.children)
-              .slice(2)
-              .forEach(function (cell, index) {
-                var columnName = "column_" + index; // You can replace this with actual column names
-                rowData[columnName] = cell.textContent.trim();
+              checkboxes.forEach(function (checkbox) {
+                  // Set the state of each checkbox to match the "Select All" checkbox
+                  checkbox.checked = selectAllCheckbox.checked;
+
+                  // Trigger the change event on each checkbox
+                  var event = new Event("change");
+                  checkbox.dispatchEvent(event);
               });
-
-            if (checkbox.checked) {
-              selectedItems.push(rowData);
-            } else {
-              var rowIndex = selectedItems.findIndex(
-                (item) => item.id === rowData.id
-              );
-              if (rowIndex !== -1) {
-                selectedItems.splice(rowIndex, 1);
-              }
-            }
-
-            console.log("Selected Items:", selectedItems);
           });
-        });
+
+          var checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
+
+          checkboxes.forEach(function (checkbox) {
+              checkbox.addEventListener("change", function () {
+                  var row = checkbox.closest("tr");
+                  var rowData = {};
+                  rowData.id = row.children[1].textContent.trim(); // Assuming the first cell contains a unique identifier
+
+                  // Assuming the other cells represent columns in your table
+                  // You may need to adjust this loop based on your actual table structure
+                  Array.from(row.children)
+                      .slice(2)
+                      .forEach(function (cell, index) {
+                          var columnName = "column_" + index; // You can replace this with actual column names
+                          rowData[columnName] = cell.textContent.trim();
+                      });
+
+                  if (checkbox.checked) {
+                      selectedItems.push(rowData);
+                  } else {
+                      var rowIndex = selectedItems.findIndex(
+                          (item) => item.id === rowData.id
+                      );
+                      if (rowIndex !== -1) {
+                          selectedItems.splice(rowIndex, 1);
+                      }
+                  }
+
+                  console.log("Selected Items:", selectedItems);
+              });
+          });
       });
 
       function deleteSelectedItems() {
-        // Check if there are selected items
-        if (selectedItems.length > 0) {
-          // Create a form dynamically
-          var form = document.createElement("form");
-          form.action = "/delete"; // Replace with the actual endpoint
-          form.method = "POST";
+          // Check if there are selected items
+          if (selectedItems.length > 0) {
+              // Create a form dynamically
+              var form = document.createElement("form");
+              form.action = "/delete"; // Replace with the actual endpoint
+              form.method = "POST";
 
-          // Add data input to the form
-          var dataInput = document.createElement("input");
-          dataInput.type = "hidden";
-          dataInput.name = "data";
-          dataInput.value = JSON.stringify(selectedItems);
-          form.appendChild(dataInput);
+              // Add data input to the form
+              var dataInput = document.createElement("input");
+              dataInput.type = "hidden";
+              dataInput.name = "data";
+              dataInput.value = JSON.stringify(selectedItems);
+              form.appendChild(dataInput);
 
-          // Add table_name input to the form
-          var tableNameInput = document.createElement("input");
-          tableNameInput.type = "hidden";
-          tableNameInput.name = "table_name";
-          tableNameInput.value = "order_items"; // Replace with the actual table name
-          form.appendChild(tableNameInput);
+              // Add table_name input to the form
+              var tableNameInput = document.createElement("input");
+              tableNameInput.type = "hidden";
+              tableNameInput.name = "table_name";
+              tableNameInput.value = "order_items"; // Replace with the actual table name
+              form.appendChild(tableNameInput);
 
-          // Append the form to the body and submit it
-          document.body.appendChild(form);
-          form.submit();
-        } else {
-          console.log("No items selected for deletion.");
-        }
+              // Append the form to the body and submit it
+              document.body.appendChild(form);
+              form.submit();
+          } else {
+              console.log("No items selected for deletion.");
+          }
       }
-    </script>
+  </script>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var tableRows = document.querySelectorAll("tbody tr");
@@ -304,6 +320,22 @@
           event.preventDefault();
           submitForm("insert", "order_items");
         });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Get the select all checkbox
+        var selectAllCheckbox = document.getElementById('selectAllCheckbox');
+    
+        // Get all checkboxes in the table body
+        var checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+    
+        // Add an event listener to the select all checkbox
+        selectAllCheckbox.addEventListener('change', function () {
+          checkboxes.forEach(function (checkbox) {
+            checkbox.checked = selectAllCheckbox.checked;
+          });
+        });
+      });
     </script>
   </body>
 </html>
