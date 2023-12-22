@@ -234,14 +234,11 @@ class OrderItems:
     def update_data(self, data, id):
         try:
             cursor = self.connection.cursor()
-
             processed_data = [
                 None if data[field] == 'None' else data[field] for field in self.columns if field in data
             ]
-
             update_fields = ', '.join([f"{field} = %s" for field in self.columns if field in data])
             update_query = f"UPDATE order_items SET {update_fields} WHERE id = %s"
-
             cursor.execute(update_query, processed_data + [id])
             self.connection.commit()
             cursor.close()
@@ -266,27 +263,30 @@ class OrderItems:
             cursor = self.connection.cursor()
             query_parts = []
             parameters = []
-
             for column in self.columns:
                 value = data.get(column, '') + '%'
                 if value == '%':
-                    # Handle NULL values and non-NULL values
                     query_parts.append(f"({column} LIKE %s OR {column} IS NULL)")
                 else:
                     query_parts.append(f"{column} LIKE %s")
                 parameters.append(value)
-
             query = "SELECT * FROM order_items WHERE " + " AND ".join(query_parts)
             cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
-            formatted_results = [list(row) for row in results]
             cursor.close()
-            return formatted_results
+            columns = cursor.description
+            column_types = []
+            for column in columns:
+                column_name = column[0]
+                column_type = column[1]
+                mysql_data_type = get_mysql_data_types(column_type)
+                item = {'column_name': column_name, 'column_type': mysql_data_type}
+                column_types.append(item)
+            return results, column_types
+        
         except Exception as e:
             print("Could not find any corresponding value", e)
             return False
-
-
 
 class Orders:
     def __init__(self, connection):
