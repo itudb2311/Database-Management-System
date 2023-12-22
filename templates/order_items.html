@@ -51,7 +51,7 @@
     <div class="container" style="margin-top: 6.5rem">
       <div class="row d-flex" style="justify-content: space-evenly">
         <form id="insert_or_update_form" class="row" action="" method="POST">
-          {% for column in centers[1] %}
+          {% if centers[1] %} {% for column in centers[1] %}
           <div class="col p-01">
             <label
               class="d-flex justify-content-center fw-bold"
@@ -61,7 +61,7 @@
             </label>
             <input type="{{ column.column_type }}" class="form-control" name="{{
             column.column_name }}" id="{{ column.column_name }}" placeholder="{{
-            column.column_name }}" {% if "id" in column.column_name %} readonly
+            column.column_name }}" {% if column.column_name == "id" %} readonly
             {% endif %} />
           </div>
           {% endfor %}
@@ -98,25 +98,18 @@
               Insert
             </button>
           </div>
+          {% endif %}
         </form>
       </div>
       <div class="row">
         <div class="col-6 d-flex justify-content-start">
           <button
-            type="submit"
+            type="button"
             class="btn btn-danger m-2"
             style="margin-left: 0px !important; width: 300px"
+            onclick="deleteSelectedItems()"
           >
             Delete Selected Items
-          </button>
-        </div>
-        <div class="col-6 d-flex justify-content-end">
-          <button
-            type="submit"
-            class="btn btn-warning m-2"
-            style="margin-right: 0px !important; width: 300px"
-          >
-            Search
           </button>
         </div>
       </div>
@@ -142,21 +135,37 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><i class="fa-solid fa-magnifying-glass"></i></td>
-              {% for column in centers[1]%}
-              <td>
-                <input
-                  type="column.column_type"
-                  class="form-control"
-                  placeholder="Search for {{ column.column_name }}"
-                />
-              </td>
-              {% endfor %}
-            </tr>
+            <form action="/search" method="post">
+              <tr>
+                <td>
+                  <div>
+                    <input
+                      style="
+                        margin-top: 5px;
+                        background-color: #f4d03f;
+                        border: none;
+                      "
+                      type="submit"
+                      value="Search"
+                    />
+                  </div>
+                </td>
+                {% for column in centers[1]%}
+                <td>
+                  <input
+                    type="column.column_type"
+                    class="form-control m-auto"
+                    name="{{ column.column_name }}"
+                    placeholder="Search for {{ column.column_name }}"
+                  />
+                </td>
+                {% endfor %}
+              </tr>
+              <input type="hidden" name="table_name" value="order_items" />
+            </form>
             {% for center in centers[0] %}
             <tr>
-              <th scope="col" nam><input type="checkbox" /></th>
+              <th scope="col" neme="checkbox"><input type="checkbox" /></th>
               <td>{{ center[0] }}</td>
               <td>{{ center[1] }}</td>
               <td>{{ center[2] }}</td>
@@ -175,41 +184,74 @@
       </div>
     </div>
     <script>
+      // Declare selectedItems as a global variable
+      var selectedItems = [];
+
       document.addEventListener("DOMContentLoaded", function () {
-        // Get all the checkboxes in the table
         var checkboxes = document.querySelectorAll(
           "tbody input[type='checkbox']"
         );
-        var selectedItems = []; // Array to store selected items
 
-        // Add click event listener to each checkbox
-        checkboxes.forEach(function (checkbox, index) {
+        checkboxes.forEach(function (checkbox) {
           checkbox.addEventListener("change", function () {
             var row = checkbox.closest("tr");
+            var rowData = {};
+            rowData.id = row.children[1].textContent.trim(); // Assuming the first cell contains a unique identifier
 
-            // Get data from the row containing the clicked checkbox
-            var rowData = Array.from(row.children).map(function (cell) {
-              return cell.textContent.trim();
-            });
+            // Assuming the other cells represent columns in your table
+            // You may need to adjust this loop based on your actual table structure
+            Array.from(row.children)
+              .slice(2)
+              .forEach(function (cell, index) {
+                var columnName = "column_" + index; // You can replace this with actual column names
+                rowData[columnName] = cell.textContent.trim();
+              });
 
-            // Check if the checkbox is checked and add/remove from the list accordingly
             if (checkbox.checked) {
               selectedItems.push(rowData);
             } else {
-              // Remove the item from the list if the checkbox is unchecked
               var rowIndex = selectedItems.findIndex(
-                (item) => JSON.stringify(item) === JSON.stringify(rowData)
+                (item) => item.id === rowData.id
               );
               if (rowIndex !== -1) {
                 selectedItems.splice(rowIndex, 1);
               }
             }
 
-            // Log the selected items to the console
             console.log("Selected Items:", selectedItems);
           });
         });
       });
+
+      function deleteSelectedItems() {
+        // Check if there are selected items
+        if (selectedItems.length > 0) {
+          // Create a form dynamically
+          var form = document.createElement("form");
+          form.action = "/delete"; // Replace with the actual endpoint
+          form.method = "POST";
+
+          // Add data input to the form
+          var dataInput = document.createElement("input");
+          dataInput.type = "hidden";
+          dataInput.name = "data";
+          dataInput.value = JSON.stringify(selectedItems);
+          form.appendChild(dataInput);
+
+          // Add table_name input to the form
+          var tableNameInput = document.createElement("input");
+          tableNameInput.type = "hidden";
+          tableNameInput.name = "table_name";
+          tableNameInput.value = "order_items"; // Replace with the actual table name
+          form.appendChild(tableNameInput);
+
+          // Append the form to the body and submit it
+          document.body.appendChild(form);
+          form.submit();
+        } else {
+          console.log("No items selected for deletion.");
+        }
+      }
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -239,25 +281,29 @@
     <script>
       function submitForm(actionType, tableName) {
         console.log("Action Type:", actionType);
-      
+
         // Set the value of the table_name input
         document.getElementById("table_name").value = tableName;
-      
+
         // Update the form action based on the actionType
         document.getElementById("insert_or_update_form").action = actionType;
-      
+
         // Submit the form
         document.getElementById("insert_or_update_form").submit();
       }
-      document.getElementById("update").addEventListener("click", function (event) {
-        event.preventDefault();
-        submitForm("update", "order_items");
-      });
-      
-      document.getElementById("insert").addEventListener("click", function (event) {
-        event.preventDefault();
-        submitForm("insert", "order_items");
-      });
+      document
+        .getElementById("update")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          submitForm("update", "order_items");
+        });
+
+      document
+        .getElementById("insert")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          submitForm("insert", "order_items");
+        });
     </script>
   </body>
 </html>
