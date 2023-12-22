@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, json
 from settings import db_user,db_password,db_host,db_name  
 import mysql.connector
 from utils.table_operations import *
@@ -59,27 +59,37 @@ def order_items():
 @app.route('/search', methods=['POST'])
 def search():
     table_name = request.form['table_name']
-
+    print("searched",request.form.get)
     inputs = [request.form.get(f'input{i}', '').strip() for i in range(1, 30)]
+    print("inputs",inputs)
     table = tables[table_name]
 
-    results = table.search(inputs)
+    results = table.search(request.form.get)
     if not results:
         results = [['No Data Found!']]
-    results = [results]
+    print(results)
     return render_template(f'{table_name}.html', centers=results)
 
-def delete(data, table_name):
+@app.route('/delete', methods=['POST'])
+def delete():
+    data = request.form
+    table_name = data['table_name']
+    items_to_delete = json.loads(data['data'])
     handler = tables[table_name]
-    for datum in data:
-        handler.delete(datum)
-    return render_template(table_name+'.html')
+    for item in items_to_delete:
+        handler.delete_data(item["id"])
+
+    results = get_table_data(table_name)
+
+    if not results:
+        results = [['No Data Found!']]
+
+    return render_template(f'{table_name}.html', centers=results)
 
 @app.route('/update', methods=['POST'])
 def update():
     data = request.form
     table_name = data['table_name']
-    print(data)
     id = data['id']
     tables[table_name].update_data(data,id)
     results = get_table_data(table_name)
