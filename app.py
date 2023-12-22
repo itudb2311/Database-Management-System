@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, json
+from flask import Flask, render_template, request, redirect, jsonify, json
 from settings import db_user,db_password,db_host,db_name  
 import mysql.connector
 from utils.table_operations import *
@@ -56,6 +56,7 @@ def order_items():
     centers = get_table_data('order_items')
     return render_template('order_items.html', centers=centers)
 
+
 @app.route('/search', methods=['POST'])
 def search():
     table_name = request.form['table_name']
@@ -91,6 +92,18 @@ def update():
     results = get_table_data(table_name)
     if not results:
         results = [['No Data Found!']]
+
+    return render_template(f'{table_name}.html', centers=results)
+
+
+@app.route('/insert', methods=['POST'])
+def insert():
+    data = request.form.to_dict()
+    table_name = request.form['table_name']
+    tables[table_name].insert_data(data)
+    results = get_table_data(table_name)
+    if not results:
+        return jsonify({"success": False}), 500
 
     return render_template(f'{table_name}.html', centers=results)
 

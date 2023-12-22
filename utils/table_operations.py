@@ -223,14 +223,33 @@ class OrderItems:
     def insert_data(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("INSERT INTO order_items VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", data)
+
+
+            data['id'] = self.generate_primary_key()
+
+            # Convert 'None' strings to Python None and format dates
+            for key, value in data.items():
+                if value == 'None':
+                    data[key] = None
+                # Add additional formatting as necessary, e.g., for dates
+
+            # Prepare the insert statement
+            insert_fields = ', '.join(self.columns)
+            placeholders = ', '.join(['%s' for _ in self.columns])
+            insert_query = f"INSERT INTO order_items ({insert_fields}) VALUES ({placeholders})"
+
+            # Extract the values in the order of self.columns
+            insert_values = [data.get(col) for col in self.columns]
+
+            # Execute the query
+            cursor.execute(insert_query, tuple(insert_values))
             self.connection.commit()
             cursor.close()
-            print("Inserted", data)
+            print("Inserted", insert_values)
         except Exception as e:
             print("Error while inserting into order_items", e)
             return f"Error: {e}"
-
+        
     def update_data(self, data, id):
         try:
             cursor = self.connection.cursor()
