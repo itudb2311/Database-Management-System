@@ -1,6 +1,27 @@
 from settings import db_user,db_password,db_host,db_name  
 import mysql.connector
+import hashlib
 
+
+class Admins:
+    def __init__(self, connection):
+        self.columns = ['id', 'name','email','password']
+        self.connection = connection
+    def check_admin(self, email, password):
+        # Encrpyt the password to SHA256
+        hashed_password = hashlib.sha256(password.encode()).hexdigest()
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("SELECT * FROM admins WHERE email = %s AND password = %s", (email, hashed_password))
+            result = cursor.fetchone()
+            cursor.close()
+            if result is None:
+                return False
+            return True
+        except Exception as e:
+            print("Error while checking admin", e)
+            return f"Error: {e}"
+    
 class DistributionCenters:
     def __init__(self, connection):
         self.columns = ['id', 'name', 'latitude', 'longitude']
