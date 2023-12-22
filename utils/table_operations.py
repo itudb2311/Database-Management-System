@@ -277,9 +277,6 @@ class OrderItems:
                 parameters.append(value)
 
             query = "SELECT * FROM order_items WHERE " + " AND ".join(query_parts)
-            print("\n"*30, "QUERY", query)
-            print("PARAMS", parameters)
-
             cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
             formatted_results = [list(row) for row in results]
