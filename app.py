@@ -59,18 +59,12 @@ def order_items():
 @app.route('/search', methods=['POST'])
 def search():
     table_name = request.form['table_name']
-    print("searched",request.form.get)
-    inputs = [request.form.get(f'input{i}', '').strip() for i in range(1, 30)]
-    print("inputs",inputs)
     table = tables[table_name]
-    
     form_data = request.form.to_dict()
     results = table.search(form_data)
-
     if not results:
         results = [['No Data Found!']]
-    print(results)
-    return render_template(f'{table_name}.html', centers=[results])
+    return render_template(f'{table_name}.html', centers=results)
 
 @app.route('/delete', methods=['POST'])
 def delete():
@@ -95,7 +89,6 @@ def update():
     id = data['id']
     tables[table_name].update_data(data,id)
     results = get_table_data(table_name)
-    
     if not results:
         results = [['No Data Found!']]
 
