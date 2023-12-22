@@ -229,7 +229,7 @@ class OrderItems:
 
             # Convert 'None' strings to Python None and format dates
             for key, value in data.items():
-                if value == 'None':
+                if value == 'None' or value == '':
                     data[key] = None
                 # Add additional formatting as necessary, e.g., for dates
 
