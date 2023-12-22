@@ -63,12 +63,14 @@ def search():
     inputs = [request.form.get(f'input{i}', '').strip() for i in range(1, 30)]
     print("inputs",inputs)
     table = tables[table_name]
+    
+    form_data = request.form.to_dict()
+    results = table.search(form_data)
 
-    results = table.search(request.form.get)
     if not results:
         results = [['No Data Found!']]
     print(results)
-    return render_template(f'{table_name}.html', centers=results)
+    return render_template(f'{table_name}.html', centers=[results])
 
 @app.route('/delete', methods=['POST'])
 def delete():

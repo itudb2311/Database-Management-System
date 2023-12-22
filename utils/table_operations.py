@@ -264,16 +264,30 @@ class OrderItems:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            query = "SELECT * FROM order_items WHERE id LIKE %s AND order_id LIKE %s AND user_id LIKE %s AND product_id LIKE %s AND inventory_item_id LIKE %s AND status LIKE %s AND created_at LIKE %s AND shipped_at LIKE %s AND delivered_at LIKE %s AND returned_at LIKE %s AND sale_price LIKE %s"
-            parameters = tuple(data[_] + '%' for _ in range(11))
-            cursor.execute(query, parameters)
-            results = cursor.fetchall()
-            cursor.close()
-            return results
-        except Exception as e:
-            print("Could not find any corresponding value")
-            return False
+            query_parts = []
+            parameters = []
 
+            for column in self.columns:
+                value = data.get(column, '') + '%'
+                if value == '%':
+                    # Handle NULL values and non-NULL values
+                    query_parts.append(f"({column} LIKE %s OR {column} IS NULL)")
+                else:
+                    query_parts.append(f"{column} LIKE %s")
+                parameters.append(value)
+
+            query = "SELECT * FROM order_items WHERE " + " AND ".join(query_parts)
+            print("\n"*30, "QUERY", query)
+            print("PARAMS", parameters)
+
+            cursor.execute(query, tuple(parameters))
+            results = cursor.fetchall()
+            formatted_results = [list(row) for row in results]
+            cursor.close()
+            return formatted_results
+        except Exception as e:
+            print("Could not find any corresponding value", e)
+            return False
 
 
 
