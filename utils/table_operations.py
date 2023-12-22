@@ -139,7 +139,7 @@ class InventoryItems:
     def __init__(self, connection):
         self.columns = ['id', 'product_id', 'created_at', 'sold_at', 'cost', 'product_category', 'product_name', 'product_brand', 'product_retail_price', 'product_department', 'product_sku', 'product_distribution_center_id']
         self.connection = connection
-
+    
     def generate_primary_key(self):
         try:
             cursor = self.connection.cursor()
@@ -152,29 +152,53 @@ class InventoryItems:
         except Exception as e:
             print("Error while generating primary key for inventory_items", e)
             return f"Error: {e}"
-        
+    
     def insert_data(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("INSERT INTO inventory_items VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", data)
+
+
+            data['id'] = self.generate_primary_key()
+
+            # Convert 'None' strings to Python None and format dates
+            for key, value in data.items():
+                if value == 'None' or value == '':
+                    data[key] = None
+                # Add additional formatting as necessary, e.g., for dates
+
+            # Prepare the insert statement
+            insert_fields = ', '.join(self.columns)
+            placeholders = ', '.join(['%s' for _ in self.columns])
+            insert_query = f"INSERT INTO inventory_items ({insert_fields}) VALUES ({placeholders})"
+
+            # Extract the values in the order of self.columns
+            insert_values = [data.get(col) for col in self.columns]
+
+            # Execute the query
+            cursor.execute(insert_query, tuple(insert_values))
             self.connection.commit()
             cursor.close()
-            print("Inserted", data)
+            print("Inserted", insert_values)
         except Exception as e:
             print("Error while inserting into inventory_items", e)
             return f"Error: {e}"
-
+    
     def update_data(self, data, id):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("UPDATE inventory_items SET product_id=%s, created_at=%s, sold_at=%s, cost=%s, product_category=%s, product_name=%s, product_brand=%s, product_retail_price=%s, product_department=%s, product_sku=%s, product_distribution_center_id=%s WHERE id=%s" , (data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], id))
+            processed_data = [
+                None if data[field] == 'None' else data[field] for field in self.columns if field in data
+            ]
+            update_fields = ', '.join([f"{field} = %s" for field in self.columns if field in data])
+            update_query = f"UPDATE inventory_items SET {update_fields} WHERE id = %s"
+            cursor.execute(update_query, processed_data + [id])
             self.connection.commit()
             cursor.close()
-            print("Updated", data)
+            print("Updated", processed_data)
         except Exception as e:
             print("Error while updating inventory_items", e)
             return f"Error: {e}"
-
+    
     def delete_data(self, id):
         try:
             cursor = self.connection.cursor()
@@ -185,20 +209,36 @@ class InventoryItems:
         except Exception as e:
             print("Error while deleting from inventory_items", e)
             return f"Error: {e}"
-
+        
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            query = "SELECT * FROM inventory_items WHERE id LIKE %s AND product_id LIKE %s AND created_at LIKE %s AND sold_at LIKE %s AND cost LIKE %s AND product_category LIKE %s AND product_name LIKE %s AND product_brand LIKE %s AND product_retail_price LIKE %s AND product_department LIKE %s AND product_sku LIKE %s AND product_distribution_center_id LIKE %s"
-            parameters = tuple(data[_] + '%' for _ in range(12))
-            cursor.execute(query, parameters)
+            query_parts = []
+            parameters = []
+            for column in self.columns:
+                value = data.get(column, '') + '%'
+                if value == '%':
+                    query_parts.append(f"({column} LIKE %s OR {column} IS NULL)")
+                else:
+                    query_parts.append(f"{column} LIKE %s")
+                parameters.append(value)
+            query = "SELECT * FROM inventory_items WHERE " + " AND ".join(query_parts)
+            cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
             cursor.close()
-            return results
+            columns = cursor.description
+            column_types = []
+            for column in columns:
+                column_name = column[0]
+                column_type = column[1]
+                mysql_data_type = get_mysql_data_types(column_type)
+                item = {'column_name': column_name, 'column_type': mysql_data_type}
+                column_types.append(item)
+            return results, column_types
+        
         except Exception as e:
-            print("Could not find any corresponding value")
+            print("Could not find any corresponding value", e)
             return False
-
         
 
 
