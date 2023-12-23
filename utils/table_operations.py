@@ -109,10 +109,28 @@ class Events:
     def insert_data(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("INSERT INTO events VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", data)
+
+            data['id'] = self.generate_primary_key()
+
+            # Convert 'None' strings to Python None and format dates
+            for key, value in data.items():
+                if value == 'None' or value == '':
+                    data[key] = None
+                # Add additional formatting as necessary, e.g., for dates
+
+            # Prepare the insert statement
+            insert_fields = ', '.join(self.columns)
+            placeholders = ', '.join(['%s' for _ in self.columns])
+            insert_query = f"INSERT INTO events ({insert_fields}) VALUES ({placeholders})"
+
+            # Extract the values in the order of self.columns
+            insert_values = [data.get(col) for col in self.columns]
+
+            # Execute the query
+            cursor.execute(insert_query, tuple(insert_values))
             self.connection.commit()
             cursor.close()
-            print("Inserted", data)
+            print("Inserted", insert_values)
         except Exception as e:
             print("Error while inserting into events", e)
             return f"Error: {e}"
@@ -120,10 +138,15 @@ class Events:
     def update_data(self, data, id):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("UPDATE events SET user_id=%s, sequence_number=%s, session_id=%s, created_at=%s, ip_address=%s, city=%s, state=%s, postal_code=%s, browser=%s, traffic_source=%s, uri=%s, event_type=%s WHERE id=%s" , (data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], id))
+            processed_data = [
+                None if data[field] == 'None' else data[field] for field in self.columns if field in data
+            ]
+            update_fields = ', '.join([f"{field} = %s" for field in self.columns if field in data])
+            update_query = f"UPDATE events SET {update_fields} WHERE id = %s"
+            cursor.execute(update_query, processed_data + [id])
             self.connection.commit()
             cursor.close()
-            print("Updated", data)
+            print("Updated", processed_data)
         except Exception as e:
             print("Error while updating events", e)
             return f"Error: {e}"
@@ -142,19 +165,32 @@ class Events:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            query = "SELECT * FROM events WHERE id LIKE %s AND user_id LIKE %s AND sequence_number LIKE %s AND session_id LIKE %s AND created_at LIKE %s AND ip_address LIKE %s AND city LIKE %s AND state LIKE %s AND postal_code LIKE %s AND browser LIKE %s AND traffic_source LIKE %s AND uri LIKE %s AND event_type LIKE %s"
-            parameters = tuple(data[_] + '%' for _ in range(13))
-            cursor.execute(query, parameters)
+            query_parts = []
+            parameters = []
+            for column in self.columns:
+                value = data.get(column, '') + '%'
+                if value == '%':
+                    query_parts.append(f"({column} LIKE %s OR {column} IS NULL)")
+                else:
+                    query_parts.append(f"{column} LIKE %s")
+                parameters.append(value)
+            query = "SELECT * FROM events WHERE " + " AND ".join(query_parts)
+            cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
             cursor.close()
-            return results
-        except Exception as e:
-            print("Could not find any corresponding value")
-            return False
-
+            columns = cursor.description
+            column_types = []
+            for column in columns:
+                column_name = column[0]
+                column_type = column[1]
+                mysql_data_type = get_mysql_data_types(column_type)
+                item = {'column_name': column_name, 'column_type': mysql_data_type}
+                column_types.append(item)
+            return results, column_types
         
-
-
+        except Exception as e:
+            print("Could not find any corresponding value", e)
+            return False
 
 class InventoryItems:
     def __init__(self, connection):

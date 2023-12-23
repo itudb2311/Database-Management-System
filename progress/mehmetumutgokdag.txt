@@ -5,3 +5,5 @@ mehmetumutgokdag' s progress
 3- update and delete functions added to the database_operations.py file
 4- I updated app.py adn db_init.py so that all the tables are can be monitored from the admin panel
 5- I updated the events.html page view.
+6- I updated the events.html file so that the events can be search,delete,update,insert from the admin panel
+7- I updated the table database_operations.py file so that the events can be search,delete,update,insert from the admin panel
