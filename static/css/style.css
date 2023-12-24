@@ -48,3 +48,7 @@ html, body {
   width: 100%; /* Optional: Adjust width as needed */
   max-width: 500px; /* Optional: Adjust max-width as needed */
 }
+
+.me-auto {
+  margin-right: 15px !important;
+}
