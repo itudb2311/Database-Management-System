@@ -752,4 +752,4 @@ def get_table_data(table_name):
         mysql_data_type = get_mysql_data_types(column_type)
         item = {'column_name': column_name, 'column_type': mysql_data_type}
         column_types.append(item)
-    return centers, column_types
+    return centers, column_types 
