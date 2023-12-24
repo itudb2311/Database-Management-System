@@ -275,11 +275,9 @@
 
         tableRows.forEach(function (row, index) {
           if (index === 0) {
-            // Skip first row (contains table headers)
             return;
           }
           row.addEventListener("click", function () {
-            // Clear existing values in form inputs
             formInputs.forEach(function (input) {
               input.value = "";
             });
@@ -297,10 +295,8 @@
       function submitForm(actionType, tableName) {
         console.log("Action Type:", actionType);
 
-        // Set the value of the table_name input
         document.getElementById("table_name").value = tableName;
 
-        // Update the form action based on the actionType
         document.getElementById("insert_or_update_form").action = actionType;
 
         // Submit the form
