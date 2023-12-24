@@ -2,3 +2,14 @@ omerfarukaydin' s progress
 
 thelook_ecommerce - order_items.csv file added to the tables folder
 order_items table definition added to db_init file and created the table
+static/css created
+home page (index.html) edited
+about.html created
+app.route fixed
+order_items.html page view updated
+order_items.html updated so that the events can be search, delete, update, insert from the admin panel
+table_operations.py updated for search, delete, update, insert operations for order_items
+app routes fixed
+select all and delete operations added
+log out buttons added
+login.html edited

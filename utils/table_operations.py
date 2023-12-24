@@ -5,16 +5,16 @@ import hashlib
 
 class Admins:
     def __init__(self, connection):
-        self.columns = ['id', 'name','email','password']
-        self.connection = connection
-    def check_admin(self, email, password):
+        self.columns = ['id', 'name','email','password']    # Columns
+        self.connection = connection                        # Connection
+    def check_admin(self, email, password):                 # Check if the admin exists
         # Encrpyt the password to SHA256
         hashed_password = hashlib.sha256(password.encode()).hexdigest()
         try:
-            cursor = self.connection.cursor()
-            cursor.execute("SELECT * FROM admins WHERE email = %s AND password = %s", (email, hashed_password))
-            result = cursor.fetchone()
-            cursor.close()
+            cursor = self.connection.cursor()              # Create a cursor
+            cursor.execute("SELECT * FROM admins WHERE email = %s AND password = %s", (email, hashed_password)) # Execute the query
+            result = cursor.fetchone()                      # Fetch the result
+            cursor.close()                                  # Close the cursor
             if result is None:
                 return False
             return True
@@ -24,38 +24,36 @@ class Admins:
     
 class DistributionCenters:
     def __init__(self, connection):
-        self.columns = ['id', 'name', 'latitude', 'longitude']
-        self.connection = connection
+        self.columns = ['id', 'name', 'latitude', 'longitude']  # Columns
+        self.connection = connection                            # Connection
 
     def generate_primary_key(self):
         try:
-            cursor = self.connection.cursor()
-            cursor.execute("SELECT MAX(id) FROM distribution_centers")
-            max_id = cursor.fetchone()[0]
-            cursor.close()
-            if max_id is None:
+            cursor = self.connection.cursor()                           # Create a cursor
+            cursor.execute("SELECT MAX(id) FROM distribution_centers")  # Get the max id
+            max_id = cursor.fetchone()[0]                               # Fetch the result
+            cursor.close()                                              # Close the cursor
+            if max_id is None:                                          # If there is no max id, return 1
                 return 1
-            return max_id + 1
+            return max_id + 1                                           # Otherwise, return the max id + 1
         except Exception as e:
             print("Error while generating primary key for distribution_centers", e)
             return f"Error: {e}"
 
     def insert_data(self, data):
         try:
-            cursor = self.connection.cursor()
-
-            data['id'] = self.generate_primary_key()
+            cursor = self.connection.cursor()               # Create a cursor
+            data['id'] = self.generate_primary_key()        # Generate a primary key
 
             # Convert 'None' strings to Python None and format dates
             for key, value in data.items():
                 if value == 'None' or value == '':
                     data[key] = None
-                # Add additional formatting as necessary, e.g., for dates
 
             # Prepare the insert statement
-            insert_fields = ', '.join(self.columns)
-            placeholders = ', '.join(['%s' for _ in self.columns])
-            insert_query = f"INSERT INTO distribution_centers ({insert_fields}) VALUES ({placeholders})"
+            insert_fields = ', '.join(self.columns)                 # Get the columns
+            placeholders = ', '.join(['%s' for _ in self.columns])  # Get the placeholders
+            insert_query = f"INSERT INTO distribution_centers ({insert_fields}) VALUES ({placeholders})"    # Create the query
 
             # Extract the values in the order of self.columns
             insert_values = [data.get(col) for col in self.columns]
@@ -71,13 +69,22 @@ class DistributionCenters:
 
     def update_data(self, data, id):
         try:
-            cursor = self.connection.cursor()
+            cursor = self.connection.cursor()               # Create a cursor
+            # Convert 'None' strings to Python None and format dates
             processed_data = [
                 None if data[field] == 'None' else data[field] for field in self.columns if field in data
             ]
+
+            # Prepare the update statement
             update_fields = ', '.join([f"{field} = %s" for field in self.columns if field in data])
+
+            # Create the query
             update_query = f"UPDATE distribution_centers SET {update_fields} WHERE id = %s"
+
+            # Execute the query
             cursor.execute(update_query, processed_data + [id])
+
+            # Commit the changes
             self.connection.commit()
             cursor.close()
             print("Updated", processed_data)
@@ -88,6 +95,8 @@ class DistributionCenters:
     def delete_data(self, id):
         try:
             cursor = self.connection.cursor()
+
+            # Prepare the delete statement
             cursor.execute("DELETE FROM distribution_centers WHERE id=%s", (id,))
             self.connection.commit()
             cursor.close()
@@ -99,20 +108,30 @@ class DistributionCenters:
     def search(self, data):
         try:
             cursor = self.connection.cursor()
+
+            # Prepare the search statement
             query_parts = []
             parameters = []
+            # Iterate over the columns
             for column in self.columns:
+                # Get the value from the form data
                 value = data.get(column, '') + '%'
+
+                # If the value is '%', append the query part
                 if value == '%':
                     query_parts.append(f"({column} LIKE %s OR {column} IS NULL)")
+
+                # Otherwise,
                 else:
                     query_parts.append(f"{column} LIKE %s")
                 parameters.append(value)
+            
+            # Create the query
             query = "SELECT * FROM distribution_centers WHERE " + " AND ".join(query_parts)
             cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
             cursor.close()
-            columns = cursor.description
+            columns = cursor.description # Get the columns
             column_types = []
             for column in columns:
                 column_name = column[0]
