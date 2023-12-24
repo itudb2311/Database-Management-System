@@ -1,4 +1,4 @@
-db_host = "localhost"
-db_password = "rootroot"
-db_user = "root"
-db_name = "thelook_ecommerce"
+db_host = "!FILL_HERE!"
+db_password = "!FILL_HERE!"
+db_user = "!FILL_HERE!"
+db_name = "!FILL_HERE!"

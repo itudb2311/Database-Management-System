@@ -1,9 +1,15 @@
-hasantahabagci's progress (using tests.ipynb to test functions)
+hasantahabagci's progress (used tests.ipynb to test functions)
 
 1. thelook_ecommerce - orders file added to the tables folder
 
 2. Created SCHEMA.sql file with MySQL Workbench from tables.
 
-3. Created and implemented classes and functions for all tables in utils folder.
+3. Created and implemented classes and functions for orders' table in utils/table_operations.py file.
 
 4. Created creat_db.py file to import database on local MySQL from SCHEMA.sql
+
+5. Created HTML for orders' table in templates folder.
+
+6. HTML file updated with css and js add-ons.
+
+7. Updated README.md file.
