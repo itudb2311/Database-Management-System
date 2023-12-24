@@ -7,3 +7,4 @@ mehmetumutgokdag' s progress
 5- I updated the events.html page view.
 6- I updated the events.html file so that the events can be search,delete,update,insert from the admin panel
 7- I updated the table database_operations.py file so that the events can be search,delete,update,insert from the admin panel
+8- I added the common table that "distribution_centers" frontend and backend operations

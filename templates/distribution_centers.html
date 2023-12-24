@@ -1,42 +1,330 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distribution Centers</title>
-</head>
-<body>
-    <h1>Distribution Centers</h1>
+<html>
+  <head>
+    <title>distribution_centers</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <header
+      class="d-flex flex-stratch justify-content-center py-3 mb-4 text-bg-dark fixed-top"
+      style="margin-bottom: 6.5rem"
+    >
+      <a
+        href="/distribution_centers"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+      >
+        <i class="fa-solid fa-table-cells user-icon px-5 fs-1"></i>
+        <span class="text-white fs-4">distribution_centers Table</span>
+      </a>
 
-    <form action="/search" method="post">
-        <input type="hidden" name="table_name" value="distribution_centers">
-    
-        <!-- Place the submit button at the top -->
-        <div>
-            <input type="submit" value="Search">
+      <ul class="nav nav-pills px-5">
+        <li class="nav-item">
+          <a href="/" class="nav-link" aria-current="page">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="/logout" class="nav-link">Log Out</a>
+        </li>
+      </ul>
+    </header>
+
+    <div class="container" style="margin-top: 6.5rem">
+      <div class="row d-flex" style="justify-content: space-evenly">
+        <form id="insert_or_update_form" class="row" action="" method="POST">
+          {% if centers[1] %} {% for column in centers[1] %}
+          <div class="col p-01">
+            <label
+              class="d-flex justify-content-center fw-bold"
+              for="{{ column.column_name }}"
+            >
+              {{ column.column_name }}
+            </label>
+            <input type="{{ column.column_type }}" class="form-control" name="{{
+            column.column_name }}" id="{{ column.column_name }}" placeholder="{{
+            column.column_name }}" {% if column.column_name == "id" %} readonly
+            {% endif %} />
+          </div>
+          {% endfor %}
+
+          <!-- Move the table_name input outside the loop -->
+          <input
+            type="hidden"
+            name="table_name"
+            id="table_name"
+            value="distribution_centers"
+          />
+
+          <div class="col-12 d-flex justify-content-end p-01">
+            <button
+              type="submit"
+              action="update"
+              id="update"
+              class="btn btn-primary m-2"
+              style="width: 100px"
+              name="update"
+              value="update"
+            >
+              Update
+            </button>
+            <button
+              type="submit"
+              action="insert"
+              id="insert"
+              class="btn btn-success m-2"
+              style="margin-right: 0 !important; width: 100px"
+              name="insert"
+              value="insert"
+            >
+              Insert
+            </button>
+          </div>
+          {% endif %}
+        </form>
+      </div>
+      <div class="row">
+        <div class="col-6 d-flex justify-content-start">
+          <button
+            type="button"
+            class="btn btn-danger m-2"
+            style="margin-left: 0px !important; width: 300px"
+            onclick="deleteSelectedItems()"
+          >
+            Delete Selected Items
+          </button>
         </div>
-    
-        <table border="1">
-            <!-- Table Headers and other rows... -->
+      </div>
+      <div class="row">
+        <table
+          class="table table-striped table-hover"
+          style="margin-top: 1.5rem"
+        >
+          <thead>
             <tr>
-                <td><input type="text" name="input1" placeholder="Id"></td>
-                <td><input type="text" name="input2" placeholder="Name"></td>
-                <td><input type="text" name="input3" placeholder="Latitude"></td>
-                <td><input type="text" name="input4" placeholder="Longitude"></td>
+              <th scope="col"><input type="checkbox" id="selectAllCheckbox"></th>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Latitutde</th>
+              <th scope="col">Longitude</th>
             </tr>
-            
-             {% for center in centers[0] %}
+          </thead>
+          <tbody>
+            <form action="/search" method="post">
+              <tr>
+                <td>
+                  <div>
+                    <input
+                      style="
+                        margin-top: 5px;
+                        background-color: #f4d03f;
+                        border: none;
+                      "
+                      type="submit"
+                      value="Search"
+                    />
+                  </div>
+                </td>
+                {% for column in centers[1]%}
+                <td>
+                  <input
+                    type="column.column_type"
+                    class="form-control m-auto"
+                    name="{{ column.column_name }}"
+                    placeholder="Search for {{ column.column_name }}"
+                  />
+                </td>
+                {% endfor %}
+              </tr>
+              <input type="hidden" name="table_name" value="distribution_centers" />
+            </form>
+            {% for center in centers[0] %}
             <tr>
-                <td>{{ center[0] }}</td>
-                <td>{{ center[1] }}</td>
-                <td>{{ center[2] }}</td>
-                <td>{{ center[3] }}</td>
+              <th scope="col" neme="checkbox"><input type="checkbox" /></th>
+              <td>{{ center[0] }}</td>
+              <td>{{ center[1] }}</td>
+              <td>{{ center[2] }}</td>
+              <td>{{ center[3] }}</td>
             </tr>
-            {% endfor %} 
+            {% endfor %}
+          </tbody>
         </table>
-    </form>
-    
-    
+      </div>
+    </div>
+    <script>
+      // Declare selectedItems as a global variable
+      var selectedItems = [];
 
-</body>
+      document.addEventListener("DOMContentLoaded", function () {
+          // Get the "Select All" checkbox
+          var selectAllCheckbox = document.getElementById("selectAllCheckbox");
+
+          selectAllCheckbox.addEventListener("change", function () {
+              // Get all checkboxes in the tbody
+              var checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
+
+              checkboxes.forEach(function (checkbox) {
+                  // Set the state of each checkbox to match the "Select All" checkbox
+                  checkbox.checked = selectAllCheckbox.checked;
+
+                  // Trigger the change event on each checkbox
+                  var event = new Event("change");
+                  checkbox.dispatchEvent(event);
+              });
+          });
+
+          var checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
+
+          checkboxes.forEach(function (checkbox) {
+              checkbox.addEventListener("change", function () {
+                  var row = checkbox.closest("tr");
+                  var rowData = {};
+                  rowData.id = row.children[1].textContent.trim(); // Assuming the first cell contains a unique identifier
+
+                  // Assuming the other cells represent columns in your table
+                  // You may need to adjust this loop based on your actual table structure
+                  Array.from(row.children)
+                      .slice(2)
+                      .forEach(function (cell, index) {
+                          var columnName = "column_" + index; // You can replace this with actual column names
+                          rowData[columnName] = cell.textContent.trim();
+                      });
+
+                  if (checkbox.checked) {
+                      selectedItems.push(rowData);
+                  } else {
+                      var rowIndex = selectedItems.findIndex(
+                          (item) => item.id === rowData.id
+                      );
+                      if (rowIndex !== -1) {
+                          selectedItems.splice(rowIndex, 1);
+                      }
+                  }
+
+                  console.log("Selected Items:", selectedItems);
+              });
+          });
+      });
+
+      function deleteSelectedItems() {
+          // Check if there are selected items
+          if (selectedItems.length > 0) {
+              // Create a form dynamically
+              var form = document.createElement("form");
+              form.action = "/delete"; // Replace with the actual endpoint
+              form.method = "POST";
+
+              // Add data input to the form
+              var dataInput = document.createElement("input");
+              dataInput.type = "hidden";
+              dataInput.name = "data";
+              dataInput.value = JSON.stringify(selectedItems);
+              form.appendChild(dataInput);
+
+              // Add table_name input to the form
+              var tableNameInput = document.createElement("input");
+              tableNameInput.type = "hidden";
+              tableNameInput.name = "table_name";
+              tableNameInput.value = "distribution_centers"; // Replace with the actual table name
+              form.appendChild(tableNameInput);
+
+              // Append the form to the body and submit it
+              document.body.appendChild(form);
+              form.submit();
+          } else {
+              console.log("No items selected for deletion.");
+          }
+      }
+  </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var tableRows = document.querySelectorAll("tbody tr");
+        var formInputs = document.querySelectorAll("form input");
+
+        tableRows.forEach(function (row, index) {
+          if (index === 0) {
+            // Skip first row (contains table headers)
+            return;
+          }
+          row.addEventListener("click", function () {
+            // Clear existing values in form inputs
+            formInputs.forEach(function (input) {
+              input.value = "";
+            });
+
+            // Get values from the clicked row
+            var columns = row.getElementsByTagName("td");
+            for (var i = 0; i < columns.length; i++) {
+              formInputs[i].value = columns[i].innerText;
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      function submitForm(actionType, tableName) {
+        console.log("Action Type:", actionType);
+
+        // Set the value of the table_name input
+        document.getElementById("table_name").value = tableName;
+
+        // Update the form action based on the actionType
+        document.getElementById("insert_or_update_form").action = actionType;
+
+        // Submit the form
+        document.getElementById("insert_or_update_form").submit();
+      }
+      document
+        .getElementById("update")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          submitForm("update", "distribution_centers");
+        });
+
+      document
+        .getElementById("insert")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          submitForm("insert", "distribution_centers");
+        });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Get the select all checkbox
+        var selectAllCheckbox = document.getElementById('selectAllCheckbox');
+    
+        // Get all checkboxes in the table body
+        var checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+    
+        // Add an event listener to the select all checkbox
+        selectAllCheckbox.addEventListener('change', function () {
+          checkboxes.forEach(function (checkbox) {
+            checkbox.checked = selectAllCheckbox.checked;
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
