@@ -25,3 +25,26 @@ body {
 .p-01 {
   padding:0.1rem;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-sheet {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 100%;
+}
+
+.modal-dialog {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.modal-content {
+  width: 100%; /* Optional: Adjust width as needed */
+  max-width: 500px; /* Optional: Adjust max-width as needed */
+}
