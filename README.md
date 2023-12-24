@@ -11,8 +11,12 @@ Before you begin, ensure you have the following installed:
 - MySQL
 - Python 3
 - Flask
-- Pandas
-- Numpy
+
+```bash
+pip install requirements.txt
+```
+
+
 ### Setup Instructions
 
 1. **Initialize the MySQL Database:**
@@ -30,7 +34,16 @@ Before you begin, ensure you have the following installed:
    db_host = 'localhost'  # or your database host
    db_name = 'thelook_ecommerce'
 
-3. **Run The Application:**
+3. **Create the Database Tables:**
+
+   In the project directory, run the `create_db.py` script to create the database with the required tables:
+
+   ```bash
+   cd path/to/itudb2311
+   python create_db.py
+   ```
+
+4. **Run The Application:**
     Navigate to the project directory and run the Flask application:
     ```bash
     cd path/to/itudb2311
