@@ -31,7 +31,7 @@
       style="margin-bottom: 6.5rem"
     >
       <a
-        href="/order_items"
+        href="/inventory_items"
         class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
       >
         <i class="fa-solid fa-table-cells user-icon px-5 fs-1"></i>
@@ -71,7 +71,7 @@
             type="hidden"
             name="table_name"
             id="table_name"
-            value="order_items"
+            value="inventory_items"
           />
 
           <div class="col-12 d-flex justify-content-end p-01">
@@ -162,7 +162,7 @@
                 </td>
                 {% endfor %}
               </tr>
-              <input type="hidden" name="table_name" value="order_items" />
+              <input type="hidden" name="table_name" value="inventory_items" />
             </form>
             {% for center in centers[0] %}
             <tr>
@@ -245,7 +245,7 @@
           if (selectedItems.length > 0) {
               // Create a form dynamically
               var form = document.createElement("form");
-              form.action = "/delete"; // Replace with the actual endpoint
+              form.action = "/delete"; 
               form.method = "POST";
 
               // Add data input to the form
@@ -259,7 +259,7 @@
               var tableNameInput = document.createElement("input");
               tableNameInput.type = "hidden";
               tableNameInput.name = "table_name";
-              tableNameInput.value = "order_items"; // Replace with the actual table name
+              tableNameInput.value = "inventory_items";
               form.appendChild(tableNameInput);
 
               // Append the form to the body and submit it
@@ -313,14 +313,14 @@
         .getElementById("update")
         .addEventListener("click", function (event) {
           event.preventDefault();
-          submitForm("update", "order_items");
+          submitForm("update", "inventory_items");
         });
 
       document
         .getElementById("insert")
         .addEventListener("click", function (event) {
           event.preventDefault();
-          submitForm("insert", "order_items");
+          submitForm("insert", "inventory_items");
         });
     </script>
     <script>
