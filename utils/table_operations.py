@@ -597,14 +597,32 @@ class Users:
         except Exception as e:
             print("Error while generating primary key for users", e)
             return f"Error: {e}"
-        
+
     def insert_data(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("INSERT INTO users VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", data)
+
+            data['id'] = self.generate_primary_key()
+
+            # Convert 'None' strings to Python None and format dates
+            for key, value in data.items():
+                if value == 'None' or value == '':
+                    data[key] = None
+                # Add additional formatting as necessary, e.g., for dates
+
+            # Prepare the insert statement
+            insert_fields = ', '.join(self.columns)
+            placeholders = ', '.join(['%s' for _ in self.columns])
+            insert_query = f"INSERT INTO users ({insert_fields}) VALUES ({placeholders})"
+
+            # Extract the values in the order of self.columns
+            insert_values = [data.get(col) for col in self.columns]
+
+            # Execute the query
+            cursor.execute(insert_query, tuple(insert_values))
             self.connection.commit()
             cursor.close()
-            print("Inserted", data)
+            print("Inserted", insert_values)
         except Exception as e:
             print("Error while inserting into users", e)
             return f"Error: {e}"
@@ -612,36 +630,58 @@ class Users:
     def update_data(self, data, id):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("UPDATE users SET first_name = %s, last_name = %s, email = %s, age = %s, gender = %s, state = %s, street_address = %s, postal_code = %s, city = %s, country = %s, latitude = %s, longitude = %s, traffic_source = %s, created_at = %s WHERE id = %s", data + (id,))
+            processed_data = [
+                None if data[field] == 'None' else data[field] for field in self.columns if field in data
+            ]
+            update_fields = ', '.join([f"{field} = %s" for field in self.columns if field in data])
+            update_query = f"UPDATE users SET {update_fields} WHERE id = %s"
+            cursor.execute(update_query, processed_data + [id])
             self.connection.commit()
             cursor.close()
-            print("Updated data for id:", id)
+            print("Updated", processed_data)
         except Exception as e:
-            print("Error while updating data for id:", id, e)
+            print("Error while updating users", e)
             return f"Error: {e}"
 
     def delete_data(self, id):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("DELETE FROM users WHERE id = %s", (id,))
+            cursor.execute("DELETE FROM users WHERE id=%s", (id,))
             self.connection.commit()
             cursor.close()
-            print("Deleted data for id:", id)
+            print("Deleted", id)
         except Exception as e:
-            print("Error while deleting data for id:", id, e)
+            print("Error while deleting from users", e)
             return f"Error: {e}"
 
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            query = "SELECT * FROM users WHERE id LIKE %s AND first_name LIKE %s AND last_name LIKE %s AND email LIKE %s AND age LIKE %s AND gender LIKE %s AND state LIKE %s AND street_address LIKE %s AND postal_code LIKE %s AND city LIKE %s AND country LIKE %s AND latitude LIKE %s AND longitude LIKE %s AND traffic_source LIKE %s AND created_at LIKE %s"
-            parameters = tuple(data[_] + '%' for _ in range(15))
-            cursor.execute(query, parameters)
+            query_parts = []
+            parameters = []
+            for column in self.columns:
+                value = data.get(column, '') + '%'
+                if value == '%':
+                    query_parts.append(f"({column} LIKE %s OR {column} IS NULL)")
+                else:
+                    query_parts.append(f"{column} LIKE %s")
+                parameters.append(value)
+            query = "SELECT * FROM users WHERE " + " AND ".join(query_parts)
+            cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
             cursor.close()
-            return results
+            columns = cursor.description
+            column_types = []
+            for column in columns:
+                column_name = column[0]
+                column_type = column[1]
+                mysql_data_type = get_mysql_data_types(column_type)
+                item = {'column_name': column_name, 'column_type': mysql_data_type}
+                column_types.append(item)
+            return results, column_types
+        
         except Exception as e:
-            print("Could not find any corresponding value")
+            print("Could not find any corresponding value", e)
             return False
 
 
