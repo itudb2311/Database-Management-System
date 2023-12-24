@@ -33,128 +33,128 @@ def login():
 
 @app.route('/')
 def index():
-    if not session.get('logged_in'):
-        return redirect('/login')
-    return render_template('index.html')
+    if not session.get('logged_in'):    # If user is not logged in, redirect to login page
+        return redirect('/login')       # Otherwise, show the index page
+    return render_template('index.html')    # If user is logged in, show the index page
 
-@app.route('/about')
-def about():
-    if not session.get('logged_in'):
-        return redirect('/login')
-    return render_template('about.html')
+@app.route('/about')                    # If user is logged in, show the about page 
+def about():                            # Otherwise, redirect to login page
+    if not session.get('logged_in'):    # If user is not logged in, redirect to login page
+        return redirect('/login')       
+    return render_template('about.html')# If user is logged in, show the about page
 
 @app.route('/distribution_centers')
 def distribution_centers():
-    if not session.get('logged_in'):
+    if not session.get('logged_in'):    
         return redirect('/login')
-    centers = get_table_data('distribution_centers')
-    return render_template('distribution_centers.html', centers=centers)
+    centers = get_table_data('distribution_centers')                        # Get distribution centers data from the database
+    return render_template('distribution_centers.html', centers=centers)    # Pass the data to the template
 
 @app.route('/users')
 def users():
     if not session.get('logged_in'):
         return redirect('/login')
-    centers = get_table_data('users')
-    return render_template('users.html', centers=centers)
+    centers = get_table_data('users')                       # Get users data from the database
+    return render_template('users.html', centers=centers)   # Pass the data to the template
 
 @app.route('/events')
 def events():
     if not session.get('logged_in'):
         return redirect('/login')
-    centers = get_table_data('events')
-    return render_template('events.html', centers=centers)
+    centers = get_table_data('events')                      # Get events data from the database
+    return render_template('events.html', centers=centers)  # Pass the data to the template
 
 @app.route('/inventory_items')
 def inventory_items():
     if not session.get('logged_in'):
         return redirect('/login')
-    centers = get_table_data('inventory_items')
-    return render_template('inventory_items.html', centers=centers)
+    centers = get_table_data('inventory_items')                     # Get inventory items data from the database
+    return render_template('inventory_items.html', centers=centers) # Pass the data to the template
 
 @app.route('/products')
 def products():
     if not session.get('logged_in'):
         return redirect('/login')
-    centers = get_table_data('products')
-    return render_template('products.html', centers=centers)
+    centers = get_table_data('products')                        # Get products data from the database
+    return render_template('products.html', centers=centers)    # Pass the data to the template    
 
 @app.route('/orders')
 def orders():
     if not session.get('logged_in'):
         return redirect('/login')
-    centers = get_table_data('orders')
-    return render_template('orders.html', centers=centers)
+    centers = get_table_data('orders')                          # Get orders data from the database
+    return render_template('orders.html', centers=centers)      # Pass the data to the template
 
 @app.route('/order_items')
 def order_items():
     if not session.get('logged_in'):
         return redirect('/login')
-    centers = get_table_data('order_items')
-    return render_template('order_items.html', centers=centers)
+    centers = get_table_data('order_items')                     # Get order items data from the database
+    return render_template('order_items.html', centers=centers) # Pass the data to the template
 
 
 @app.route('/search', methods=['POST'])
 def search():
     if not session.get('logged_in'):
         return redirect('/login')
-    table_name = request.form['table_name']
-    table = tables[table_name]
-    form_data = request.form.to_dict()
-    results = table.search(form_data)
-    if not results:
-        results = [['No Data Found!']]
-    return render_template(f'{table_name}.html', centers=results)
+    table_name = request.form['table_name'] # Get the table name from the form data
+    table = tables[table_name]              # Get the table handler from the dictionary
+    form_data = request.form.to_dict()      # Convert the form data to a dictionary
+    results = table.search(form_data)       # Searching operation call with the form data
+    if not results:                         # If no results found, show a message
+        results = [['No Data Found!']]      
+    return render_template(f'{table_name}.html', centers=results)   # Pass the data to the template
 
 @app.route('/delete', methods=['POST'])
 def delete():
     if not session.get('logged_in'):
         return redirect('/login')
-    data = request.form
-    table_name = data['table_name']
-    items_to_delete = json.loads(data['data'])
-    handler = tables[table_name]
-    for item in items_to_delete:
-        handler.delete_data(item["id"])
+    data = request.form                         # Get the form data
+    table_name = data['table_name']             # Get the table name from the form data
+    items_to_delete = json.loads(data['data'])  # Get the items to delete from the form data
+    handler = tables[table_name]                # Get the table handler from the dictionary
+    for item in items_to_delete:                # Iterate over the items to delete
+        handler.delete_data(item["id"])         # Delete the item from the database
 
-    results = get_table_data(table_name)
+    results = get_table_data(table_name)        # Get the updated data from the database
 
     if not results:
         results = [['No Data Found!']]
 
-    return render_template(f'{table_name}.html', centers=results)
+    return render_template(f'{table_name}.html', centers=results)   # Pass the data to the template
 
 @app.route('/update', methods=['POST'])
 def update():
     if not session.get('logged_in'):
         return redirect('/login')
-    data = request.form
-    table_name = data['table_name']
-    id = data['id']
-    tables[table_name].update_data(data,id)
-    results = get_table_data(table_name)
+    data = request.form                 # Get the form data
+    table_name = data['table_name']     # Get the table name from the form data
+    id = data['id']                     # Get the id from the form data
+    tables[table_name].update_data(data,id) # Update the data in the database
+    results = get_table_data(table_name)    # Get the updated data from the database
     if not results:
         results = [['No Data Found!']]
 
-    return render_template(f'{table_name}.html', centers=results)
+    return render_template(f'{table_name}.html', centers=results)       # Pass the data to the template
 
 
 @app.route('/insert', methods=['POST'])
 def insert():
     if not session.get('logged_in'):
         return redirect('/login')
-    data = request.form.to_dict()
-    table_name = request.form['table_name']
-    tables[table_name].insert_data(data)
-    results = get_table_data(table_name)
-    if not results:
+    data = request.form.to_dict()               # Get the form data
+    table_name = request.form['table_name']     # Get the table name from the form data
+    tables[table_name].insert_data(data)        # Insert the data into the database
+    results = get_table_data(table_name)        # Get the updated data from the database
+    if not results:     
         return jsonify({"success": False}), 500
 
-    return render_template(f'{table_name}.html', centers=results)
+    return render_template(f'{table_name}.html', centers=results)  # Pass the data to the template
 
 @app.route('/logout')
 def logout():
-    session.pop('logged_in', None)
-    return redirect('/login')
+    session.pop('logged_in', None)  # Remove the logged_in session variable
+    return redirect('/login')       # Redirect to login page
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True)             # Run the app in debug mode
