@@ -129,7 +129,10 @@ def update():
         return redirect('/login')
     data = request.form                 # Get the form data
     table_name = data['table_name']     # Get the table name from the form data
-    id = data['id']                     # Get the id from the form data
+    if table_name == 'orders':           # If the table is users, hash the password
+        id = data['order_id']                 # Get the id from the form data
+    else:
+        id = data['id']                     
     tables[table_name].update_data(data,id) # Update the data in the database
     results = get_table_data(table_name)    # Get the updated data from the database
     if not results:
