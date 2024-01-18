@@ -130,8 +130,8 @@ class DistributionCenters:
             query = "SELECT * FROM distribution_centers WHERE " + " AND ".join(query_parts)
             cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
-            cursor.close()
             columns = cursor.description # Get the columns
+            cursor.close()
             column_types = []
             for column in columns:
                 column_name = column[0]
@@ -236,8 +236,8 @@ class Events:
             query = "SELECT * FROM events WHERE " + " AND ".join(query_parts)
             cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
+            columns = cursor.description # Get the columns
             cursor.close()
-            columns = cursor.description
             column_types = []
             for column in columns:
                 column_name = column[0]
@@ -341,8 +341,8 @@ class InventoryItems:
             query = "SELECT * FROM inventory_items WHERE " + " AND ".join(query_parts)
             cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
+            columns = cursor.description # Get the columns
             cursor.close()
-            columns = cursor.description
             column_types = []
             for column in columns:
                 column_name = column[0]
@@ -448,8 +448,8 @@ class OrderItems:
             query = "SELECT * FROM order_items WHERE " + " AND ".join(query_parts)
             cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
+            columns = cursor.description # Get the columns
             cursor.close()
-            columns = cursor.description
             column_types = []
             for column in columns:
                 column_name = column[0]
@@ -485,50 +485,87 @@ class Orders:
     def insert_data(self, data):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("INSERT INTO orders VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)", data)
+
+            data['order_id'] = self.generate_primary_key()
+
+            # Convert 'None' strings to Python None and format dates
+            for key, value in data.items():
+                if value == 'None' or value == '':
+                    data[key] = None
+
+            # Prepare the insert statement
+            insert_fields = ', '.join(self.columns)
+            placeholders = ', '.join(['%s' for _ in self.columns])
+            insert_query = f"INSERT INTO orders ({insert_fields}) VALUES ({placeholders})"
+
+            # Extract the values in the order of self.columns
+            insert_values = [data.get(col) for col in self.columns]
+
+            # Execute the query
+            cursor.execute(insert_query, tuple(insert_values))
             self.connection.commit()
             cursor.close()
-            print("Inserted", data)
+            print("Inserted", insert_values)
         except Exception as e:
             print("Error while inserting into orders", e)
             return f"Error: {e}"
-
+        
     def update_data(self, data, id):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("UPDATE orders SET order_id = %s, user_id = %s, status = %s, gender = %s, created_at = %s, returned_at = %s, shipped_at = %s, delivered_at = %s, num_of_item = %s WHERE order_id = %s", (*data, id))
+            processed_data = [
+                None if data[field] == 'None' else data[field] for field in self.columns if field in data
+            ]
+            update_fields = ', '.join([f"{field} = %s" for field in self.columns if field in data])
+            update_query = f"UPDATE orders SET {update_fields} WHERE order_id = %s"
+            cursor.execute(update_query, processed_data + [id])
             self.connection.commit()
             cursor.close()
-            print("Updated data for order_id:", id)
+            print("Updated", processed_data)
         except Exception as e:
-            print("Error while updating data for order_id:", id, e)
+            print("Error while updating orders", e)
             return f"Error: {e}"
-
+        
     def delete_data(self, id):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("DELETE FROM orders WHERE order_id = %s", (id,))
+            cursor.execute("DELETE FROM orders WHERE order_id=%s", (id,))
             self.connection.commit()
             cursor.close()
-            print("Deleted order_id:", id)
+            print("Deleted", id)
         except Exception as e:
             print("Error while deleting from orders", e)
             return f"Error: {e}"
-
+        
     def search(self, data):
         try:
             cursor = self.connection.cursor()
-            query = "SELECT * FROM orders WHERE order_id LIKE %s AND user_id LIKE %s AND status LIKE %s AND gender LIKE %s AND created_at LIKE %s AND returned_at LIKE %s AND shipped_at LIKE %s AND delivered_at LIKE %s AND num_of_item LIKE %s"
-            parameters = tuple(data[_] + '%' for _ in range(9))
-            cursor.execute(query, parameters)
+            query_parts = []
+            parameters = []
+            for column in self.columns:
+                value = data.get(column, '') + '%'
+                if value == '%':
+                    query_parts.append(f"({column} LIKE %s OR {column} IS NULL)")
+                else:
+                    query_parts.append(f"{column} LIKE %s")
+                parameters.append(value)
+            query = "SELECT * FROM orders WHERE " + " AND ".join(query_parts)
+            cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
+            columns = cursor.description # Get the columns
             cursor.close()
-            return results
+            column_types = []
+            for column in columns:
+                column_name = column[0]
+                column_type = column[1]
+                mysql_data_type = get_mysql_data_types(column_type)
+                item = {'column_name': column_name, 'column_type': mysql_data_type}
+                column_types.append(item)
+            return results, column_types
+        
         except Exception as e:
-            print("Could not find any corresponding value")
+            print("Could not find any corresponding value", e)
             return False
-
-
 
 
 
@@ -621,8 +658,8 @@ class Products:
             query = "SELECT * FROM products WHERE " + " AND ".join(query_parts)
             cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
+            columns = cursor.description # Get the columns
             cursor.close()
-            columns = cursor.description
             column_types = []
             for column in columns:
                 column_name = column[0]
@@ -727,8 +764,8 @@ class Users:
             query = "SELECT * FROM users WHERE " + " AND ".join(query_parts)
             cursor.execute(query, tuple(parameters))
             results = cursor.fetchall()
+            columns = cursor.description # Get the columns
             cursor.close()
-            columns = cursor.description
             column_types = []
             for column in columns:
                 column_name = column[0]
