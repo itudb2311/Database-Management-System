@@ -13,3 +13,8 @@ app routes fixed
 select all and delete operations added
 log out buttons added
 login.html edited
+
+db_host = "localhost"
+db_password = "root"
+db_user = "root"
+db_name = "thelook_ecommerce"
