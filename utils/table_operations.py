@@ -1,6 +1,7 @@
 from settings import db_user,db_password,db_host,db_name  
 import mysql.connector
 import hashlib
+import math
 
 
 class Admins:
