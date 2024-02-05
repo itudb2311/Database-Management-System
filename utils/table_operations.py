@@ -1,8 +1,8 @@
 from settings import db_user,db_password,db_host,db_name  
 import mysql.connector
 import hashlib
-import numpy as np
-
+import numpy as numpy
+import pandas as pd
 
 class Admins:
     def __init__(self, connection):
